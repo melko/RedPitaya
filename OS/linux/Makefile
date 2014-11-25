@@ -4,7 +4,7 @@
 # Linux kernel Makefile
 #
 
-LINUX_GIT := /var/git/linux-xlnx.git
+LINUX_GIT := ~/linux-xlnx
 LINUX_TAG := xilinx-v14.6.02
 XLINUX_DIR := linux-xlnx
 PATCH := patches

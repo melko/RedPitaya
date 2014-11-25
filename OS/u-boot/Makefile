@@ -9,7 +9,7 @@
 #
 
 
-UBOOT_GIT := /var/git/u-boot-xlnx.git
+UBOOT_GIT := ~/uboot-xlnx
 UBOOT_TAG := xilinx-v14.6.01
 UBOOT_DIR := u-boot-xlnx
 UBOOT := $(UBOOT_DIR)/u-boot
