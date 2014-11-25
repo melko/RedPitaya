@@ -310,7 +310,7 @@ red_pitaya_analog i_analog
   .dac_dat_o          (  dac_dat_o        ),  // combined data
   .dac_wrt_o          (  dac_wrt_o        ),  // write enable
   .dac_sel_o          (  dac_sel_o        ),  // channel select
-  .dac_clk_o          (  dac_clk_o        ),  // clock
+  .dac_clk_o          (  /*dac_clk_o*/    ),  // clock for daq DISABLED
   .dac_rst_o          (  dac_rst_o        ),  // reset
   
   // PWM DAC
@@ -335,7 +335,7 @@ red_pitaya_analog i_analog
 );
 
 always @(posedge adc_clk) begin
-   adc_rstn <= frstn[0] ;
+   adc_rstn <= 1'b0 //frstn[0] ; keep this DISABLED for now
 end
 
 
@@ -431,7 +431,7 @@ red_pitaya_hk i_hk
   .rstn_i          (  adc_rstn                   ),  // reset - active low
 
   // LED
-  .led_o           (  led_o                      ),  // LED output
+  .led_o           (  /*led_o*/                  ),  // LED output (DISABLED)
    // Expansion connector
   .exp_p_dat_i     (  exp_p_in                   ),  // input data
   .exp_p_dat_o     (  exp_p_out                  ),  // output data
