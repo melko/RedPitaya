@@ -402,10 +402,10 @@ assign ps_sys_ack   = sys_cs[ 0] & sys_ack[  0] |
                       sys_cs[ 7] & sys_ack[  7] ; 
 
 
-assign sys_rdata[ 6*32+31: 6*32] = 32'h0;
+//assign sys_rdata[ 6*32+31: 6*32] = 32'h0;
 
-assign sys_err[6] = {1{1'b0}} ;
-assign sys_ack[6] = {1{1'b1}} ;
+//assign sys_err[6] = {1{1'b0}} ;
+//assign sys_ack[6] = {1{1'b1}} ;
 
 
 
@@ -700,6 +700,25 @@ red_pitaya_daisy i_daisy
 
 
 
+//------------------------------------------------------------------------
+//
+// Custom module
+custom i_custom
+(
+    .clk             (  fclk[2]                    ),
+    .leddini         (  led_o                      ),
+    // System bus
+    .sys_clk_i       (  sys_clk                    ),  // clock
+    .sys_rstn_i      (  sys_rstn                   ),  // reset - active low
+    .sys_addr_i      (  sys_addr                   ),  // address
+    .sys_wdata_i     (  sys_wdata                  ),  // write data
+    .sys_sel_i       (  sys_sel                    ),  // write byte select
+    .sys_wen_i       (  sys_wen[6]                 ),  // write enable
+    .sys_ren_i       (  sys_ren[6]                 ),  // read enable
+    .sys_rdata_o     (  sys_rdata[ 6*32+31: 6*32]  ),  // read data
+    .sys_err_o       (  sys_err[6]                 ),  // error indicator
+    .sys_ack_o       (  sys_ack[6]                 )   // acknowledge signal
+);
 
 
 
