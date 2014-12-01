@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DARoots Version="1" Minor="30">
+  <FileSet Name="fifo32" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo32">
+    <File Path="$PSRCDIR/sources_1/ip/fifo32/fifo32.xci">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="fifo32"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+      <Define Name="TOOL_VIVADO"/>
+    </Config>
+  </FileSet>
+</DARoots>
