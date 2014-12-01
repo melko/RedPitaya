@@ -335,7 +335,7 @@ red_pitaya_analog i_analog
 );
 
 always @(posedge adc_clk) begin
-   adc_rstn <= 1'b0 //frstn[0] ; keep this DISABLED for now
+   adc_rstn <= 1'b0; //frstn[0] ; keep this DISABLED for now
 end
 
 
