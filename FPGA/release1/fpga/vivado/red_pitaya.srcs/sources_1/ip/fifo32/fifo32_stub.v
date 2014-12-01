@@ -1,7 +1,7 @@
 // Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2013.3 (lin32) Build 329390 Wed Oct 16 18:28:36 MDT 2013
-// Date        : Mon Dec  1 11:50:09 2014
+// Date        : Mon Dec  1 12:50:08 2014
 // Host        : elegen02 running 32-bit Debian GNU/Linux 6.0.9 (squeeze)
 // Command     : write_verilog -force -mode synth_stub
 //               /Network/Servers/elegen04.roma1.infn.it/Volumes/MacintoshHD2/Users/paolocretaro/Xilinx/RedPitaya/FPGA/release1/fpga/vivado/red_pitaya.srcs/sources_1/ip/fifo32/fifo32_stub.v
@@ -14,14 +14,14 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 module fifo32(rst, wr_clk, rd_clk, din, wr_en, rd_en, dout, full, empty)
-/* synthesis syn_black_box black_box_pad_pin="rst,wr_clk,rd_clk,din[31:0],wr_en,rd_en,dout[31:0],full,empty" */;
+/* synthesis syn_black_box black_box_pad_pin="rst,wr_clk,rd_clk,din[63:0],wr_en,rd_en,dout[63:0],full,empty" */;
   input rst;
   input wr_clk;
   input rd_clk;
-  input [31:0]din;
+  input [63:0]din;
   input wr_en;
   input rd_en;
-  output [31:0]dout;
+  output [63:0]dout;
   output full;
   output empty;
 endmodule
