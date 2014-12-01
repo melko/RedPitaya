@@ -1,21 +1,21 @@
 // Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2013.3 (lin32) Build 329390 Wed Oct 16 18:28:36 MDT 2013
-// Date        : Mon Dec  1 12:50:08 2014
+// Date        : Mon Dec  1 13:45:05 2014
 // Host        : elegen02 running 32-bit Debian GNU/Linux 6.0.9 (squeeze)
 // Command     : write_verilog -force -mode funcsim
-//               /Network/Servers/elegen04.roma1.infn.it/Volumes/MacintoshHD2/Users/paolocretaro/Xilinx/RedPitaya/FPGA/release1/fpga/vivado/red_pitaya.srcs/sources_1/ip/fifo32/fifo32_funcsim.v
-// Design      : fifo32
+//               /Network/Servers/elegen04.roma1.infn.it/Volumes/MacintoshHD2/Users/paolocretaro/Xilinx/RedPitaya/FPGA/release1/fpga/vivado/red_pitaya.srcs/sources_1/ip/fifo64/fifo64_funcsim.v
+// Design      : fifo64
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo_generator_v11_0,Vivado 2013.3" *) (* CHECK_LICENSE_TYPE = "fifo32,fifo_generator_v11_0,{}" *) 
-(* core_generation_info = "fifo32,fifo_generator_v11_0,{x_ipProduct=Vivado 2013.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=fifo_generator,x_ipVersion=11.0,x_ipCoreRevision=0,x_ipLanguage=VERILOG,C_COMMON_CLOCK=0,C_COUNT_TYPE=0,C_DATA_COUNT_WIDTH=14,C_DEFAULT_VALUE=BlankString,C_DIN_WIDTH=64,C_DOUT_RST_VAL=0,C_DOUT_WIDTH=64,C_ENABLE_RLOCS=0,C_FAMILY=zynq,C_FULL_FLAGS_RST_VAL=1,C_HAS_ALMOST_EMPTY=0,C_HAS_ALMOST_FULL=0,C_HAS_BACKUP=0,C_HAS_DATA_COUNT=0,C_HAS_INT_CLK=0,C_HAS_MEMINIT_FILE=0,C_HAS_OVERFLOW=0,C_HAS_RD_DATA_COUNT=0,C_HAS_RD_RST=0,C_HAS_RST=1,C_HAS_SRST=0,C_HAS_UNDERFLOW=0,C_HAS_VALID=0,C_HAS_WR_ACK=0,C_HAS_WR_DATA_COUNT=0,C_HAS_WR_RST=0,C_IMPLEMENTATION_TYPE=2,C_INIT_WR_PNTR_VAL=0,C_MEMORY_TYPE=1,C_MIF_FILE_NAME=BlankString,C_OPTIMIZATION_MODE=0,C_OVERFLOW_LOW=0,C_PRELOAD_LATENCY=0,C_PRELOAD_REGS=1,C_PRIM_FIFO_TYPE=8kx4,C_PROG_EMPTY_THRESH_ASSERT_VAL=4,C_PROG_EMPTY_THRESH_NEGATE_VAL=5,C_PROG_EMPTY_TYPE=0,C_PROG_FULL_THRESH_ASSERT_VAL=16383,C_PROG_FULL_THRESH_NEGATE_VAL=16382,C_PROG_FULL_TYPE=0,C_RD_DATA_COUNT_WIDTH=14,C_RD_DEPTH=16384,C_RD_FREQ=1,C_RD_PNTR_WIDTH=14,C_UNDERFLOW_LOW=0,C_USE_DOUT_RST=1,C_USE_ECC=0,C_USE_EMBEDDED_REG=0,C_USE_FIFO16_FLAGS=0,C_USE_FWFT_DATA_COUNT=0,C_VALID_LOW=0,C_WR_ACK_LOW=0,C_WR_DATA_COUNT_WIDTH=14,C_WR_DEPTH=16384,C_WR_FREQ=1,C_WR_PNTR_WIDTH=14,C_WR_RESPONSE_LATENCY=1,C_MSGON_VAL=1,C_ENABLE_RST_SYNC=1,C_ERROR_INJECTION_TYPE=0,C_SYNCHRONIZER_STAGE=2,C_INTERFACE_TYPE=0,C_AXI_TYPE=1,C_HAS_AXI_WR_CHANNEL=1,C_HAS_AXI_RD_CHANNEL=1,C_HAS_SLAVE_CE=0,C_HAS_MASTER_CE=0,C_ADD_NGC_CONSTRAINT=0,C_USE_COMMON_OVERFLOW=0,C_USE_COMMON_UNDERFLOW=0,C_USE_DEFAULT_SETTINGS=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_HAS_AXI_AWUSER=0,C_HAS_AXI_WUSER=0,C_HAS_AXI_BUSER=0,C_HAS_AXI_ARUSER=0,C_HAS_AXI_RUSER=0,C_AXI_ARUSER_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_HAS_AXI_ID=0,C_HAS_AXIS_TDATA=1,C_HAS_AXIS_TID=0,C_HAS_AXIS_TDEST=0,C_HAS_AXIS_TUSER=1,C_HAS_AXIS_TREADY=1,C_HAS_AXIS_TLAST=0,C_HAS_AXIS_TSTRB=0,C_HAS_AXIS_TKEEP=0,C_AXIS_TDATA_WIDTH=8,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=4,C_AXIS_TSTRB_WIDTH=1,C_AXIS_TKEEP_WIDTH=1,C_WACH_TYPE=0,C_WDCH_TYPE=0,C_WRCH_TYPE=0,C_RACH_TYPE=0,C_RDCH_TYPE=0,C_AXIS_TYPE=0,C_IMPLEMENTATION_TYPE_WACH=1,C_IMPLEMENTATION_TYPE_WDCH=1,C_IMPLEMENTATION_TYPE_WRCH=1,C_IMPLEMENTATION_TYPE_RACH=1,C_IMPLEMENTATION_TYPE_RDCH=1,C_IMPLEMENTATION_TYPE_AXIS=1,C_APPLICATION_TYPE_WACH=0,C_APPLICATION_TYPE_WDCH=0,C_APPLICATION_TYPE_WRCH=0,C_APPLICATION_TYPE_RACH=0,C_APPLICATION_TYPE_RDCH=0,C_APPLICATION_TYPE_AXIS=0,C_USE_ECC_WACH=0,C_USE_ECC_WDCH=0,C_USE_ECC_WRCH=0,C_USE_ECC_RACH=0,C_USE_ECC_RDCH=0,C_USE_ECC_AXIS=0,C_ERROR_INJECTION_TYPE_WACH=0,C_ERROR_INJECTION_TYPE_WDCH=0,C_ERROR_INJECTION_TYPE_WRCH=0,C_ERROR_INJECTION_TYPE_RACH=0,C_ERROR_INJECTION_TYPE_RDCH=0,C_ERROR_INJECTION_TYPE_AXIS=0,C_DIN_WIDTH_WACH=32,C_DIN_WIDTH_WDCH=64,C_DIN_WIDTH_WRCH=2,C_DIN_WIDTH_RACH=32,C_DIN_WIDTH_RDCH=64,C_DIN_WIDTH_AXIS=1,C_WR_DEPTH_WACH=16,C_WR_DEPTH_WDCH=1024,C_WR_DEPTH_WRCH=16,C_WR_DEPTH_RACH=16,C_WR_DEPTH_RDCH=1024,C_WR_DEPTH_AXIS=1024,C_WR_PNTR_WIDTH_WACH=4,C_WR_PNTR_WIDTH_WDCH=10,C_WR_PNTR_WIDTH_WRCH=4,C_WR_PNTR_WIDTH_RACH=4,C_WR_PNTR_WIDTH_RDCH=10,C_WR_PNTR_WIDTH_AXIS=10,C_HAS_DATA_COUNTS_WACH=0,C_HAS_DATA_COUNTS_WDCH=0,C_HAS_DATA_COUNTS_WRCH=0,C_HAS_DATA_COUNTS_RACH=0,C_HAS_DATA_COUNTS_RDCH=0,C_HAS_DATA_COUNTS_AXIS=0,C_HAS_PROG_FLAGS_WACH=0,C_HAS_PROG_FLAGS_WDCH=0,C_HAS_PROG_FLAGS_WRCH=0,C_HAS_PROG_FLAGS_RACH=0,C_HAS_PROG_FLAGS_RDCH=0,C_HAS_PROG_FLAGS_AXIS=0,C_PROG_FULL_TYPE_WACH=0,C_PROG_FULL_TYPE_WDCH=0,C_PROG_FULL_TYPE_WRCH=0,C_PROG_FULL_TYPE_RACH=0,C_PROG_FULL_TYPE_RDCH=0,C_PROG_FULL_TYPE_AXIS=0,C_PROG_FULL_THRESH_ASSERT_VAL_WACH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_WDCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_WRCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_RACH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_RDCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_AXIS=1023,C_PROG_EMPTY_TYPE_WACH=0,C_PROG_EMPTY_TYPE_WDCH=0,C_PROG_EMPTY_TYPE_WRCH=0,C_PROG_EMPTY_TYPE_RACH=0,C_PROG_EMPTY_TYPE_RDCH=0,C_PROG_EMPTY_TYPE_AXIS=0,C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS=1022,C_REG_SLICE_MODE_WACH=0,C_REG_SLICE_MODE_WDCH=0,C_REG_SLICE_MODE_WRCH=0,C_REG_SLICE_MODE_RACH=0,C_REG_SLICE_MODE_RDCH=0,C_REG_SLICE_MODE_AXIS=0,C_AXI_LEN_WIDTH=8,C_AXI_LOCK_WIDTH=1}" *) 
+(* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo_generator_v11_0,Vivado 2013.3" *) (* CHECK_LICENSE_TYPE = "fifo64,fifo_generator_v11_0,{}" *) 
+(* core_generation_info = "fifo64,fifo_generator_v11_0,{x_ipProduct=Vivado 2013.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=fifo_generator,x_ipVersion=11.0,x_ipCoreRevision=0,x_ipLanguage=VERILOG,C_COMMON_CLOCK=0,C_COUNT_TYPE=0,C_DATA_COUNT_WIDTH=14,C_DEFAULT_VALUE=BlankString,C_DIN_WIDTH=64,C_DOUT_RST_VAL=0,C_DOUT_WIDTH=64,C_ENABLE_RLOCS=0,C_FAMILY=zynq,C_FULL_FLAGS_RST_VAL=1,C_HAS_ALMOST_EMPTY=0,C_HAS_ALMOST_FULL=0,C_HAS_BACKUP=0,C_HAS_DATA_COUNT=0,C_HAS_INT_CLK=0,C_HAS_MEMINIT_FILE=0,C_HAS_OVERFLOW=0,C_HAS_RD_DATA_COUNT=0,C_HAS_RD_RST=0,C_HAS_RST=1,C_HAS_SRST=0,C_HAS_UNDERFLOW=0,C_HAS_VALID=0,C_HAS_WR_ACK=0,C_HAS_WR_DATA_COUNT=0,C_HAS_WR_RST=0,C_IMPLEMENTATION_TYPE=2,C_INIT_WR_PNTR_VAL=0,C_MEMORY_TYPE=1,C_MIF_FILE_NAME=BlankString,C_OPTIMIZATION_MODE=0,C_OVERFLOW_LOW=0,C_PRELOAD_LATENCY=0,C_PRELOAD_REGS=1,C_PRIM_FIFO_TYPE=8kx4,C_PROG_EMPTY_THRESH_ASSERT_VAL=4,C_PROG_EMPTY_THRESH_NEGATE_VAL=5,C_PROG_EMPTY_TYPE=0,C_PROG_FULL_THRESH_ASSERT_VAL=16383,C_PROG_FULL_THRESH_NEGATE_VAL=16382,C_PROG_FULL_TYPE=0,C_RD_DATA_COUNT_WIDTH=14,C_RD_DEPTH=16384,C_RD_FREQ=1,C_RD_PNTR_WIDTH=14,C_UNDERFLOW_LOW=0,C_USE_DOUT_RST=1,C_USE_ECC=0,C_USE_EMBEDDED_REG=0,C_USE_FIFO16_FLAGS=0,C_USE_FWFT_DATA_COUNT=0,C_VALID_LOW=0,C_WR_ACK_LOW=0,C_WR_DATA_COUNT_WIDTH=14,C_WR_DEPTH=16384,C_WR_FREQ=1,C_WR_PNTR_WIDTH=14,C_WR_RESPONSE_LATENCY=1,C_MSGON_VAL=1,C_ENABLE_RST_SYNC=1,C_ERROR_INJECTION_TYPE=0,C_SYNCHRONIZER_STAGE=2,C_INTERFACE_TYPE=0,C_AXI_TYPE=1,C_HAS_AXI_WR_CHANNEL=1,C_HAS_AXI_RD_CHANNEL=1,C_HAS_SLAVE_CE=0,C_HAS_MASTER_CE=0,C_ADD_NGC_CONSTRAINT=0,C_USE_COMMON_OVERFLOW=0,C_USE_COMMON_UNDERFLOW=0,C_USE_DEFAULT_SETTINGS=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_HAS_AXI_AWUSER=0,C_HAS_AXI_WUSER=0,C_HAS_AXI_BUSER=0,C_HAS_AXI_ARUSER=0,C_HAS_AXI_RUSER=0,C_AXI_ARUSER_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_HAS_AXI_ID=0,C_HAS_AXIS_TDATA=1,C_HAS_AXIS_TID=0,C_HAS_AXIS_TDEST=0,C_HAS_AXIS_TUSER=1,C_HAS_AXIS_TREADY=1,C_HAS_AXIS_TLAST=0,C_HAS_AXIS_TSTRB=0,C_HAS_AXIS_TKEEP=0,C_AXIS_TDATA_WIDTH=8,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=4,C_AXIS_TSTRB_WIDTH=1,C_AXIS_TKEEP_WIDTH=1,C_WACH_TYPE=0,C_WDCH_TYPE=0,C_WRCH_TYPE=0,C_RACH_TYPE=0,C_RDCH_TYPE=0,C_AXIS_TYPE=0,C_IMPLEMENTATION_TYPE_WACH=1,C_IMPLEMENTATION_TYPE_WDCH=1,C_IMPLEMENTATION_TYPE_WRCH=1,C_IMPLEMENTATION_TYPE_RACH=1,C_IMPLEMENTATION_TYPE_RDCH=1,C_IMPLEMENTATION_TYPE_AXIS=1,C_APPLICATION_TYPE_WACH=0,C_APPLICATION_TYPE_WDCH=0,C_APPLICATION_TYPE_WRCH=0,C_APPLICATION_TYPE_RACH=0,C_APPLICATION_TYPE_RDCH=0,C_APPLICATION_TYPE_AXIS=0,C_USE_ECC_WACH=0,C_USE_ECC_WDCH=0,C_USE_ECC_WRCH=0,C_USE_ECC_RACH=0,C_USE_ECC_RDCH=0,C_USE_ECC_AXIS=0,C_ERROR_INJECTION_TYPE_WACH=0,C_ERROR_INJECTION_TYPE_WDCH=0,C_ERROR_INJECTION_TYPE_WRCH=0,C_ERROR_INJECTION_TYPE_RACH=0,C_ERROR_INJECTION_TYPE_RDCH=0,C_ERROR_INJECTION_TYPE_AXIS=0,C_DIN_WIDTH_WACH=32,C_DIN_WIDTH_WDCH=64,C_DIN_WIDTH_WRCH=2,C_DIN_WIDTH_RACH=32,C_DIN_WIDTH_RDCH=64,C_DIN_WIDTH_AXIS=1,C_WR_DEPTH_WACH=16,C_WR_DEPTH_WDCH=1024,C_WR_DEPTH_WRCH=16,C_WR_DEPTH_RACH=16,C_WR_DEPTH_RDCH=1024,C_WR_DEPTH_AXIS=1024,C_WR_PNTR_WIDTH_WACH=4,C_WR_PNTR_WIDTH_WDCH=10,C_WR_PNTR_WIDTH_WRCH=4,C_WR_PNTR_WIDTH_RACH=4,C_WR_PNTR_WIDTH_RDCH=10,C_WR_PNTR_WIDTH_AXIS=10,C_HAS_DATA_COUNTS_WACH=0,C_HAS_DATA_COUNTS_WDCH=0,C_HAS_DATA_COUNTS_WRCH=0,C_HAS_DATA_COUNTS_RACH=0,C_HAS_DATA_COUNTS_RDCH=0,C_HAS_DATA_COUNTS_AXIS=0,C_HAS_PROG_FLAGS_WACH=0,C_HAS_PROG_FLAGS_WDCH=0,C_HAS_PROG_FLAGS_WRCH=0,C_HAS_PROG_FLAGS_RACH=0,C_HAS_PROG_FLAGS_RDCH=0,C_HAS_PROG_FLAGS_AXIS=0,C_PROG_FULL_TYPE_WACH=0,C_PROG_FULL_TYPE_WDCH=0,C_PROG_FULL_TYPE_WRCH=0,C_PROG_FULL_TYPE_RACH=0,C_PROG_FULL_TYPE_RDCH=0,C_PROG_FULL_TYPE_AXIS=0,C_PROG_FULL_THRESH_ASSERT_VAL_WACH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_WDCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_WRCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_RACH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_RDCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_AXIS=1023,C_PROG_EMPTY_TYPE_WACH=0,C_PROG_EMPTY_TYPE_WDCH=0,C_PROG_EMPTY_TYPE_WRCH=0,C_PROG_EMPTY_TYPE_RACH=0,C_PROG_EMPTY_TYPE_RDCH=0,C_PROG_EMPTY_TYPE_AXIS=0,C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS=1022,C_REG_SLICE_MODE_WACH=0,C_REG_SLICE_MODE_WDCH=0,C_REG_SLICE_MODE_WRCH=0,C_REG_SLICE_MODE_RACH=0,C_REG_SLICE_MODE_RDCH=0,C_REG_SLICE_MODE_AXIS=0,C_AXI_LEN_WIDTH=8,C_AXI_LOCK_WIDTH=1}" *) 
 (* NotValidForBitStream *)
-module fifo32
+module fifo64
    (rst,
     wr_clk,
     rd_clk,
@@ -361,7 +361,7 @@ GND GND
    (* C_WR_PNTR_WIDTH_WDCH = "10" *) 
    (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
    (* C_WR_RESPONSE_LATENCY = "1" *) 
-   fifo32fifo_generator_v11_0 U0
+   fifo64fifo_generator_v11_0 U0
        (.almost_empty(NLW_U0_almost_empty_UNCONNECTED),
         .almost_full(NLW_U0_almost_full_UNCONNECTED),
         .axi_ar_data_count(NLW_U0_axi_ar_data_count_UNCONNECTED[4:0]),
@@ -592,7 +592,7 @@ GND GND
         .wr_rst(\<const0> ));
 endmodule
 
-module fifo32blk_mem_gen_generic_cstr
+module fifo64blk_mem_gen_generic_cstr
    (D,
     wr_clk,
     rd_clk,
@@ -907,7 +907,7 @@ module fifo32blk_mem_gen_generic_cstr
   wire tmp_ram_rd_en;
   wire wr_clk;
 
-fifo32blk_mem_gen_mux__parameterized0 \has_mux_b.B 
+fifo64blk_mem_gen_mux__parameterized0 \has_mux_b.B 
        (.D(D[63:1]),
         .DOBDO({\n_0_ramloop[4].ram.r ,\n_1_ramloop[4].ram.r ,\n_2_ramloop[4].ram.r ,\n_3_ramloop[4].ram.r ,\n_4_ramloop[4].ram.r ,\n_5_ramloop[4].ram.r ,\n_6_ramloop[4].ram.r ,\n_7_ramloop[4].ram.r }),
         .DOPBDOP(\n_8_ramloop[4].ram.r ),
@@ -970,7 +970,7 @@ fifo32blk_mem_gen_mux__parameterized0 \has_mux_b.B
         .p_13_out(p_13_out),
         .p_17_out(p_17_out),
         .rd_clk(rd_clk));
-fifo32blk_mem_gen_prim_width \ramloop[0].ram.r 
+fifo64blk_mem_gen_prim_width \ramloop[0].ram.r 
        (.D(D[0]),
         .I1(I1),
         .I2(I2),
@@ -981,7 +981,7 @@ fifo32blk_mem_gen_prim_width \ramloop[0].ram.r
         .rd_clk(rd_clk),
         .tmp_ram_rd_en(tmp_ram_rd_en),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized9 \ramloop[10].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized9 \ramloop[10].ram.r 
        (.I17({\n_0_ramloop[10].ram.r ,\n_1_ramloop[10].ram.r ,\n_2_ramloop[10].ram.r ,\n_3_ramloop[10].ram.r ,\n_4_ramloop[10].ram.r ,\n_5_ramloop[10].ram.r ,\n_6_ramloop[10].ram.r ,\n_7_ramloop[10].ram.r }),
         .I2(I2[11:0]),
         .I21(\n_8_ramloop[10].ram.r ),
@@ -993,7 +993,7 @@ fifo32blk_mem_gen_prim_width__parameterized9 \ramloop[10].ram.r
         .din(din[27:19]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized10 \ramloop[11].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized10 \ramloop[11].ram.r 
        (.DOBDO({\n_0_ramloop[11].ram.r ,\n_1_ramloop[11].ram.r ,\n_2_ramloop[11].ram.r ,\n_3_ramloop[11].ram.r ,\n_4_ramloop[11].ram.r ,\n_5_ramloop[11].ram.r ,\n_6_ramloop[11].ram.r ,\n_7_ramloop[11].ram.r }),
         .DOPBDOP(\n_8_ramloop[11].ram.r ),
         .I2(I2[11:0]),
@@ -1005,7 +1005,7 @@ fifo32blk_mem_gen_prim_width__parameterized10 \ramloop[11].ram.r
         .din(din[27:19]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized11 \ramloop[12].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized11 \ramloop[12].ram.r 
        (.DOBDO({\n_0_ramloop[12].ram.r ,\n_1_ramloop[12].ram.r ,\n_2_ramloop[12].ram.r ,\n_3_ramloop[12].ram.r ,\n_4_ramloop[12].ram.r ,\n_5_ramloop[12].ram.r ,\n_6_ramloop[12].ram.r ,\n_7_ramloop[12].ram.r }),
         .DOPBDOP(\n_8_ramloop[12].ram.r ),
         .I2(I2[11:0]),
@@ -1017,7 +1017,7 @@ fifo32blk_mem_gen_prim_width__parameterized11 \ramloop[12].ram.r
         .ram_enb(ram_enb),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized12 \ramloop[13].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized12 \ramloop[13].ram.r 
        (.I2(I2[11:0]),
         .I26({\n_0_ramloop[13].ram.r ,\n_1_ramloop[13].ram.r ,\n_2_ramloop[13].ram.r ,\n_3_ramloop[13].ram.r ,\n_4_ramloop[13].ram.r ,\n_5_ramloop[13].ram.r ,\n_6_ramloop[13].ram.r ,\n_7_ramloop[13].ram.r }),
         .I3(I3),
@@ -1029,7 +1029,7 @@ fifo32blk_mem_gen_prim_width__parameterized12 \ramloop[13].ram.r
         .din(din[36:28]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized13 \ramloop[14].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized13 \ramloop[14].ram.r 
        (.DOBDO({\n_0_ramloop[14].ram.r ,\n_1_ramloop[14].ram.r ,\n_2_ramloop[14].ram.r ,\n_3_ramloop[14].ram.r ,\n_4_ramloop[14].ram.r ,\n_5_ramloop[14].ram.r ,\n_6_ramloop[14].ram.r ,\n_7_ramloop[14].ram.r }),
         .DOPBDOP(\n_8_ramloop[14].ram.r ),
         .I2(I2[11:0]),
@@ -1041,7 +1041,7 @@ fifo32blk_mem_gen_prim_width__parameterized13 \ramloop[14].ram.r
         .din(din[36:28]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized14 \ramloop[15].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized14 \ramloop[15].ram.r 
        (.DOBDO({\n_0_ramloop[15].ram.r ,\n_1_ramloop[15].ram.r ,\n_2_ramloop[15].ram.r ,\n_3_ramloop[15].ram.r ,\n_4_ramloop[15].ram.r ,\n_5_ramloop[15].ram.r ,\n_6_ramloop[15].ram.r ,\n_7_ramloop[15].ram.r }),
         .DOPBDOP(\n_8_ramloop[15].ram.r ),
         .I2(I2[11:0]),
@@ -1053,7 +1053,7 @@ fifo32blk_mem_gen_prim_width__parameterized14 \ramloop[15].ram.r
         .din(din[36:28]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized15 \ramloop[16].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized15 \ramloop[16].ram.r 
        (.I2(I2[11:0]),
         .I23({\n_0_ramloop[16].ram.r ,\n_1_ramloop[16].ram.r ,\n_2_ramloop[16].ram.r ,\n_3_ramloop[16].ram.r ,\n_4_ramloop[16].ram.r ,\n_5_ramloop[16].ram.r ,\n_6_ramloop[16].ram.r ,\n_7_ramloop[16].ram.r }),
         .I27(\n_8_ramloop[16].ram.r ),
@@ -1065,7 +1065,7 @@ fifo32blk_mem_gen_prim_width__parameterized15 \ramloop[16].ram.r
         .ram_enb(ram_enb),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized16 \ramloop[17].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized16 \ramloop[17].ram.r 
        (.DOBDO({\n_0_ramloop[17].ram.r ,\n_1_ramloop[17].ram.r ,\n_2_ramloop[17].ram.r ,\n_3_ramloop[17].ram.r ,\n_4_ramloop[17].ram.r ,\n_5_ramloop[17].ram.r ,\n_6_ramloop[17].ram.r ,\n_7_ramloop[17].ram.r }),
         .DOPBDOP(\n_8_ramloop[17].ram.r ),
         .I2(I2[11:0]),
@@ -1077,7 +1077,7 @@ fifo32blk_mem_gen_prim_width__parameterized16 \ramloop[17].ram.r
         .din(din[45:37]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized17 \ramloop[18].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized17 \ramloop[18].ram.r 
        (.DOBDO({\n_0_ramloop[18].ram.r ,\n_1_ramloop[18].ram.r ,\n_2_ramloop[18].ram.r ,\n_3_ramloop[18].ram.r ,\n_4_ramloop[18].ram.r ,\n_5_ramloop[18].ram.r ,\n_6_ramloop[18].ram.r ,\n_7_ramloop[18].ram.r }),
         .DOPBDOP(\n_8_ramloop[18].ram.r ),
         .I2(I2[11:0]),
@@ -1089,7 +1089,7 @@ fifo32blk_mem_gen_prim_width__parameterized17 \ramloop[18].ram.r
         .din(din[45:37]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized18 \ramloop[19].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized18 \ramloop[19].ram.r 
        (.I2(I2[11:0]),
         .I32({\n_0_ramloop[19].ram.r ,\n_1_ramloop[19].ram.r ,\n_2_ramloop[19].ram.r ,\n_3_ramloop[19].ram.r ,\n_4_ramloop[19].ram.r ,\n_5_ramloop[19].ram.r ,\n_6_ramloop[19].ram.r ,\n_7_ramloop[19].ram.r }),
         .I36(\n_8_ramloop[19].ram.r ),
@@ -1101,7 +1101,7 @@ fifo32blk_mem_gen_prim_width__parameterized18 \ramloop[19].ram.r
         .din(din[45:37]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized0 \ramloop[1].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized0 \ramloop[1].ram.r 
        (.DOBDO({\n_0_ramloop[1].ram.r ,\n_1_ramloop[1].ram.r ,\n_2_ramloop[1].ram.r ,\n_3_ramloop[1].ram.r ,\n_4_ramloop[1].ram.r ,\n_5_ramloop[1].ram.r ,\n_6_ramloop[1].ram.r ,\n_7_ramloop[1].ram.r }),
         .DOPBDOP(\n_8_ramloop[1].ram.r ),
         .I2(I2[11:0]),
@@ -1113,7 +1113,7 @@ fifo32blk_mem_gen_prim_width__parameterized0 \ramloop[1].ram.r
         .din(din[9:1]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized19 \ramloop[20].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized19 \ramloop[20].ram.r 
        (.I2(I2[11:0]),
         .I31({\n_0_ramloop[20].ram.r ,\n_1_ramloop[20].ram.r ,\n_2_ramloop[20].ram.r ,\n_3_ramloop[20].ram.r ,\n_4_ramloop[20].ram.r ,\n_5_ramloop[20].ram.r ,\n_6_ramloop[20].ram.r ,\n_7_ramloop[20].ram.r }),
         .I35(\n_8_ramloop[20].ram.r ),
@@ -1125,7 +1125,7 @@ fifo32blk_mem_gen_prim_width__parameterized19 \ramloop[20].ram.r
         .ram_enb(ram_enb),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized20 \ramloop[21].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized20 \ramloop[21].ram.r 
        (.DOBDO({\n_0_ramloop[21].ram.r ,\n_1_ramloop[21].ram.r ,\n_2_ramloop[21].ram.r ,\n_3_ramloop[21].ram.r ,\n_4_ramloop[21].ram.r ,\n_5_ramloop[21].ram.r ,\n_6_ramloop[21].ram.r ,\n_7_ramloop[21].ram.r }),
         .DOPBDOP(\n_8_ramloop[21].ram.r ),
         .I2(I2[11:0]),
@@ -1137,7 +1137,7 @@ fifo32blk_mem_gen_prim_width__parameterized20 \ramloop[21].ram.r
         .din(din[54:46]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized21 \ramloop[22].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized21 \ramloop[22].ram.r 
        (.DOBDO({\n_0_ramloop[22].ram.r ,\n_1_ramloop[22].ram.r ,\n_2_ramloop[22].ram.r ,\n_3_ramloop[22].ram.r ,\n_4_ramloop[22].ram.r ,\n_5_ramloop[22].ram.r ,\n_6_ramloop[22].ram.r ,\n_7_ramloop[22].ram.r }),
         .DOPBDOP(\n_8_ramloop[22].ram.r ),
         .I2(I2[11:0]),
@@ -1149,7 +1149,7 @@ fifo32blk_mem_gen_prim_width__parameterized21 \ramloop[22].ram.r
         .din(din[54:46]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized22 \ramloop[23].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized22 \ramloop[23].ram.r 
        (.I2(I2[11:0]),
         .I40({\n_0_ramloop[23].ram.r ,\n_1_ramloop[23].ram.r ,\n_2_ramloop[23].ram.r ,\n_3_ramloop[23].ram.r ,\n_4_ramloop[23].ram.r ,\n_5_ramloop[23].ram.r ,\n_6_ramloop[23].ram.r ,\n_7_ramloop[23].ram.r }),
         .I44(\n_8_ramloop[23].ram.r ),
@@ -1161,7 +1161,7 @@ fifo32blk_mem_gen_prim_width__parameterized22 \ramloop[23].ram.r
         .din(din[54:46]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized23 \ramloop[24].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized23 \ramloop[24].ram.r 
        (.DOBDO({\n_0_ramloop[24].ram.r ,\n_1_ramloop[24].ram.r ,\n_2_ramloop[24].ram.r ,\n_3_ramloop[24].ram.r ,\n_4_ramloop[24].ram.r ,\n_5_ramloop[24].ram.r ,\n_6_ramloop[24].ram.r ,\n_7_ramloop[24].ram.r }),
         .DOPBDOP(\n_8_ramloop[24].ram.r ),
         .I2(I2[11:0]),
@@ -1173,7 +1173,7 @@ fifo32blk_mem_gen_prim_width__parameterized23 \ramloop[24].ram.r
         .ram_enb(ram_enb),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized24 \ramloop[25].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized24 \ramloop[25].ram.r 
        (.DOBDO({\n_0_ramloop[25].ram.r ,\n_1_ramloop[25].ram.r ,\n_2_ramloop[25].ram.r ,\n_3_ramloop[25].ram.r ,\n_4_ramloop[25].ram.r ,\n_5_ramloop[25].ram.r ,\n_6_ramloop[25].ram.r ,\n_7_ramloop[25].ram.r }),
         .DOPBDOP(\n_8_ramloop[25].ram.r ),
         .I2(I2[11:0]),
@@ -1185,7 +1185,7 @@ fifo32blk_mem_gen_prim_width__parameterized24 \ramloop[25].ram.r
         .din(din[63:55]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized25 \ramloop[26].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized25 \ramloop[26].ram.r 
        (.DOBDO({\n_0_ramloop[26].ram.r ,\n_1_ramloop[26].ram.r ,\n_2_ramloop[26].ram.r ,\n_3_ramloop[26].ram.r ,\n_4_ramloop[26].ram.r ,\n_5_ramloop[26].ram.r ,\n_6_ramloop[26].ram.r ,\n_7_ramloop[26].ram.r }),
         .DOPBDOP(\n_8_ramloop[26].ram.r ),
         .I2(I2[11:0]),
@@ -1197,7 +1197,7 @@ fifo32blk_mem_gen_prim_width__parameterized25 \ramloop[26].ram.r
         .din(din[63:55]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized26 \ramloop[27].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized26 \ramloop[27].ram.r 
        (.DOBDO({\n_0_ramloop[27].ram.r ,\n_1_ramloop[27].ram.r ,\n_2_ramloop[27].ram.r ,\n_3_ramloop[27].ram.r ,\n_4_ramloop[27].ram.r ,\n_5_ramloop[27].ram.r ,\n_6_ramloop[27].ram.r ,\n_7_ramloop[27].ram.r }),
         .DOPBDOP(\n_8_ramloop[27].ram.r ),
         .I2(I2[11:0]),
@@ -1209,7 +1209,7 @@ fifo32blk_mem_gen_prim_width__parameterized26 \ramloop[27].ram.r
         .din(din[63:55]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized27 \ramloop[28].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized27 \ramloop[28].ram.r 
        (.I2(I2[11:0]),
         .I47({\n_0_ramloop[28].ram.r ,\n_1_ramloop[28].ram.r ,\n_2_ramloop[28].ram.r ,\n_3_ramloop[28].ram.r ,\n_4_ramloop[28].ram.r ,\n_5_ramloop[28].ram.r ,\n_6_ramloop[28].ram.r ,\n_7_ramloop[28].ram.r }),
         .I51(\n_8_ramloop[28].ram.r ),
@@ -1221,7 +1221,7 @@ fifo32blk_mem_gen_prim_width__parameterized27 \ramloop[28].ram.r
         .ram_enb(ram_enb),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized1 \ramloop[2].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized1 \ramloop[2].ram.r 
        (.DOBDO({\n_0_ramloop[2].ram.r ,\n_1_ramloop[2].ram.r ,\n_2_ramloop[2].ram.r ,\n_3_ramloop[2].ram.r ,\n_4_ramloop[2].ram.r ,\n_5_ramloop[2].ram.r ,\n_6_ramloop[2].ram.r ,\n_7_ramloop[2].ram.r }),
         .DOPBDOP(\n_8_ramloop[2].ram.r ),
         .I2(I2[11:0]),
@@ -1233,7 +1233,7 @@ fifo32blk_mem_gen_prim_width__parameterized1 \ramloop[2].ram.r
         .din(din[9:1]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized2 \ramloop[3].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized2 \ramloop[3].ram.r 
        (.DOBDO({\n_0_ramloop[3].ram.r ,\n_1_ramloop[3].ram.r ,\n_2_ramloop[3].ram.r ,\n_3_ramloop[3].ram.r ,\n_4_ramloop[3].ram.r ,\n_5_ramloop[3].ram.r ,\n_6_ramloop[3].ram.r ,\n_7_ramloop[3].ram.r }),
         .DOPBDOP(\n_8_ramloop[3].ram.r ),
         .I2(I2[11:0]),
@@ -1245,7 +1245,7 @@ fifo32blk_mem_gen_prim_width__parameterized2 \ramloop[3].ram.r
         .din(din[9:1]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized3 \ramloop[4].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized3 \ramloop[4].ram.r 
        (.DOBDO({\n_0_ramloop[4].ram.r ,\n_1_ramloop[4].ram.r ,\n_2_ramloop[4].ram.r ,\n_3_ramloop[4].ram.r ,\n_4_ramloop[4].ram.r ,\n_5_ramloop[4].ram.r ,\n_6_ramloop[4].ram.r ,\n_7_ramloop[4].ram.r }),
         .DOPBDOP(\n_8_ramloop[4].ram.r ),
         .I2(I2[11:0]),
@@ -1257,7 +1257,7 @@ fifo32blk_mem_gen_prim_width__parameterized3 \ramloop[4].ram.r
         .ram_enb(ram_enb),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized4 \ramloop[5].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized4 \ramloop[5].ram.r 
        (.DOBDO({\n_0_ramloop[5].ram.r ,\n_1_ramloop[5].ram.r ,\n_2_ramloop[5].ram.r ,\n_3_ramloop[5].ram.r ,\n_4_ramloop[5].ram.r ,\n_5_ramloop[5].ram.r ,\n_6_ramloop[5].ram.r ,\n_7_ramloop[5].ram.r }),
         .DOPBDOP(\n_8_ramloop[5].ram.r ),
         .I2(I2[11:0]),
@@ -1269,7 +1269,7 @@ fifo32blk_mem_gen_prim_width__parameterized4 \ramloop[5].ram.r
         .din(din[18:10]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized5 \ramloop[6].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized5 \ramloop[6].ram.r 
        (.DOBDO({\n_0_ramloop[6].ram.r ,\n_1_ramloop[6].ram.r ,\n_2_ramloop[6].ram.r ,\n_3_ramloop[6].ram.r ,\n_4_ramloop[6].ram.r ,\n_5_ramloop[6].ram.r ,\n_6_ramloop[6].ram.r ,\n_7_ramloop[6].ram.r }),
         .DOPBDOP(\n_8_ramloop[6].ram.r ),
         .I2(I2[11:0]),
@@ -1281,7 +1281,7 @@ fifo32blk_mem_gen_prim_width__parameterized5 \ramloop[6].ram.r
         .din(din[18:10]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized6 \ramloop[7].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized6 \ramloop[7].ram.r 
        (.DOBDO({\n_0_ramloop[7].ram.r ,\n_1_ramloop[7].ram.r ,\n_2_ramloop[7].ram.r ,\n_3_ramloop[7].ram.r ,\n_4_ramloop[7].ram.r ,\n_5_ramloop[7].ram.r ,\n_6_ramloop[7].ram.r ,\n_7_ramloop[7].ram.r }),
         .DOPBDOP(\n_8_ramloop[7].ram.r ),
         .I2(I2[11:0]),
@@ -1293,7 +1293,7 @@ fifo32blk_mem_gen_prim_width__parameterized6 \ramloop[7].ram.r
         .din(din[18:10]),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized7 \ramloop[8].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized7 \ramloop[8].ram.r 
        (.DOBDO({\n_0_ramloop[8].ram.r ,\n_1_ramloop[8].ram.r ,\n_2_ramloop[8].ram.r ,\n_3_ramloop[8].ram.r ,\n_4_ramloop[8].ram.r ,\n_5_ramloop[8].ram.r ,\n_6_ramloop[8].ram.r ,\n_7_ramloop[8].ram.r }),
         .DOPBDOP(\n_8_ramloop[8].ram.r ),
         .I2(I2[11:0]),
@@ -1305,7 +1305,7 @@ fifo32blk_mem_gen_prim_width__parameterized7 \ramloop[8].ram.r
         .ram_enb(ram_enb),
         .rd_clk(rd_clk),
         .wr_clk(wr_clk));
-fifo32blk_mem_gen_prim_width__parameterized8 \ramloop[9].ram.r 
+fifo64blk_mem_gen_prim_width__parameterized8 \ramloop[9].ram.r 
        (.DOBDO({\n_0_ramloop[9].ram.r ,\n_1_ramloop[9].ram.r ,\n_2_ramloop[9].ram.r ,\n_3_ramloop[9].ram.r ,\n_4_ramloop[9].ram.r ,\n_5_ramloop[9].ram.r ,\n_6_ramloop[9].ram.r ,\n_7_ramloop[9].ram.r }),
         .DOPBDOP(\n_8_ramloop[9].ram.r ),
         .I2(I2[11:0]),
@@ -1320,7 +1320,7 @@ fifo32blk_mem_gen_prim_width__parameterized8 \ramloop[9].ram.r
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_mux" *) 
-module fifo32blk_mem_gen_mux__parameterized0
+module fifo64blk_mem_gen_mux__parameterized0
    (D,
     DOBDO,
     I1,
@@ -2184,7 +2184,7 @@ FDRE #(
         .R(\<const0> ));
 endmodule
 
-module fifo32blk_mem_gen_prim_width
+module fifo64blk_mem_gen_prim_width
    (D,
     wr_clk,
     rd_clk,
@@ -2217,7 +2217,7 @@ module fifo32blk_mem_gen_prim_width
   wire tmp_ram_rd_en;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6 \v6_noinit.ram 
        (.D(D),
         .I1(I1),
         .I2(I2),
@@ -2231,7 +2231,7 @@ fifo32blk_mem_gen_prim_wrapper_v6 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized0
+module fifo64blk_mem_gen_prim_width__parameterized0
    (DOBDO,
     DOPBDOP,
     I3,
@@ -2267,7 +2267,7 @@ module fifo32blk_mem_gen_prim_width__parameterized0
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized0 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized0 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2282,7 +2282,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized0 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized1
+module fifo64blk_mem_gen_prim_width__parameterized1
    (DOBDO,
     DOPBDOP,
     I5,
@@ -2318,7 +2318,7 @@ module fifo32blk_mem_gen_prim_width__parameterized1
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized1 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized1 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2333,7 +2333,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized1 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized10
+module fifo64blk_mem_gen_prim_width__parameterized10
    (DOBDO,
     DOPBDOP,
     I7,
@@ -2369,7 +2369,7 @@ module fifo32blk_mem_gen_prim_width__parameterized10
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized10 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized10 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2384,7 +2384,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized10 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized11
+module fifo64blk_mem_gen_prim_width__parameterized11
    (DOBDO,
     DOPBDOP,
     ram_ena,
@@ -2420,7 +2420,7 @@ module fifo32blk_mem_gen_prim_width__parameterized11
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized11 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized11 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2435,7 +2435,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized11 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized12
+module fifo64blk_mem_gen_prim_width__parameterized12
    (I26,
     I30,
     I3,
@@ -2471,7 +2471,7 @@ module fifo32blk_mem_gen_prim_width__parameterized12
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized12 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized12 \v6_noinit.ram 
        (.I2(I2),
         .I26(I26),
         .I3(I3),
@@ -2486,7 +2486,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized12 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized13
+module fifo64blk_mem_gen_prim_width__parameterized13
    (DOBDO,
     DOPBDOP,
     I5,
@@ -2522,7 +2522,7 @@ module fifo32blk_mem_gen_prim_width__parameterized13
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized13 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized13 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2537,7 +2537,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized13 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized14
+module fifo64blk_mem_gen_prim_width__parameterized14
    (DOBDO,
     DOPBDOP,
     I7,
@@ -2573,7 +2573,7 @@ module fifo32blk_mem_gen_prim_width__parameterized14
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized14 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized14 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2588,7 +2588,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized14 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized15
+module fifo64blk_mem_gen_prim_width__parameterized15
    (I23,
     I27,
     ram_ena,
@@ -2624,7 +2624,7 @@ module fifo32blk_mem_gen_prim_width__parameterized15
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized15 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized15 \v6_noinit.ram 
        (.I2(I2),
         .I23(I23),
         .I27(I27),
@@ -2639,7 +2639,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized15 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized16
+module fifo64blk_mem_gen_prim_width__parameterized16
    (DOBDO,
     DOPBDOP,
     I3,
@@ -2675,7 +2675,7 @@ module fifo32blk_mem_gen_prim_width__parameterized16
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized16 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized16 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2690,7 +2690,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized16 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized17
+module fifo64blk_mem_gen_prim_width__parameterized17
    (DOBDO,
     DOPBDOP,
     I5,
@@ -2726,7 +2726,7 @@ module fifo32blk_mem_gen_prim_width__parameterized17
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized17 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized17 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2741,7 +2741,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized17 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized18
+module fifo64blk_mem_gen_prim_width__parameterized18
    (I32,
     I36,
     I7,
@@ -2777,7 +2777,7 @@ module fifo32blk_mem_gen_prim_width__parameterized18
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized18 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized18 \v6_noinit.ram 
        (.I2(I2),
         .I32(I32),
         .I36(I36),
@@ -2792,7 +2792,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized18 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized19
+module fifo64blk_mem_gen_prim_width__parameterized19
    (I31,
     I35,
     ram_ena,
@@ -2828,7 +2828,7 @@ module fifo32blk_mem_gen_prim_width__parameterized19
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized19 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized19 \v6_noinit.ram 
        (.I2(I2),
         .I31(I31),
         .I35(I35),
@@ -2843,7 +2843,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized19 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized2
+module fifo64blk_mem_gen_prim_width__parameterized2
    (DOBDO,
     DOPBDOP,
     I7,
@@ -2879,7 +2879,7 @@ module fifo32blk_mem_gen_prim_width__parameterized2
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized2 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized2 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2894,7 +2894,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized2 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized20
+module fifo64blk_mem_gen_prim_width__parameterized20
    (DOBDO,
     DOPBDOP,
     I3,
@@ -2930,7 +2930,7 @@ module fifo32blk_mem_gen_prim_width__parameterized20
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized20 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized20 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2945,7 +2945,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized20 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized21
+module fifo64blk_mem_gen_prim_width__parameterized21
    (DOBDO,
     DOPBDOP,
     I5,
@@ -2981,7 +2981,7 @@ module fifo32blk_mem_gen_prim_width__parameterized21
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized21 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized21 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -2996,7 +2996,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized21 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized22
+module fifo64blk_mem_gen_prim_width__parameterized22
    (I40,
     I44,
     I7,
@@ -3032,7 +3032,7 @@ module fifo32blk_mem_gen_prim_width__parameterized22
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized22 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized22 \v6_noinit.ram 
        (.I2(I2),
         .I40(I40),
         .I44(I44),
@@ -3047,7 +3047,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized22 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized23
+module fifo64blk_mem_gen_prim_width__parameterized23
    (DOBDO,
     DOPBDOP,
     ram_ena,
@@ -3083,7 +3083,7 @@ module fifo32blk_mem_gen_prim_width__parameterized23
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized23 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized23 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3098,7 +3098,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized23 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized24
+module fifo64blk_mem_gen_prim_width__parameterized24
    (DOBDO,
     DOPBDOP,
     I3,
@@ -3134,7 +3134,7 @@ module fifo32blk_mem_gen_prim_width__parameterized24
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized24 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized24 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3149,7 +3149,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized24 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized25
+module fifo64blk_mem_gen_prim_width__parameterized25
    (DOBDO,
     DOPBDOP,
     I5,
@@ -3185,7 +3185,7 @@ module fifo32blk_mem_gen_prim_width__parameterized25
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized25 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized25 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3200,7 +3200,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized25 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized26
+module fifo64blk_mem_gen_prim_width__parameterized26
    (DOBDO,
     DOPBDOP,
     I7,
@@ -3236,7 +3236,7 @@ module fifo32blk_mem_gen_prim_width__parameterized26
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized26 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized26 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3251,7 +3251,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized26 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized27
+module fifo64blk_mem_gen_prim_width__parameterized27
    (I47,
     I51,
     ram_ena,
@@ -3287,7 +3287,7 @@ module fifo32blk_mem_gen_prim_width__parameterized27
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized27 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized27 \v6_noinit.ram 
        (.I2(I2),
         .I47(I47),
         .I51(I51),
@@ -3302,7 +3302,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized27 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized3
+module fifo64blk_mem_gen_prim_width__parameterized3
    (DOBDO,
     DOPBDOP,
     ram_ena,
@@ -3338,7 +3338,7 @@ module fifo32blk_mem_gen_prim_width__parameterized3
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized3 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized3 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3353,7 +3353,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized3 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized4
+module fifo64blk_mem_gen_prim_width__parameterized4
    (DOBDO,
     DOPBDOP,
     I3,
@@ -3389,7 +3389,7 @@ module fifo32blk_mem_gen_prim_width__parameterized4
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized4 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized4 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3404,7 +3404,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized4 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized5
+module fifo64blk_mem_gen_prim_width__parameterized5
    (DOBDO,
     DOPBDOP,
     I5,
@@ -3440,7 +3440,7 @@ module fifo32blk_mem_gen_prim_width__parameterized5
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized5 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized5 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3455,7 +3455,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized5 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized6
+module fifo64blk_mem_gen_prim_width__parameterized6
    (DOBDO,
     DOPBDOP,
     I7,
@@ -3491,7 +3491,7 @@ module fifo32blk_mem_gen_prim_width__parameterized6
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized6 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized6 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3506,7 +3506,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized6 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized7
+module fifo64blk_mem_gen_prim_width__parameterized7
    (DOBDO,
     DOPBDOP,
     ram_ena,
@@ -3542,7 +3542,7 @@ module fifo32blk_mem_gen_prim_width__parameterized7
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized7 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized7 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3557,7 +3557,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized7 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized8
+module fifo64blk_mem_gen_prim_width__parameterized8
    (DOBDO,
     DOPBDOP,
     I3,
@@ -3593,7 +3593,7 @@ module fifo32blk_mem_gen_prim_width__parameterized8
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized8 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized8 \v6_noinit.ram 
        (.DOBDO(DOBDO),
         .DOPBDOP(DOPBDOP),
         .I2(I2),
@@ -3608,7 +3608,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized8 \v6_noinit.ram
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module fifo32blk_mem_gen_prim_width__parameterized9
+module fifo64blk_mem_gen_prim_width__parameterized9
    (I17,
     I21,
     I5,
@@ -3644,7 +3644,7 @@ module fifo32blk_mem_gen_prim_width__parameterized9
   wire rd_clk;
   wire wr_clk;
 
-fifo32blk_mem_gen_prim_wrapper_v6__parameterized9 \v6_noinit.ram 
+fifo64blk_mem_gen_prim_wrapper_v6__parameterized9 \v6_noinit.ram 
        (.I17(I17),
         .I2(I2),
         .I21(I21),
@@ -3658,7 +3658,7 @@ fifo32blk_mem_gen_prim_wrapper_v6__parameterized9 \v6_noinit.ram
         .wr_clk(wr_clk));
 endmodule
 
-module fifo32blk_mem_gen_prim_wrapper_v6
+module fifo64blk_mem_gen_prim_wrapper_v6
    (D,
     wr_clk,
     rd_clk,
@@ -3831,7 +3831,7 @@ GND GND
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized0
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized0
    (DOBDO,
     DOPBDOP,
     I3,
@@ -4102,7 +4102,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized1
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized1
    (DOBDO,
     DOPBDOP,
     I5,
@@ -4373,7 +4373,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized10
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized10
    (DOBDO,
     DOPBDOP,
     I7,
@@ -4644,7 +4644,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized11
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized11
    (DOBDO,
     DOPBDOP,
     ram_ena,
@@ -4915,7 +4915,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized12
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized12
    (I26,
     I30,
     I3,
@@ -5186,7 +5186,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized13
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized13
    (DOBDO,
     DOPBDOP,
     I5,
@@ -5457,7 +5457,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized14
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized14
    (DOBDO,
     DOPBDOP,
     I7,
@@ -5728,7 +5728,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized15
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized15
    (I23,
     I27,
     ram_ena,
@@ -5999,7 +5999,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized16
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized16
    (DOBDO,
     DOPBDOP,
     I3,
@@ -6270,7 +6270,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized17
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized17
    (DOBDO,
     DOPBDOP,
     I5,
@@ -6541,7 +6541,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized18
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized18
    (I32,
     I36,
     I7,
@@ -6812,7 +6812,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized19
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized19
    (I31,
     I35,
     ram_ena,
@@ -7083,7 +7083,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized2
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized2
    (DOBDO,
     DOPBDOP,
     I7,
@@ -7354,7 +7354,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized20
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized20
    (DOBDO,
     DOPBDOP,
     I3,
@@ -7625,7 +7625,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized21
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized21
    (DOBDO,
     DOPBDOP,
     I5,
@@ -7896,7 +7896,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized22
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized22
    (I40,
     I44,
     I7,
@@ -8167,7 +8167,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized23
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized23
    (DOBDO,
     DOPBDOP,
     ram_ena,
@@ -8438,7 +8438,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized24
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized24
    (DOBDO,
     DOPBDOP,
     I3,
@@ -8709,7 +8709,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized25
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized25
    (DOBDO,
     DOPBDOP,
     I5,
@@ -8980,7 +8980,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized26
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized26
    (DOBDO,
     DOPBDOP,
     I7,
@@ -9251,7 +9251,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized27
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized27
    (I47,
     I51,
     ram_ena,
@@ -9522,7 +9522,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized3
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized3
    (DOBDO,
     DOPBDOP,
     ram_ena,
@@ -9793,7 +9793,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized4
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized4
    (DOBDO,
     DOPBDOP,
     I3,
@@ -10064,7 +10064,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized5
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized5
    (DOBDO,
     DOPBDOP,
     I5,
@@ -10335,7 +10335,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized6
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized6
    (DOBDO,
     DOPBDOP,
     I7,
@@ -10606,7 +10606,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized7
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized7
    (DOBDO,
     DOPBDOP,
     ram_ena,
@@ -10877,7 +10877,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized8
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized8
    (DOBDO,
     DOPBDOP,
     I3,
@@ -11148,7 +11148,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_v6" *) 
-module fifo32blk_mem_gen_prim_wrapper_v6__parameterized9
+module fifo64blk_mem_gen_prim_wrapper_v6__parameterized9
    (I17,
     I21,
     I5,
@@ -11418,7 +11418,7 @@ VCC VCC
        (.P(\<const1> ));
 endmodule
 
-module fifo32blk_mem_gen_top
+module fifo64blk_mem_gen_top
    (D,
     wr_clk,
     rd_clk,
@@ -11481,7 +11481,7 @@ module fifo32blk_mem_gen_top
   wire tmp_ram_rd_en;
   wire wr_clk;
 
-fifo32blk_mem_gen_generic_cstr \valid.cstr 
+fifo64blk_mem_gen_generic_cstr \valid.cstr 
        (.D(D),
         .I1(I1),
         .I2(I2),
@@ -11504,7 +11504,7 @@ fifo32blk_mem_gen_generic_cstr \valid.cstr
         .wr_clk(wr_clk));
 endmodule
 
-module fifo32blk_mem_gen_v8_0
+module fifo64blk_mem_gen_v8_0
    (D,
     wr_clk,
     rd_clk,
@@ -11567,7 +11567,7 @@ module fifo32blk_mem_gen_v8_0
   wire tmp_ram_rd_en;
   wire wr_clk;
 
-fifo32blk_mem_gen_v8_0_synth inst_blk_mem_gen
+fifo64blk_mem_gen_v8_0_synth inst_blk_mem_gen
        (.D(D),
         .I1(I1),
         .I2(I2),
@@ -11590,7 +11590,7 @@ fifo32blk_mem_gen_v8_0_synth inst_blk_mem_gen
         .wr_clk(wr_clk));
 endmodule
 
-module fifo32blk_mem_gen_v8_0_synth
+module fifo64blk_mem_gen_v8_0_synth
    (D,
     wr_clk,
     rd_clk,
@@ -11653,7 +11653,7 @@ module fifo32blk_mem_gen_v8_0_synth
   wire tmp_ram_rd_en;
   wire wr_clk;
 
-fifo32blk_mem_gen_top \gnativebmg.native_blk_mem_gen 
+fifo64blk_mem_gen_top \gnativebmg.native_blk_mem_gen 
        (.D(D),
         .I1(I1),
         .I2(I2),
@@ -11676,7 +11676,7 @@ fifo32blk_mem_gen_top \gnativebmg.native_blk_mem_gen
         .wr_clk(wr_clk));
 endmodule
 
-module fifo32clk_x_pntrs
+module fifo64clk_x_pntrs
    (v1_reg,
     v1_reg_0,
     O1,
@@ -11871,22 +11871,22 @@ LUT4 #(
         .I2(p_1_out[13]),
         .I3(out[13]),
         .O(v1_reg_0[6]));
-fifo32synchronizer_ff \gsync_stage[1].rd_stg_inst 
+fifo64synchronizer_ff \gsync_stage[1].rd_stg_inst 
        (.I1(wr_pntr_gc),
         .I2(I2),
         .Q(Q_0),
         .rd_clk(rd_clk));
-fifo32synchronizer_ff_3 \gsync_stage[1].wr_stg_inst 
+fifo64synchronizer_ff_3 \gsync_stage[1].wr_stg_inst 
        (.I1(rd_pntr_gc),
         .I3(I3),
         .Q({\n_0_gsync_stage[1].wr_stg_inst ,\n_1_gsync_stage[1].wr_stg_inst ,\n_2_gsync_stage[1].wr_stg_inst ,\n_3_gsync_stage[1].wr_stg_inst ,\n_4_gsync_stage[1].wr_stg_inst ,\n_5_gsync_stage[1].wr_stg_inst ,\n_6_gsync_stage[1].wr_stg_inst ,\n_7_gsync_stage[1].wr_stg_inst ,\n_8_gsync_stage[1].wr_stg_inst ,\n_9_gsync_stage[1].wr_stg_inst ,\n_10_gsync_stage[1].wr_stg_inst ,\n_11_gsync_stage[1].wr_stg_inst ,\n_12_gsync_stage[1].wr_stg_inst ,\n_13_gsync_stage[1].wr_stg_inst }),
         .wr_clk(wr_clk));
-fifo32synchronizer_ff_4 \gsync_stage[2].rd_stg_inst 
+fifo64synchronizer_ff_4 \gsync_stage[2].rd_stg_inst 
        (.D(Q_0),
         .I2(I2),
         .p_0_in(p_0_in),
         .rd_clk(rd_clk));
-fifo32synchronizer_ff_5 \gsync_stage[2].wr_stg_inst 
+fifo64synchronizer_ff_5 \gsync_stage[2].wr_stg_inst 
        (.D({\n_0_gsync_stage[1].wr_stg_inst ,\n_1_gsync_stage[1].wr_stg_inst ,\n_2_gsync_stage[1].wr_stg_inst ,\n_3_gsync_stage[1].wr_stg_inst ,\n_4_gsync_stage[1].wr_stg_inst ,\n_5_gsync_stage[1].wr_stg_inst ,\n_6_gsync_stage[1].wr_stg_inst ,\n_7_gsync_stage[1].wr_stg_inst ,\n_8_gsync_stage[1].wr_stg_inst ,\n_9_gsync_stage[1].wr_stg_inst ,\n_10_gsync_stage[1].wr_stg_inst ,\n_11_gsync_stage[1].wr_stg_inst ,\n_12_gsync_stage[1].wr_stg_inst ,\n_13_gsync_stage[1].wr_stg_inst }),
         .I3(I3),
         .O1({\n_1_gsync_stage[2].wr_stg_inst ,\n_2_gsync_stage[2].wr_stg_inst ,\n_3_gsync_stage[2].wr_stg_inst ,\n_4_gsync_stage[2].wr_stg_inst ,\n_5_gsync_stage[2].wr_stg_inst ,\n_6_gsync_stage[2].wr_stg_inst ,\n_7_gsync_stage[2].wr_stg_inst ,\n_8_gsync_stage[2].wr_stg_inst ,\n_9_gsync_stage[2].wr_stg_inst ,\n_10_gsync_stage[2].wr_stg_inst ,\n_11_gsync_stage[2].wr_stg_inst ,\n_12_gsync_stage[2].wr_stg_inst ,\n_13_gsync_stage[2].wr_stg_inst }),
@@ -12522,7 +12522,7 @@ FDCE #(
         .Q(wr_pntr_gc[9]));
 endmodule
 
-module fifo32compare
+module fifo64compare
    (comp1,
     I1,
     I2);
@@ -12631,7 +12631,7 @@ LUT4 #(
 endmodule
 
 (* ORIG_REF_NAME = "compare" *) 
-module fifo32compare_0
+module fifo64compare_0
    (ram_full_i,
     wr_en,
     I1,
@@ -12762,7 +12762,7 @@ LUT5 #(
 endmodule
 
 (* ORIG_REF_NAME = "compare" *) 
-module fifo32compare_1
+module fifo64compare_1
    (comp0,
     v1_reg);
   output comp0;
@@ -12811,7 +12811,7 @@ GND \gmux.gm[4].gms.ms_CARRY4_GND
 endmodule
 
 (* ORIG_REF_NAME = "compare" *) 
-module fifo32compare_2
+module fifo64compare_2
    (comp1,
     v1_reg_0);
   output comp1;
@@ -12859,7 +12859,7 @@ GND \gmux.gm[4].gms.ms_CARRY4_GND
        (.G(lopt_1));
 endmodule
 
-module fifo32fifo_generator_ramfifo
+module fifo64fifo_generator_ramfifo
    (dout,
     empty,
     full,
@@ -12915,7 +12915,7 @@ module fifo32fifo_generator_ramfifo
   wire wr_en;
   wire [0:0]wr_rst_i;
 
-fifo32clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx 
+fifo64clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx 
        (.I1(p_8_out),
         .I2(rd_rst_i[1]),
         .I3(wr_rst_i),
@@ -12926,7 +12926,7 @@ fifo32clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx
         .v1_reg(\gras.rsts/c0/v1_reg ),
         .v1_reg_0(\gras.rsts/c1/v1_reg ),
         .wr_clk(wr_clk));
-fifo32rd_logic \gntv_or_sync_fifo.gl0.rd 
+fifo64rd_logic \gntv_or_sync_fifo.gl0.rd 
        (.E(p_14_out),
         .O1(p_19_out),
         .O2(\n_33_gntv_or_sync_fifo.gl0.rd ),
@@ -12943,7 +12943,7 @@ fifo32rd_logic \gntv_or_sync_fifo.gl0.rd
         .tmp_ram_rd_en(tmp_ram_rd_en),
         .v1_reg(\gras.rsts/c0/v1_reg ),
         .v1_reg_0(\gras.rsts/c1/v1_reg ));
-fifo32wr_logic \gntv_or_sync_fifo.gl0.wr 
+fifo64wr_logic \gntv_or_sync_fifo.gl0.wr 
        (.E(\n_1_gntv_or_sync_fifo.gl0.wr ),
         .I1(RST),
         .I2(p_0_out),
@@ -12958,7 +12958,7 @@ fifo32wr_logic \gntv_or_sync_fifo.gl0.wr
         .rst_full_gen_i(rst_full_gen_i),
         .wr_clk(wr_clk),
         .wr_en(wr_en));
-fifo32memory \gntv_or_sync_fifo.mem 
+fifo64memory \gntv_or_sync_fifo.mem 
        (.E(p_14_out),
         .I1(\n_2_gntv_or_sync_fifo.gl0.wr ),
         .I2(p_8_out),
@@ -12980,7 +12980,7 @@ fifo32memory \gntv_or_sync_fifo.mem
         .rd_clk(rd_clk),
         .tmp_ram_rd_en(tmp_ram_rd_en),
         .wr_clk(wr_clk));
-fifo32reset_blk_ramfifo rstblk
+fifo64reset_blk_ramfifo rstblk
        (.O1({RD_RST,rd_rst_i}),
         .Q({RST,wr_rst_i}),
         .rd_clk(rd_clk),
@@ -12990,7 +12990,7 @@ fifo32reset_blk_ramfifo rstblk
         .wr_clk(wr_clk));
 endmodule
 
-module fifo32fifo_generator_top
+module fifo64fifo_generator_top
    (dout,
     empty,
     full,
@@ -13020,7 +13020,7 @@ module fifo32fifo_generator_top
   wire wr_clk;
   wire wr_en;
 
-fifo32fifo_generator_ramfifo \grf.rf 
+fifo64fifo_generator_ramfifo \grf.rf 
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -13096,7 +13096,7 @@ endmodule
 (* C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH = "1022" *) (* C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH = "1022" *) (* C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS = "1022" *) 
 (* C_REG_SLICE_MODE_WACH = "0" *) (* C_REG_SLICE_MODE_WDCH = "0" *) (* C_REG_SLICE_MODE_WRCH = "0" *) 
 (* C_REG_SLICE_MODE_RACH = "0" *) (* C_REG_SLICE_MODE_RDCH = "0" *) (* C_REG_SLICE_MODE_AXIS = "0" *) 
-module fifo32fifo_generator_v11_0
+module fifo64fifo_generator_v11_0
    (backup,
     backup_marker,
     clk,
@@ -14203,7 +14203,7 @@ GND GND
        (.G(\<const0> ));
 VCC VCC
        (.P(\<const1> ));
-fifo32fifo_generator_v11_0_synth inst_fifo_gen
+fifo64fifo_generator_v11_0_synth inst_fifo_gen
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -14215,7 +14215,7 @@ fifo32fifo_generator_v11_0_synth inst_fifo_gen
         .wr_en(wr_en));
 endmodule
 
-module fifo32fifo_generator_v11_0_synth
+module fifo64fifo_generator_v11_0_synth
    (dout,
     empty,
     full,
@@ -14245,7 +14245,7 @@ module fifo32fifo_generator_v11_0_synth
   wire wr_clk;
   wire wr_en;
 
-fifo32fifo_generator_top \gconvfifo.rf 
+fifo64fifo_generator_top \gconvfifo.rf 
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -14257,7 +14257,7 @@ fifo32fifo_generator_top \gconvfifo.rf
         .wr_en(wr_en));
 endmodule
 
-module fifo32memory
+module fifo64memory
    (dout,
     wr_clk,
     rd_clk,
@@ -14324,7 +14324,7 @@ module fifo32memory
   wire tmp_ram_rd_en;
   wire wr_clk;
 
-fifo32blk_mem_gen_v8_0 \gbm.gbmg.gbmga.ngecc.bmg 
+fifo64blk_mem_gen_v8_0 \gbm.gbmg.gbmga.ngecc.bmg 
        (.D(\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/din_2D[3]_0 ),
         .I1(I1),
         .I2(I2),
@@ -14859,7 +14859,7 @@ FDRE #(
         .R(Q));
 endmodule
 
-module fifo32rd_bin_cntr
+module fifo64rd_bin_cntr
    (out,
     ram_enb,
     Q,
@@ -15315,7 +15315,7 @@ CARRY4 \gc0.count_reg[8]_i_1
         .Q(out[9]));
 endmodule
 
-module fifo32rd_fwft
+module fifo64rd_fwft
    (empty,
     E,
     tmp_ram_rd_en,
@@ -15458,7 +15458,7 @@ LUT6 #(
         .O(O1));
 endmodule
 
-module fifo32rd_logic
+module fifo64rd_logic
    (p_17_out,
     empty,
     out,
@@ -15512,7 +15512,7 @@ module fifo32rd_logic
   wire [6:0]v1_reg;
   wire [6:0]v1_reg_0;
 
-fifo32rd_fwft \gr1.rfwft 
+fifo64rd_fwft \gr1.rfwft 
        (.E(E),
         .I1(p_17_out),
         .O1(\n_3_gr1.rfwft ),
@@ -15524,7 +15524,7 @@ fifo32rd_fwft \gr1.rfwft
         .rd_clk(rd_clk),
         .rd_en(rd_en),
         .tmp_ram_rd_en(tmp_ram_rd_en));
-fifo32rd_status_flags_as \gras.rsts 
+fifo64rd_status_flags_as \gras.rsts 
        (.I1(\n_3_gr1.rfwft ),
         .Q(Q[1]),
         .comp0(comp0),
@@ -15533,7 +15533,7 @@ fifo32rd_status_flags_as \gras.rsts
         .rd_clk(rd_clk),
         .v1_reg(v1_reg),
         .v1_reg_0(v1_reg_0));
-fifo32rd_bin_cntr rpntr
+fifo64rd_bin_cntr rpntr
        (.E(p_13_out),
         .I1(Q),
         .I2(p_17_out),
@@ -15546,7 +15546,7 @@ fifo32rd_bin_cntr rpntr
         .rd_clk(rd_clk));
 endmodule
 
-module fifo32rd_status_flags_as
+module fifo64rd_status_flags_as
    (comp0,
     comp1,
     p_17_out,
@@ -15576,10 +15576,10 @@ module fifo32rd_status_flags_as
 
 VCC VCC
        (.P(\<const1> ));
-fifo32compare_1 c0
+fifo64compare_1 c0
        (.comp0(comp0),
         .v1_reg(v1_reg));
-fifo32compare_2 c1
+fifo64compare_2 c1
        (.comp1(comp1),
         .v1_reg_0(v1_reg_0));
 (* equivalent_register_removal = "no" *) 
@@ -15593,7 +15593,7 @@ fifo32compare_2 c1
         .Q(p_17_out));
 endmodule
 
-module fifo32reset_blk_ramfifo
+module fifo64reset_blk_ramfifo
    (rst_full_gen_i,
     rst_d2,
     Q,
@@ -15800,7 +15800,7 @@ LUT2 #(
         .Q(Q[1]));
 endmodule
 
-module fifo32synchronizer_ff
+module fifo64synchronizer_ff
    (Q,
     I1,
     rd_clk,
@@ -15961,7 +15961,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module fifo32synchronizer_ff_3
+module fifo64synchronizer_ff_3
    (Q,
     I1,
     wr_clk,
@@ -16122,7 +16122,7 @@ VCC VCC
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module fifo32synchronizer_ff_4
+module fifo64synchronizer_ff_4
    (p_0_in,
     D,
     rd_clk,
@@ -16407,7 +16407,7 @@ LUT6 #(
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module fifo32synchronizer_ff_5
+module fifo64synchronizer_ff_5
    (Q,
     O1,
     D,
@@ -16694,7 +16694,7 @@ LUT6 #(
         .O(O1[9]));
 endmodule
 
-module fifo32wr_bin_cntr
+module fifo64wr_bin_cntr
    (out,
     ram_ena,
     Q,
@@ -17264,7 +17264,7 @@ CARRY4 \gic0.gc0.count_reg[8]_i_1
         .Q(out[9]));
 endmodule
 
-module fifo32wr_logic
+module fifo64wr_logic
    (full,
     E,
     O1,
@@ -17312,7 +17312,7 @@ module fifo32wr_logic
   wire [13:0]wr_pntr_plus1;
   wire [13:0]wr_pntr_plus2;
 
-fifo32wr_status_flags_as \gwas.wsts 
+fifo64wr_status_flags_as \gwas.wsts 
        (.E(E),
         .I1(wr_pntr_plus1),
         .I2(I2),
@@ -17324,7 +17324,7 @@ fifo32wr_status_flags_as \gwas.wsts
         .rst_full_gen_i(rst_full_gen_i),
         .wr_clk(wr_clk),
         .wr_en(wr_en));
-fifo32wr_bin_cntr wpntr
+fifo64wr_bin_cntr wpntr
        (.I1(I1),
         .O1(wr_pntr_plus1),
         .O2(O2),
@@ -17339,7 +17339,7 @@ fifo32wr_bin_cntr wpntr
         .wr_en(wr_en));
 endmodule
 
-module fifo32wr_status_flags_as
+module fifo64wr_status_flags_as
    (full,
     p_0_out,
     E,
@@ -17392,11 +17392,11 @@ LUT2 #(
         .O(E));
 VCC VCC
        (.P(\<const1> ));
-fifo32compare c1
+fifo64compare c1
        (.I1(I1),
         .I2(I2),
         .comp1(comp1));
-fifo32compare_0 c2
+fifo64compare_0 c2
        (.I1(p_0_out),
         .I2(I2),
         .comp1(comp1),

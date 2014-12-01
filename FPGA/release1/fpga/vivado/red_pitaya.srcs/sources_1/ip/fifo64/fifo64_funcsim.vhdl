@@ -1,18 +1,18 @@
 -- Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2013.3 (lin32) Build 329390 Wed Oct 16 18:28:36 MDT 2013
--- Date        : Mon Dec  1 12:50:09 2014
+-- Date        : Mon Dec  1 13:45:06 2014
 -- Host        : elegen02 running 32-bit Debian GNU/Linux 6.0.9 (squeeze)
 -- Command     : write_vhdl -force -mode funcsim
---               /Network/Servers/elegen04.roma1.infn.it/Volumes/MacintoshHD2/Users/paolocretaro/Xilinx/RedPitaya/FPGA/release1/fpga/vivado/red_pitaya.srcs/sources_1/ip/fifo32/fifo32_funcsim.vhdl
--- Design      : fifo32
+--               /Network/Servers/elegen04.roma1.infn.it/Volumes/MacintoshHD2/Users/paolocretaro/Xilinx/RedPitaya/FPGA/release1/fpga/vivado/red_pitaya.srcs/sources_1/ip/fifo64/fifo64_funcsim.vhdl
+-- Design      : fifo64
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z010clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_mux__parameterized0\ is
+entity \fifo64blk_mem_gen_mux__parameterized0\ is
   port (
     D : out STD_LOGIC_VECTOR ( 62 downto 0 );
     DOBDO : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -78,10 +78,10 @@ entity \fifo32blk_mem_gen_mux__parameterized0\ is
     rd_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_mux__parameterized0\ : entity is "blk_mem_gen_mux";
-end \fifo32blk_mem_gen_mux__parameterized0\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_mux__parameterized0\ : entity is "blk_mem_gen_mux";
+end \fifo64blk_mem_gen_mux__parameterized0\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_mux__parameterized0\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_mux__parameterized0\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \n_0_no_softecc_sel_reg.ce_pri.sel_pipe[0]_i_1\ : STD_LOGIC;
@@ -964,7 +964,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32blk_mem_gen_prim_wrapper_v6 is
+entity fifo64blk_mem_gen_prim_wrapper_v6 is
   port (
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC;
@@ -977,9 +977,9 @@ entity fifo32blk_mem_gen_prim_wrapper_v6 is
     din : in STD_LOGIC_VECTOR ( 0 to 0 );
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end fifo32blk_mem_gen_prim_wrapper_v6;
+end fifo64blk_mem_gen_prim_wrapper_v6;
 
-architecture STRUCTURE of fifo32blk_mem_gen_prim_wrapper_v6 is
+architecture STRUCTURE of fifo64blk_mem_gen_prim_wrapper_v6 is
   signal \<const0>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_REGCEAREGCE_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_REGCEB_UNCONNECTED\ : STD_LOGIC;
@@ -1162,7 +1162,7 @@ GND: unisim.vcomponents.GND
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized0\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized0\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1177,10 +1177,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized0\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized0\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized0\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized0\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized0\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized0\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized0\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -1498,7 +1498,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized1\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized1\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1513,10 +1513,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized1\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized1\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized1\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized1\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized1\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized1\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized1\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -1834,7 +1834,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized10\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized10\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1849,10 +1849,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized10\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized10\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized10\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized10\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized10\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized10\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized10\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -2170,7 +2170,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized11\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized11\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2185,10 +2185,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized11\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized11\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized11\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized11\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized11\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized11\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized11\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -2506,7 +2506,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized12\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized12\ is
   port (
     I26 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I30 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2521,10 +2521,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized12\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized12\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized12\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized12\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized12\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized12\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized12\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -2842,7 +2842,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized13\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized13\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2857,10 +2857,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized13\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized13\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized13\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized13\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized13\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized13\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized13\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -3178,7 +3178,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized14\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized14\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3193,10 +3193,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized14\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized14\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized14\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized14\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized14\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized14\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized14\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -3514,7 +3514,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized15\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized15\ is
   port (
     I23 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I27 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3529,10 +3529,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized15\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized15\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized15\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized15\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized15\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized15\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized15\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -3850,7 +3850,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized16\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized16\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3865,10 +3865,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized16\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized16\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized16\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized16\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized16\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized16\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized16\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -4186,7 +4186,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized17\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized17\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4201,10 +4201,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized17\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized17\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized17\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized17\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized17\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized17\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized17\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -4522,7 +4522,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized18\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized18\ is
   port (
     I32 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I36 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4537,10 +4537,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized18\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized18\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized18\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized18\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized18\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized18\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized18\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -4858,7 +4858,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized19\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized19\ is
   port (
     I31 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I35 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4873,10 +4873,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized19\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized19\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized19\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized19\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized19\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized19\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized19\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -5194,7 +5194,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized2\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized2\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -5209,10 +5209,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized2\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized2\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized2\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized2\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized2\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized2\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized2\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -5530,7 +5530,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized20\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized20\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -5545,10 +5545,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized20\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized20\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized20\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized20\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized20\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized20\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized20\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -5866,7 +5866,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized21\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized21\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -5881,10 +5881,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized21\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized21\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized21\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized21\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized21\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized21\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized21\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -6202,7 +6202,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized22\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized22\ is
   port (
     I40 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I44 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6217,10 +6217,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized22\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized22\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized22\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized22\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized22\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized22\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized22\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -6538,7 +6538,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized23\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized23\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6553,10 +6553,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized23\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized23\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized23\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized23\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized23\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized23\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized23\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -6874,7 +6874,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized24\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized24\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6889,10 +6889,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized24\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized24\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized24\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized24\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized24\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized24\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized24\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -7210,7 +7210,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized25\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized25\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7225,10 +7225,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized25\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized25\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized25\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized25\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized25\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized25\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized25\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -7546,7 +7546,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized26\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized26\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7561,10 +7561,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized26\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized26\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized26\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized26\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized26\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized26\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized26\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -7882,7 +7882,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized27\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized27\ is
   port (
     I47 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I51 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7897,10 +7897,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized27\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized27\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized27\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized27\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized27\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized27\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized27\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -8218,7 +8218,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized3\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized3\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8233,10 +8233,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized3\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized3\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized3\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized3\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized3\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized3\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized3\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -8554,7 +8554,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized4\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized4\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8569,10 +8569,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized4\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized4\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized4\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized4\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized4\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized4\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized4\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -8890,7 +8890,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized5\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized5\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8905,10 +8905,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized5\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized5\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized5\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized5\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized5\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized5\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized5\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -9226,7 +9226,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized6\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized6\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -9241,10 +9241,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized6\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized6\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized6\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized6\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized6\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized6\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized6\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -9562,7 +9562,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized7\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized7\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -9577,10 +9577,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized7\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized7\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized7\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized7\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized7\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized7\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized7\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -9898,7 +9898,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized8\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized8\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -9913,10 +9913,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized8\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized8\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized8\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized8\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized8\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized8\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized8\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -10234,7 +10234,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized9\ is
+entity \fifo64blk_mem_gen_prim_wrapper_v6__parameterized9\ is
   port (
     I17 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I21 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -10249,10 +10249,10 @@ entity \fifo32blk_mem_gen_prim_wrapper_v6__parameterized9\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized9\ : entity is "blk_mem_gen_prim_wrapper_v6";
-end \fifo32blk_mem_gen_prim_wrapper_v6__parameterized9\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized9\ : entity is "blk_mem_gen_prim_wrapper_v6";
+end \fifo64blk_mem_gen_prim_wrapper_v6__parameterized9\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_wrapper_v6__parameterized9\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_wrapper_v6__parameterized9\ is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \NLW_NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
@@ -10570,15 +10570,15 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32compare is
+entity fifo64compare is
   port (
     comp1 : out STD_LOGIC;
     I1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     I2 : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
-end fifo32compare;
+end fifo64compare;
 
-architecture STRUCTURE of fifo32compare is
+architecture STRUCTURE of fifo64compare is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal lopt : STD_LOGIC;
@@ -10722,7 +10722,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32compare_0 is
+entity fifo64compare_0 is
   port (
     ram_full_i : out STD_LOGIC;
     wr_en : in STD_LOGIC;
@@ -10733,10 +10733,10 @@ entity fifo32compare_0 is
     I2 : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo32compare_0 : entity is "compare";
-end fifo32compare_0;
+  attribute ORIG_REF_NAME of fifo64compare_0 : entity is "compare";
+end fifo64compare_0;
 
-architecture STRUCTURE of fifo32compare_0 is
+architecture STRUCTURE of fifo64compare_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal comp2 : STD_LOGIC;
@@ -10893,16 +10893,16 @@ ram_full_i_i_1: unisim.vcomponents.LUT5
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32compare_1 is
+entity fifo64compare_1 is
   port (
     comp0 : out STD_LOGIC;
     v1_reg : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo32compare_1 : entity is "compare";
-end fifo32compare_1;
+  attribute ORIG_REF_NAME of fifo64compare_1 : entity is "compare";
+end fifo64compare_1;
 
-architecture STRUCTURE of fifo32compare_1 is
+architecture STRUCTURE of fifo64compare_1 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal lopt : STD_LOGIC;
@@ -10968,16 +10968,16 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32compare_2 is
+entity fifo64compare_2 is
   port (
     comp1 : out STD_LOGIC;
     v1_reg_0 : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo32compare_2 : entity is "compare";
-end fifo32compare_2;
+  attribute ORIG_REF_NAME of fifo64compare_2 : entity is "compare";
+end fifo64compare_2;
 
-architecture STRUCTURE of fifo32compare_2 is
+architecture STRUCTURE of fifo64compare_2 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal lopt : STD_LOGIC;
@@ -11043,7 +11043,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32rd_bin_cntr is
+entity fifo64rd_bin_cntr is
   port (
     \out\ : out STD_LOGIC_VECTOR ( 13 downto 0 );
     ram_enb : out STD_LOGIC;
@@ -11056,9 +11056,9 @@ entity fifo32rd_bin_cntr is
     I2 : in STD_LOGIC;
     rd_clk : in STD_LOGIC
   );
-end fifo32rd_bin_cntr;
+end fifo64rd_bin_cntr;
 
-architecture STRUCTURE of fifo32rd_bin_cntr is
+architecture STRUCTURE of fifo64rd_bin_cntr is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -11684,7 +11684,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32rd_fwft is
+entity fifo64rd_fwft is
   port (
     empty : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -11698,9 +11698,9 @@ entity fifo32rd_fwft is
     comp1 : in STD_LOGIC;
     comp0 : in STD_LOGIC
   );
-end fifo32rd_fwft;
+end fifo64rd_fwft;
 
-architecture STRUCTURE of fifo32rd_fwft is
+architecture STRUCTURE of fifo64rd_fwft is
   signal \<const1>\ : STD_LOGIC;
   signal curr_fwft_state : STD_LOGIC_VECTOR ( 0 to 0 );
   signal empty_fwft_fb : STD_LOGIC;
@@ -11847,7 +11847,7 @@ ram_empty_fb_i_i_1: unisim.vcomponents.LUT6
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32reset_blk_ramfifo is
+entity fifo64reset_blk_ramfifo is
   port (
     rst_full_gen_i : out STD_LOGIC;
     rst_d2 : out STD_LOGIC;
@@ -11857,9 +11857,9 @@ entity fifo32reset_blk_ramfifo is
     rd_clk : in STD_LOGIC;
     rst : in STD_LOGIC
   );
-end fifo32reset_blk_ramfifo;
+end fifo64reset_blk_ramfifo;
 
-architecture STRUCTURE of fifo32reset_blk_ramfifo is
+architecture STRUCTURE of fifo64reset_blk_ramfifo is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \n_0_ngwrdrst.grst.rd_rst_asreg_i_1\ : STD_LOGIC;
@@ -12109,16 +12109,16 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32synchronizer_ff is
+entity fifo64synchronizer_ff is
   port (
     Q : out STD_LOGIC_VECTOR ( 13 downto 0 );
     I1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     rd_clk : in STD_LOGIC;
     I2 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end fifo32synchronizer_ff;
+end fifo64synchronizer_ff;
 
-architecture STRUCTURE of fifo32synchronizer_ff is
+architecture STRUCTURE of fifo64synchronizer_ff is
   signal \<const1>\ : STD_LOGIC;
   attribute ASYNC_REG : boolean;
   attribute ASYNC_REG of \Q_reg_reg[0]\ : label is true;
@@ -12312,7 +12312,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32synchronizer_ff_3 is
+entity fifo64synchronizer_ff_3 is
   port (
     Q : out STD_LOGIC_VECTOR ( 13 downto 0 );
     I1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -12320,10 +12320,10 @@ entity fifo32synchronizer_ff_3 is
     I3 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo32synchronizer_ff_3 : entity is "synchronizer_ff";
-end fifo32synchronizer_ff_3;
+  attribute ORIG_REF_NAME of fifo64synchronizer_ff_3 : entity is "synchronizer_ff";
+end fifo64synchronizer_ff_3;
 
-architecture STRUCTURE of fifo32synchronizer_ff_3 is
+architecture STRUCTURE of fifo64synchronizer_ff_3 is
   signal \<const1>\ : STD_LOGIC;
   attribute ASYNC_REG : boolean;
   attribute ASYNC_REG of \Q_reg_reg[0]\ : label is true;
@@ -12517,7 +12517,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32synchronizer_ff_4 is
+entity fifo64synchronizer_ff_4 is
   port (
     p_0_in : out STD_LOGIC_VECTOR ( 13 downto 0 );
     D : in STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -12525,10 +12525,10 @@ entity fifo32synchronizer_ff_4 is
     I2 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo32synchronizer_ff_4 : entity is "synchronizer_ff";
-end fifo32synchronizer_ff_4;
+  attribute ORIG_REF_NAME of fifo64synchronizer_ff_4 : entity is "synchronizer_ff";
+end fifo64synchronizer_ff_4;
 
-architecture STRUCTURE of fifo32synchronizer_ff_4 is
+architecture STRUCTURE of fifo64synchronizer_ff_4 is
   signal \<const1>\ : STD_LOGIC;
   signal \n_0_Q_reg_reg[0]\ : STD_LOGIC;
   signal \n_0_Q_reg_reg[10]\ : STD_LOGIC;
@@ -12888,7 +12888,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32synchronizer_ff_5 is
+entity fifo64synchronizer_ff_5 is
   port (
     Q : out STD_LOGIC_VECTOR ( 0 to 0 );
     O1 : out STD_LOGIC_VECTOR ( 12 downto 0 );
@@ -12897,10 +12897,10 @@ entity fifo32synchronizer_ff_5 is
     I3 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo32synchronizer_ff_5 : entity is "synchronizer_ff";
-end fifo32synchronizer_ff_5;
+  attribute ORIG_REF_NAME of fifo64synchronizer_ff_5 : entity is "synchronizer_ff";
+end fifo64synchronizer_ff_5;
 
-architecture STRUCTURE of fifo32synchronizer_ff_5 is
+architecture STRUCTURE of fifo64synchronizer_ff_5 is
   signal \<const1>\ : STD_LOGIC;
   signal \^o1\ : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal \^q\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -13262,7 +13262,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32wr_bin_cntr is
+entity fifo64wr_bin_cntr is
   port (
     \out\ : out STD_LOGIC_VECTOR ( 13 downto 0 );
     ram_ena : out STD_LOGIC;
@@ -13277,9 +13277,9 @@ entity fifo32wr_bin_cntr is
     wr_clk : in STD_LOGIC;
     I1 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end fifo32wr_bin_cntr;
+end fifo64wr_bin_cntr;
 
-architecture STRUCTURE of fifo32wr_bin_cntr is
+architecture STRUCTURE of fifo64wr_bin_cntr is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \^o1\ : STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -14057,7 +14057,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32blk_mem_gen_prim_width is
+entity fifo64blk_mem_gen_prim_width is
   port (
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC;
@@ -14070,11 +14070,11 @@ entity fifo32blk_mem_gen_prim_width is
     din : in STD_LOGIC_VECTOR ( 0 to 0 );
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end fifo32blk_mem_gen_prim_width;
+end fifo64blk_mem_gen_prim_width;
 
-architecture STRUCTURE of fifo32blk_mem_gen_prim_width is
+architecture STRUCTURE of fifo64blk_mem_gen_prim_width is
 begin
-\v6_noinit.ram\: entity work.fifo32blk_mem_gen_prim_wrapper_v6
+\v6_noinit.ram\: entity work.fifo64blk_mem_gen_prim_wrapper_v6
     port map (
       D(0) => D(0),
       I1 => I1,
@@ -14090,7 +14090,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized0\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized0\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14105,12 +14105,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized0\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized0\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized0\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized0\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized0\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized0\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized0\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized0\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized0\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14127,7 +14127,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized1\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized1\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14142,12 +14142,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized1\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized1\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized1\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized1\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized1\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized1\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized1\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized1\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized1\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14164,7 +14164,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized10\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized10\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14179,12 +14179,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized10\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized10\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized10\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized10\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized10\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized10\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized10\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized10\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized10\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14201,7 +14201,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized11\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized11\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14216,12 +14216,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized11\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized11\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized11\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized11\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized11\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized11\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized11\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized11\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized11\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14238,7 +14238,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized12\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized12\ is
   port (
     I26 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I30 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14253,12 +14253,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized12\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized12\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized12\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized12\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized12\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized12\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized12\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized12\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized12\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I26(7 downto 0) => I26(7 downto 0),
@@ -14275,7 +14275,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized13\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized13\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14290,12 +14290,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized13\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized13\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized13\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized13\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized13\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized13\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized13\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized13\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized13\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14312,7 +14312,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized14\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized14\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14327,12 +14327,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized14\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized14\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized14\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized14\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized14\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized14\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized14\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized14\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized14\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14349,7 +14349,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized15\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized15\ is
   port (
     I23 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I27 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14364,12 +14364,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized15\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized15\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized15\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized15\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized15\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized15\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized15\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized15\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized15\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I23(7 downto 0) => I23(7 downto 0),
@@ -14386,7 +14386,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized16\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized16\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14401,12 +14401,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized16\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized16\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized16\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized16\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized16\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized16\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized16\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized16\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized16\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14423,7 +14423,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized17\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized17\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14438,12 +14438,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized17\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized17\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized17\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized17\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized17\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized17\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized17\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized17\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized17\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14460,7 +14460,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized18\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized18\ is
   port (
     I32 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I36 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14475,12 +14475,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized18\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized18\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized18\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized18\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized18\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized18\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized18\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized18\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized18\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I32(7 downto 0) => I32(7 downto 0),
@@ -14497,7 +14497,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized19\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized19\ is
   port (
     I31 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I35 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14512,12 +14512,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized19\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized19\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized19\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized19\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized19\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized19\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized19\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized19\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized19\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I31(7 downto 0) => I31(7 downto 0),
@@ -14534,7 +14534,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized2\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized2\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14549,12 +14549,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized2\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized2\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized2\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized2\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized2\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized2\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized2\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized2\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized2\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14571,7 +14571,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized20\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized20\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14586,12 +14586,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized20\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized20\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized20\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized20\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized20\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized20\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized20\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized20\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized20\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14608,7 +14608,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized21\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized21\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14623,12 +14623,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized21\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized21\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized21\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized21\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized21\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized21\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized21\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized21\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized21\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14645,7 +14645,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized22\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized22\ is
   port (
     I40 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I44 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14660,12 +14660,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized22\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized22\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized22\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized22\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized22\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized22\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized22\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized22\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized22\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I40(7 downto 0) => I40(7 downto 0),
@@ -14682,7 +14682,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized23\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized23\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14697,12 +14697,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized23\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized23\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized23\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized23\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized23\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized23\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized23\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized23\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized23\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14719,7 +14719,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized24\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized24\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14734,12 +14734,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized24\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized24\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized24\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized24\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized24\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized24\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized24\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized24\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized24\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14756,7 +14756,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized25\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized25\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14771,12 +14771,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized25\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized25\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized25\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized25\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized25\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized25\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized25\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized25\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized25\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14793,7 +14793,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized26\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized26\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14808,12 +14808,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized26\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized26\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized26\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized26\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized26\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized26\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized26\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized26\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized26\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14830,7 +14830,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized27\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized27\ is
   port (
     I47 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I51 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14845,12 +14845,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized27\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized27\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized27\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized27\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized27\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized27\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized27\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized27\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized27\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I47(7 downto 0) => I47(7 downto 0),
@@ -14867,7 +14867,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized3\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized3\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14882,12 +14882,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized3\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized3\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized3\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized3\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized3\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized3\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized3\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized3\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized3\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14904,7 +14904,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized4\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized4\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14919,12 +14919,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized4\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized4\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized4\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized4\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized4\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized4\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized4\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized4\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized4\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14941,7 +14941,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized5\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized5\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14956,12 +14956,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized5\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized5\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized5\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized5\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized5\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized5\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized5\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized5\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized5\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -14978,7 +14978,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized6\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized6\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14993,12 +14993,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized6\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized6\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized6\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized6\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized6\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized6\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized6\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized6\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized6\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -15015,7 +15015,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized7\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized7\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -15030,12 +15030,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized7\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized7\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized7\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized7\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized7\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized7\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized7\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized7\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized7\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -15052,7 +15052,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized8\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized8\ is
   port (
     DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -15067,12 +15067,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized8\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized8\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized8\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized8\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized8\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized8\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized8\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized8\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized8\
     port map (
       DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPBDOP(0) => DOPBDOP(0),
@@ -15089,7 +15089,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity \fifo32blk_mem_gen_prim_width__parameterized9\ is
+entity \fifo64blk_mem_gen_prim_width__parameterized9\ is
   port (
     I17 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     I21 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -15104,12 +15104,12 @@ entity \fifo32blk_mem_gen_prim_width__parameterized9\ is
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \fifo32blk_mem_gen_prim_width__parameterized9\ : entity is "blk_mem_gen_prim_width";
-end \fifo32blk_mem_gen_prim_width__parameterized9\;
+  attribute ORIG_REF_NAME of \fifo64blk_mem_gen_prim_width__parameterized9\ : entity is "blk_mem_gen_prim_width";
+end \fifo64blk_mem_gen_prim_width__parameterized9\;
 
-architecture STRUCTURE of \fifo32blk_mem_gen_prim_width__parameterized9\ is
+architecture STRUCTURE of \fifo64blk_mem_gen_prim_width__parameterized9\ is
 begin
-\v6_noinit.ram\: entity work.\fifo32blk_mem_gen_prim_wrapper_v6__parameterized9\
+\v6_noinit.ram\: entity work.\fifo64blk_mem_gen_prim_wrapper_v6__parameterized9\
     port map (
       I17(7 downto 0) => I17(7 downto 0),
       I2(11 downto 0) => I2(11 downto 0),
@@ -15126,7 +15126,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32clk_x_pntrs is
+entity fifo64clk_x_pntrs is
   port (
     v1_reg : out STD_LOGIC_VECTOR ( 6 downto 0 );
     v1_reg_0 : out STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -15139,9 +15139,9 @@ entity fifo32clk_x_pntrs is
     wr_clk : in STD_LOGIC;
     I3 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end fifo32clk_x_pntrs;
+end fifo64clk_x_pntrs;
 
-architecture STRUCTURE of fifo32clk_x_pntrs is
+architecture STRUCTURE of fifo64clk_x_pntrs is
   signal \<const1>\ : STD_LOGIC;
   signal Q_0 : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal \n_0_gsync_stage[1].wr_stg_inst\ : STD_LOGIC;
@@ -15374,14 +15374,14 @@ VCC: unisim.vcomponents.VCC
       I3 => \out\(13),
       O => v1_reg_0(6)
     );
-\gsync_stage[1].rd_stg_inst\: entity work.fifo32synchronizer_ff
+\gsync_stage[1].rd_stg_inst\: entity work.fifo64synchronizer_ff
     port map (
       I1(13 downto 0) => wr_pntr_gc(13 downto 0),
       I2(0) => I2(0),
       Q(13 downto 0) => Q_0(13 downto 0),
       rd_clk => rd_clk
     );
-\gsync_stage[1].wr_stg_inst\: entity work.fifo32synchronizer_ff_3
+\gsync_stage[1].wr_stg_inst\: entity work.fifo64synchronizer_ff_3
     port map (
       I1(13 downto 0) => rd_pntr_gc(13 downto 0),
       I3(0) => I3(0),
@@ -15401,14 +15401,14 @@ VCC: unisim.vcomponents.VCC
       Q(0) => \n_13_gsync_stage[1].wr_stg_inst\,
       wr_clk => wr_clk
     );
-\gsync_stage[2].rd_stg_inst\: entity work.fifo32synchronizer_ff_4
+\gsync_stage[2].rd_stg_inst\: entity work.fifo64synchronizer_ff_4
     port map (
       D(13 downto 0) => Q_0(13 downto 0),
       I2(0) => I2(0),
       p_0_in(13 downto 0) => p_0_in(13 downto 0),
       rd_clk => rd_clk
     );
-\gsync_stage[2].wr_stg_inst\: entity work.fifo32synchronizer_ff_5
+\gsync_stage[2].wr_stg_inst\: entity work.fifo64synchronizer_ff_5
     port map (
       D(13) => \n_0_gsync_stage[1].wr_stg_inst\,
       D(12) => \n_1_gsync_stage[1].wr_stg_inst\,
@@ -16294,7 +16294,7 @@ VCC: unisim.vcomponents.VCC
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32rd_status_flags_as is
+entity fifo64rd_status_flags_as is
   port (
     comp0 : out STD_LOGIC;
     comp1 : out STD_LOGIC;
@@ -16305,9 +16305,9 @@ entity fifo32rd_status_flags_as is
     rd_clk : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end fifo32rd_status_flags_as;
+end fifo64rd_status_flags_as;
 
-architecture STRUCTURE of fifo32rd_status_flags_as is
+architecture STRUCTURE of fifo64rd_status_flags_as is
   signal \<const1>\ : STD_LOGIC;
   attribute equivalent_register_removal : string;
   attribute equivalent_register_removal of ram_empty_fb_i_reg : label is "no";
@@ -16316,12 +16316,12 @@ VCC: unisim.vcomponents.VCC
     port map (
       P => \<const1>\
     );
-c0: entity work.fifo32compare_1
+c0: entity work.fifo64compare_1
     port map (
       comp0 => comp0,
       v1_reg(6 downto 0) => v1_reg(6 downto 0)
     );
-c1: entity work.fifo32compare_2
+c1: entity work.fifo64compare_2
     port map (
       comp1 => comp1,
       v1_reg_0(6 downto 0) => v1_reg_0(6 downto 0)
@@ -16340,7 +16340,7 @@ ram_empty_fb_i_reg: unisim.vcomponents.FDPE
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32wr_status_flags_as is
+entity fifo64wr_status_flags_as is
   port (
     full : out STD_LOGIC;
     p_0_out : out STD_LOGIC;
@@ -16354,9 +16354,9 @@ entity fifo32wr_status_flags_as is
     I2 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     \out\ : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
-end fifo32wr_status_flags_as;
+end fifo64wr_status_flags_as;
 
-architecture STRUCTURE of fifo32wr_status_flags_as is
+architecture STRUCTURE of fifo64wr_status_flags_as is
   signal \<const1>\ : STD_LOGIC;
   signal comp1 : STD_LOGIC;
   signal \^p_0_out\ : STD_LOGIC;
@@ -16388,13 +16388,13 @@ VCC: unisim.vcomponents.VCC
     port map (
       P => \<const1>\
     );
-c1: entity work.fifo32compare
+c1: entity work.fifo64compare
     port map (
       I1(13 downto 0) => I1(13 downto 0),
       I2(13 downto 0) => I2(13 downto 0),
       comp1 => comp1
     );
-c2: entity work.fifo32compare_0
+c2: entity work.fifo64compare_0
     port map (
       I1 => \^p_0_out\,
       I2(13 downto 0) => I2(13 downto 0),
@@ -16429,7 +16429,7 @@ ram_full_i_reg: unisim.vcomponents.FDPE
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32blk_mem_gen_generic_cstr is
+entity fifo64blk_mem_gen_generic_cstr is
   port (
     D : out STD_LOGIC_VECTOR ( 63 downto 0 );
     wr_clk : in STD_LOGIC;
@@ -16452,9 +16452,9 @@ entity fifo32blk_mem_gen_generic_cstr is
     p_17_out : in STD_LOGIC;
     p_13_out : in STD_LOGIC
   );
-end fifo32blk_mem_gen_generic_cstr;
+end fifo64blk_mem_gen_generic_cstr;
 
-architecture STRUCTURE of fifo32blk_mem_gen_generic_cstr is
+architecture STRUCTURE of fifo64blk_mem_gen_generic_cstr is
   signal \n_0_ramloop[10].ram.r\ : STD_LOGIC;
   signal \n_0_ramloop[11].ram.r\ : STD_LOGIC;
   signal \n_0_ramloop[12].ram.r\ : STD_LOGIC;
@@ -16708,7 +16708,7 @@ architecture STRUCTURE of fifo32blk_mem_gen_generic_cstr is
   signal \n_8_ramloop[8].ram.r\ : STD_LOGIC;
   signal \n_8_ramloop[9].ram.r\ : STD_LOGIC;
 begin
-\has_mux_b.B\: entity work.\fifo32blk_mem_gen_mux__parameterized0\
+\has_mux_b.B\: entity work.\fifo64blk_mem_gen_mux__parameterized0\
     port map (
       D(62 downto 0) => D(63 downto 1),
       DOBDO(7) => \n_0_ramloop[4].ram.r\,
@@ -16969,7 +16969,7 @@ begin
       p_17_out => p_17_out,
       rd_clk => rd_clk
     );
-\ramloop[0].ram.r\: entity work.fifo32blk_mem_gen_prim_width
+\ramloop[0].ram.r\: entity work.fifo64blk_mem_gen_prim_width
     port map (
       D(0) => D(0),
       I1 => I1,
@@ -16982,7 +16982,7 @@ begin
       tmp_ram_rd_en => tmp_ram_rd_en,
       wr_clk => wr_clk
     );
-\ramloop[10].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized9\
+\ramloop[10].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized9\
     port map (
       I17(7) => \n_0_ramloop[10].ram.r\,
       I17(6) => \n_1_ramloop[10].ram.r\,
@@ -17003,7 +17003,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[11].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized10\
+\ramloop[11].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized10\
     port map (
       DOBDO(7) => \n_0_ramloop[11].ram.r\,
       DOBDO(6) => \n_1_ramloop[11].ram.r\,
@@ -17024,7 +17024,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[12].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized11\
+\ramloop[12].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized11\
     port map (
       DOBDO(7) => \n_0_ramloop[12].ram.r\,
       DOBDO(6) => \n_1_ramloop[12].ram.r\,
@@ -17045,7 +17045,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[13].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized12\
+\ramloop[13].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized12\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I26(7) => \n_0_ramloop[13].ram.r\,
@@ -17066,7 +17066,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[14].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized13\
+\ramloop[14].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized13\
     port map (
       DOBDO(7) => \n_0_ramloop[14].ram.r\,
       DOBDO(6) => \n_1_ramloop[14].ram.r\,
@@ -17087,7 +17087,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[15].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized14\
+\ramloop[15].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized14\
     port map (
       DOBDO(7) => \n_0_ramloop[15].ram.r\,
       DOBDO(6) => \n_1_ramloop[15].ram.r\,
@@ -17108,7 +17108,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[16].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized15\
+\ramloop[16].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized15\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I23(7) => \n_0_ramloop[16].ram.r\,
@@ -17129,7 +17129,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[17].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized16\
+\ramloop[17].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized16\
     port map (
       DOBDO(7) => \n_0_ramloop[17].ram.r\,
       DOBDO(6) => \n_1_ramloop[17].ram.r\,
@@ -17150,7 +17150,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[18].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized17\
+\ramloop[18].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized17\
     port map (
       DOBDO(7) => \n_0_ramloop[18].ram.r\,
       DOBDO(6) => \n_1_ramloop[18].ram.r\,
@@ -17171,7 +17171,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[19].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized18\
+\ramloop[19].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized18\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I32(7) => \n_0_ramloop[19].ram.r\,
@@ -17192,7 +17192,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[1].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized0\
+\ramloop[1].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized0\
     port map (
       DOBDO(7) => \n_0_ramloop[1].ram.r\,
       DOBDO(6) => \n_1_ramloop[1].ram.r\,
@@ -17213,7 +17213,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[20].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized19\
+\ramloop[20].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized19\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I31(7) => \n_0_ramloop[20].ram.r\,
@@ -17234,7 +17234,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[21].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized20\
+\ramloop[21].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized20\
     port map (
       DOBDO(7) => \n_0_ramloop[21].ram.r\,
       DOBDO(6) => \n_1_ramloop[21].ram.r\,
@@ -17255,7 +17255,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[22].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized21\
+\ramloop[22].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized21\
     port map (
       DOBDO(7) => \n_0_ramloop[22].ram.r\,
       DOBDO(6) => \n_1_ramloop[22].ram.r\,
@@ -17276,7 +17276,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[23].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized22\
+\ramloop[23].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized22\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I40(7) => \n_0_ramloop[23].ram.r\,
@@ -17297,7 +17297,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[24].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized23\
+\ramloop[24].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized23\
     port map (
       DOBDO(7) => \n_0_ramloop[24].ram.r\,
       DOBDO(6) => \n_1_ramloop[24].ram.r\,
@@ -17318,7 +17318,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[25].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized24\
+\ramloop[25].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized24\
     port map (
       DOBDO(7) => \n_0_ramloop[25].ram.r\,
       DOBDO(6) => \n_1_ramloop[25].ram.r\,
@@ -17339,7 +17339,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[26].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized25\
+\ramloop[26].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized25\
     port map (
       DOBDO(7) => \n_0_ramloop[26].ram.r\,
       DOBDO(6) => \n_1_ramloop[26].ram.r\,
@@ -17360,7 +17360,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[27].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized26\
+\ramloop[27].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized26\
     port map (
       DOBDO(7) => \n_0_ramloop[27].ram.r\,
       DOBDO(6) => \n_1_ramloop[27].ram.r\,
@@ -17381,7 +17381,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[28].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized27\
+\ramloop[28].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized27\
     port map (
       I2(11 downto 0) => I2(11 downto 0),
       I47(7) => \n_0_ramloop[28].ram.r\,
@@ -17402,7 +17402,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[2].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized1\
+\ramloop[2].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized1\
     port map (
       DOBDO(7) => \n_0_ramloop[2].ram.r\,
       DOBDO(6) => \n_1_ramloop[2].ram.r\,
@@ -17423,7 +17423,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[3].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized2\
+\ramloop[3].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized2\
     port map (
       DOBDO(7) => \n_0_ramloop[3].ram.r\,
       DOBDO(6) => \n_1_ramloop[3].ram.r\,
@@ -17444,7 +17444,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[4].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized3\
+\ramloop[4].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized3\
     port map (
       DOBDO(7) => \n_0_ramloop[4].ram.r\,
       DOBDO(6) => \n_1_ramloop[4].ram.r\,
@@ -17465,7 +17465,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[5].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized4\
+\ramloop[5].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized4\
     port map (
       DOBDO(7) => \n_0_ramloop[5].ram.r\,
       DOBDO(6) => \n_1_ramloop[5].ram.r\,
@@ -17486,7 +17486,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[6].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized5\
+\ramloop[6].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized5\
     port map (
       DOBDO(7) => \n_0_ramloop[6].ram.r\,
       DOBDO(6) => \n_1_ramloop[6].ram.r\,
@@ -17507,7 +17507,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[7].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized6\
+\ramloop[7].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized6\
     port map (
       DOBDO(7) => \n_0_ramloop[7].ram.r\,
       DOBDO(6) => \n_1_ramloop[7].ram.r\,
@@ -17528,7 +17528,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[8].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized7\
+\ramloop[8].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized7\
     port map (
       DOBDO(7) => \n_0_ramloop[8].ram.r\,
       DOBDO(6) => \n_1_ramloop[8].ram.r\,
@@ -17549,7 +17549,7 @@ begin
       rd_clk => rd_clk,
       wr_clk => wr_clk
     );
-\ramloop[9].ram.r\: entity work.\fifo32blk_mem_gen_prim_width__parameterized8\
+\ramloop[9].ram.r\: entity work.\fifo64blk_mem_gen_prim_width__parameterized8\
     port map (
       DOBDO(7) => \n_0_ramloop[9].ram.r\,
       DOBDO(6) => \n_1_ramloop[9].ram.r\,
@@ -17573,7 +17573,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32rd_logic is
+entity fifo64rd_logic is
   port (
     p_17_out : out STD_LOGIC;
     empty : out STD_LOGIC;
@@ -17592,9 +17592,9 @@ entity fifo32rd_logic is
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rd_en : in STD_LOGIC
   );
-end fifo32rd_logic;
+end fifo64rd_logic;
 
-architecture STRUCTURE of fifo32rd_logic is
+architecture STRUCTURE of fifo64rd_logic is
   signal comp0 : STD_LOGIC;
   signal comp1 : STD_LOGIC;
   signal \n_3_gr1.rfwft\ : STD_LOGIC;
@@ -17603,7 +17603,7 @@ architecture STRUCTURE of fifo32rd_logic is
 begin
   p_13_out <= \^p_13_out\;
   p_17_out <= \^p_17_out\;
-\gr1.rfwft\: entity work.fifo32rd_fwft
+\gr1.rfwft\: entity work.fifo64rd_fwft
     port map (
       E(0) => E(0),
       I1 => \^p_17_out\,
@@ -17617,7 +17617,7 @@ begin
       rd_en => rd_en,
       tmp_ram_rd_en => tmp_ram_rd_en
     );
-\gras.rsts\: entity work.fifo32rd_status_flags_as
+\gras.rsts\: entity work.fifo64rd_status_flags_as
     port map (
       I1 => \n_3_gr1.rfwft\,
       Q(0) => Q(1),
@@ -17628,7 +17628,7 @@ begin
       v1_reg(6 downto 0) => v1_reg(6 downto 0),
       v1_reg_0(6 downto 0) => v1_reg_0(6 downto 0)
     );
-rpntr: entity work.fifo32rd_bin_cntr
+rpntr: entity work.fifo64rd_bin_cntr
     port map (
       E(0) => \^p_13_out\,
       I1(1 downto 0) => Q(1 downto 0),
@@ -17644,7 +17644,7 @@ rpntr: entity work.fifo32rd_bin_cntr
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32wr_logic is
+entity fifo64wr_logic is
   port (
     full : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -17661,16 +17661,16 @@ entity fifo32wr_logic is
     I1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     I2 : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
-end fifo32wr_logic;
+end fifo64wr_logic;
 
-architecture STRUCTURE of fifo32wr_logic is
+architecture STRUCTURE of fifo64wr_logic is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal p_0_out : STD_LOGIC;
   signal wr_pntr_plus1 : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal wr_pntr_plus2 : STD_LOGIC_VECTOR ( 13 downto 0 );
 begin
   E(0) <= \^e\(0);
-\gwas.wsts\: entity work.fifo32wr_status_flags_as
+\gwas.wsts\: entity work.fifo64wr_status_flags_as
     port map (
       E(0) => \^e\(0),
       I1(13 downto 0) => wr_pntr_plus1(13 downto 0),
@@ -17684,7 +17684,7 @@ begin
       wr_clk => wr_clk,
       wr_en => wr_en
     );
-wpntr: entity work.fifo32wr_bin_cntr
+wpntr: entity work.fifo64wr_bin_cntr
     port map (
       I1(0) => I1(0),
       O1(13 downto 0) => wr_pntr_plus1(13 downto 0),
@@ -17702,7 +17702,7 @@ wpntr: entity work.fifo32wr_bin_cntr
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32blk_mem_gen_top is
+entity fifo64blk_mem_gen_top is
   port (
     D : out STD_LOGIC_VECTOR ( 63 downto 0 );
     wr_clk : in STD_LOGIC;
@@ -17725,11 +17725,11 @@ entity fifo32blk_mem_gen_top is
     p_17_out : in STD_LOGIC;
     p_13_out : in STD_LOGIC
   );
-end fifo32blk_mem_gen_top;
+end fifo64blk_mem_gen_top;
 
-architecture STRUCTURE of fifo32blk_mem_gen_top is
+architecture STRUCTURE of fifo64blk_mem_gen_top is
 begin
-\valid.cstr\: entity work.fifo32blk_mem_gen_generic_cstr
+\valid.cstr\: entity work.fifo64blk_mem_gen_generic_cstr
     port map (
       D(63 downto 0) => D(63 downto 0),
       I1 => I1,
@@ -17755,7 +17755,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32blk_mem_gen_v8_0_synth is
+entity fifo64blk_mem_gen_v8_0_synth is
   port (
     D : out STD_LOGIC_VECTOR ( 63 downto 0 );
     wr_clk : in STD_LOGIC;
@@ -17778,11 +17778,11 @@ entity fifo32blk_mem_gen_v8_0_synth is
     p_17_out : in STD_LOGIC;
     p_13_out : in STD_LOGIC
   );
-end fifo32blk_mem_gen_v8_0_synth;
+end fifo64blk_mem_gen_v8_0_synth;
 
-architecture STRUCTURE of fifo32blk_mem_gen_v8_0_synth is
+architecture STRUCTURE of fifo64blk_mem_gen_v8_0_synth is
 begin
-\gnativebmg.native_blk_mem_gen\: entity work.fifo32blk_mem_gen_top
+\gnativebmg.native_blk_mem_gen\: entity work.fifo64blk_mem_gen_top
     port map (
       D(63 downto 0) => D(63 downto 0),
       I1 => I1,
@@ -17808,7 +17808,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32blk_mem_gen_v8_0 is
+entity fifo64blk_mem_gen_v8_0 is
   port (
     D : out STD_LOGIC_VECTOR ( 63 downto 0 );
     wr_clk : in STD_LOGIC;
@@ -17831,11 +17831,11 @@ entity fifo32blk_mem_gen_v8_0 is
     p_17_out : in STD_LOGIC;
     p_13_out : in STD_LOGIC
   );
-end fifo32blk_mem_gen_v8_0;
+end fifo64blk_mem_gen_v8_0;
 
-architecture STRUCTURE of fifo32blk_mem_gen_v8_0 is
+architecture STRUCTURE of fifo64blk_mem_gen_v8_0 is
 begin
-inst_blk_mem_gen: entity work.fifo32blk_mem_gen_v8_0_synth
+inst_blk_mem_gen: entity work.fifo64blk_mem_gen_v8_0_synth
     port map (
       D(63 downto 0) => D(63 downto 0),
       I1 => I1,
@@ -17861,7 +17861,7 @@ inst_blk_mem_gen: entity work.fifo32blk_mem_gen_v8_0_synth
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32memory is
+entity fifo64memory is
   port (
     dout : out STD_LOGIC_VECTOR ( 63 downto 0 );
     wr_clk : in STD_LOGIC;
@@ -17885,12 +17885,12 @@ entity fifo32memory is
     p_17_out : in STD_LOGIC;
     p_13_out : in STD_LOGIC
   );
-end fifo32memory;
+end fifo64memory;
 
-architecture STRUCTURE of fifo32memory is
+architecture STRUCTURE of fifo64memory is
   signal \inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/din_2D[3]_0\ : STD_LOGIC_VECTOR ( 63 downto 0 );
 begin
-\gbm.gbmg.gbmga.ngecc.bmg\: entity work.fifo32blk_mem_gen_v8_0
+\gbm.gbmg.gbmga.ngecc.bmg\: entity work.fifo64blk_mem_gen_v8_0
     port map (
       D(63 downto 0) => \inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/din_2D[3]_0\(63 downto 0),
       I1 => I1,
@@ -18620,7 +18620,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32fifo_generator_ramfifo is
+entity fifo64fifo_generator_ramfifo is
   port (
     dout : out STD_LOGIC_VECTOR ( 63 downto 0 );
     empty : out STD_LOGIC;
@@ -18632,9 +18632,9 @@ entity fifo32fifo_generator_ramfifo is
     rst : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
-end fifo32fifo_generator_ramfifo;
+end fifo64fifo_generator_ramfifo;
 
-architecture STRUCTURE of fifo32fifo_generator_ramfifo is
+architecture STRUCTURE of fifo64fifo_generator_ramfifo is
   signal RD_RST : STD_LOGIC;
   signal \^rst\ : STD_LOGIC;
   signal \gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ram_ena\ : STD_LOGIC;
@@ -18662,7 +18662,7 @@ architecture STRUCTURE of fifo32fifo_generator_ramfifo is
   signal tmp_ram_rd_en : STD_LOGIC;
   signal wr_rst_i : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
-\gntv_or_sync_fifo.gcx.clkx\: entity work.fifo32clk_x_pntrs
+\gntv_or_sync_fifo.gcx.clkx\: entity work.fifo64clk_x_pntrs
     port map (
       I1(13 downto 0) => p_8_out(13 downto 0),
       I2(0) => rd_rst_i(1),
@@ -18675,7 +18675,7 @@ begin
       v1_reg_0(6 downto 0) => \gras.rsts/c1/v1_reg\(6 downto 0),
       wr_clk => wr_clk
     );
-\gntv_or_sync_fifo.gl0.rd\: entity work.fifo32rd_logic
+\gntv_or_sync_fifo.gl0.rd\: entity work.fifo64rd_logic
     port map (
       E(0) => p_14_out,
       O1(13 downto 0) => p_19_out(13 downto 0),
@@ -18695,7 +18695,7 @@ begin
       v1_reg(6 downto 0) => \gras.rsts/c0/v1_reg\(6 downto 0),
       v1_reg_0(6 downto 0) => \gras.rsts/c1/v1_reg\(6 downto 0)
     );
-\gntv_or_sync_fifo.gl0.wr\: entity work.fifo32wr_logic
+\gntv_or_sync_fifo.gl0.wr\: entity work.fifo64wr_logic
     port map (
       E(0) => \n_1_gntv_or_sync_fifo.gl0.wr\,
       I1(0) => \^rst\,
@@ -18712,7 +18712,7 @@ begin
       wr_clk => wr_clk,
       wr_en => wr_en
     );
-\gntv_or_sync_fifo.mem\: entity work.fifo32memory
+\gntv_or_sync_fifo.mem\: entity work.fifo64memory
     port map (
       E(0) => p_14_out,
       I1 => \n_2_gntv_or_sync_fifo.gl0.wr\,
@@ -18736,7 +18736,7 @@ begin
       tmp_ram_rd_en => tmp_ram_rd_en,
       wr_clk => wr_clk
     );
-rstblk: entity work.fifo32reset_blk_ramfifo
+rstblk: entity work.fifo64reset_blk_ramfifo
     port map (
       O1(2) => RD_RST,
       O1(1 downto 0) => rd_rst_i(1 downto 0),
@@ -18751,7 +18751,7 @@ rstblk: entity work.fifo32reset_blk_ramfifo
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32fifo_generator_top is
+entity fifo64fifo_generator_top is
   port (
     dout : out STD_LOGIC_VECTOR ( 63 downto 0 );
     empty : out STD_LOGIC;
@@ -18763,11 +18763,11 @@ entity fifo32fifo_generator_top is
     rst : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
-end fifo32fifo_generator_top;
+end fifo64fifo_generator_top;
 
-architecture STRUCTURE of fifo32fifo_generator_top is
+architecture STRUCTURE of fifo64fifo_generator_top is
 begin
-\grf.rf\: entity work.fifo32fifo_generator_ramfifo
+\grf.rf\: entity work.fifo64fifo_generator_ramfifo
     port map (
       din(63 downto 0) => din(63 downto 0),
       dout(63 downto 0) => dout(63 downto 0),
@@ -18782,7 +18782,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32fifo_generator_v11_0_synth is
+entity fifo64fifo_generator_v11_0_synth is
   port (
     dout : out STD_LOGIC_VECTOR ( 63 downto 0 );
     empty : out STD_LOGIC;
@@ -18794,11 +18794,11 @@ entity fifo32fifo_generator_v11_0_synth is
     rst : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
-end fifo32fifo_generator_v11_0_synth;
+end fifo64fifo_generator_v11_0_synth;
 
-architecture STRUCTURE of fifo32fifo_generator_v11_0_synth is
+architecture STRUCTURE of fifo64fifo_generator_v11_0_synth is
 begin
-\gconvfifo.rf\: entity work.fifo32fifo_generator_top
+\gconvfifo.rf\: entity work.fifo64fifo_generator_top
     port map (
       din(63 downto 0) => din(63 downto 0),
       dout(63 downto 0) => dout(63 downto 0),
@@ -18813,7 +18813,7 @@ begin
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32fifo_generator_v11_0 is
+entity fifo64fifo_generator_v11_0 is
   port (
     backup : in STD_LOGIC;
     backup_marker : in STD_LOGIC;
@@ -19045,392 +19045,392 @@ entity fifo32fifo_generator_v11_0 is
     axis_prog_empty : out STD_LOGIC
   );
   attribute C_COMMON_CLOCK : integer;
-  attribute C_COMMON_CLOCK of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_COMMON_CLOCK of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_COUNT_TYPE : integer;
-  attribute C_COUNT_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_COUNT_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_DATA_COUNT_WIDTH : integer;
-  attribute C_DATA_COUNT_WIDTH of fifo32fifo_generator_v11_0 : entity is 14;
+  attribute C_DATA_COUNT_WIDTH of fifo64fifo_generator_v11_0 : entity is 14;
   attribute C_DEFAULT_VALUE : string;
-  attribute C_DEFAULT_VALUE of fifo32fifo_generator_v11_0 : entity is "BlankString";
+  attribute C_DEFAULT_VALUE of fifo64fifo_generator_v11_0 : entity is "BlankString";
   attribute C_DIN_WIDTH : integer;
-  attribute C_DIN_WIDTH of fifo32fifo_generator_v11_0 : entity is 64;
+  attribute C_DIN_WIDTH of fifo64fifo_generator_v11_0 : entity is 64;
   attribute C_DOUT_RST_VAL : string;
-  attribute C_DOUT_RST_VAL of fifo32fifo_generator_v11_0 : entity is "0";
+  attribute C_DOUT_RST_VAL of fifo64fifo_generator_v11_0 : entity is "0";
   attribute C_DOUT_WIDTH : integer;
-  attribute C_DOUT_WIDTH of fifo32fifo_generator_v11_0 : entity is 64;
+  attribute C_DOUT_WIDTH of fifo64fifo_generator_v11_0 : entity is 64;
   attribute C_ENABLE_RLOCS : integer;
-  attribute C_ENABLE_RLOCS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ENABLE_RLOCS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of fifo32fifo_generator_v11_0 : entity is "zynq";
+  attribute C_FAMILY of fifo64fifo_generator_v11_0 : entity is "zynq";
   attribute C_FULL_FLAGS_RST_VAL : integer;
-  attribute C_FULL_FLAGS_RST_VAL of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_FULL_FLAGS_RST_VAL of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_ALMOST_EMPTY : integer;
-  attribute C_HAS_ALMOST_EMPTY of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_ALMOST_EMPTY of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_ALMOST_FULL : integer;
-  attribute C_HAS_ALMOST_FULL of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_ALMOST_FULL of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_BACKUP : integer;
-  attribute C_HAS_BACKUP of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_BACKUP of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_DATA_COUNT : integer;
-  attribute C_HAS_DATA_COUNT of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_DATA_COUNT of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_INT_CLK : integer;
-  attribute C_HAS_INT_CLK of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_INT_CLK of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_MEMINIT_FILE : integer;
-  attribute C_HAS_MEMINIT_FILE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_MEMINIT_FILE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_OVERFLOW : integer;
-  attribute C_HAS_OVERFLOW of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_OVERFLOW of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_RD_DATA_COUNT : integer;
-  attribute C_HAS_RD_DATA_COUNT of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_RD_DATA_COUNT of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_RD_RST : integer;
-  attribute C_HAS_RD_RST of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_RD_RST of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_RST : integer;
-  attribute C_HAS_RST of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_HAS_RST of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_SRST : integer;
-  attribute C_HAS_SRST of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_SRST of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_UNDERFLOW : integer;
-  attribute C_HAS_UNDERFLOW of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_UNDERFLOW of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_VALID : integer;
-  attribute C_HAS_VALID of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_VALID of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_WR_ACK : integer;
-  attribute C_HAS_WR_ACK of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_WR_ACK of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_WR_DATA_COUNT : integer;
-  attribute C_HAS_WR_DATA_COUNT of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_WR_DATA_COUNT of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_WR_RST : integer;
-  attribute C_HAS_WR_RST of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_WR_RST of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_IMPLEMENTATION_TYPE : integer;
-  attribute C_IMPLEMENTATION_TYPE of fifo32fifo_generator_v11_0 : entity is 2;
+  attribute C_IMPLEMENTATION_TYPE of fifo64fifo_generator_v11_0 : entity is 2;
   attribute C_INIT_WR_PNTR_VAL : integer;
-  attribute C_INIT_WR_PNTR_VAL of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_INIT_WR_PNTR_VAL of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_MEMORY_TYPE : integer;
-  attribute C_MEMORY_TYPE of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_MEMORY_TYPE of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_MIF_FILE_NAME : string;
-  attribute C_MIF_FILE_NAME of fifo32fifo_generator_v11_0 : entity is "BlankString";
+  attribute C_MIF_FILE_NAME of fifo64fifo_generator_v11_0 : entity is "BlankString";
   attribute C_OPTIMIZATION_MODE : integer;
-  attribute C_OPTIMIZATION_MODE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_OPTIMIZATION_MODE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_OVERFLOW_LOW : integer;
-  attribute C_OVERFLOW_LOW of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_OVERFLOW_LOW of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PRELOAD_LATENCY : integer;
-  attribute C_PRELOAD_LATENCY of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PRELOAD_LATENCY of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PRELOAD_REGS : integer;
-  attribute C_PRELOAD_REGS of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_PRELOAD_REGS of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_PRIM_FIFO_TYPE : string;
-  attribute C_PRIM_FIFO_TYPE of fifo32fifo_generator_v11_0 : entity is "8kx4";
+  attribute C_PRIM_FIFO_TYPE of fifo64fifo_generator_v11_0 : entity is "8kx4";
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL of fifo32fifo_generator_v11_0 : entity is 4;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL of fifo64fifo_generator_v11_0 : entity is 4;
   attribute C_PROG_EMPTY_THRESH_NEGATE_VAL : integer;
-  attribute C_PROG_EMPTY_THRESH_NEGATE_VAL of fifo32fifo_generator_v11_0 : entity is 5;
+  attribute C_PROG_EMPTY_THRESH_NEGATE_VAL of fifo64fifo_generator_v11_0 : entity is 5;
   attribute C_PROG_EMPTY_TYPE : integer;
-  attribute C_PROG_EMPTY_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL of fifo32fifo_generator_v11_0 : entity is 16383;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL of fifo64fifo_generator_v11_0 : entity is 16383;
   attribute C_PROG_FULL_THRESH_NEGATE_VAL : integer;
-  attribute C_PROG_FULL_THRESH_NEGATE_VAL of fifo32fifo_generator_v11_0 : entity is 16382;
+  attribute C_PROG_FULL_THRESH_NEGATE_VAL of fifo64fifo_generator_v11_0 : entity is 16382;
   attribute C_PROG_FULL_TYPE : integer;
-  attribute C_PROG_FULL_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_FULL_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_RD_DATA_COUNT_WIDTH : integer;
-  attribute C_RD_DATA_COUNT_WIDTH of fifo32fifo_generator_v11_0 : entity is 14;
+  attribute C_RD_DATA_COUNT_WIDTH of fifo64fifo_generator_v11_0 : entity is 14;
   attribute C_RD_DEPTH : integer;
-  attribute C_RD_DEPTH of fifo32fifo_generator_v11_0 : entity is 16384;
+  attribute C_RD_DEPTH of fifo64fifo_generator_v11_0 : entity is 16384;
   attribute C_RD_FREQ : integer;
-  attribute C_RD_FREQ of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_RD_FREQ of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_RD_PNTR_WIDTH : integer;
-  attribute C_RD_PNTR_WIDTH of fifo32fifo_generator_v11_0 : entity is 14;
+  attribute C_RD_PNTR_WIDTH of fifo64fifo_generator_v11_0 : entity is 14;
   attribute C_UNDERFLOW_LOW : integer;
-  attribute C_UNDERFLOW_LOW of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_UNDERFLOW_LOW of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_DOUT_RST : integer;
-  attribute C_USE_DOUT_RST of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_USE_DOUT_RST of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_USE_ECC : integer;
-  attribute C_USE_ECC of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_ECC of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_EMBEDDED_REG : integer;
-  attribute C_USE_EMBEDDED_REG of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_EMBEDDED_REG of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_FIFO16_FLAGS : integer;
-  attribute C_USE_FIFO16_FLAGS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_FIFO16_FLAGS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_FWFT_DATA_COUNT : integer;
-  attribute C_USE_FWFT_DATA_COUNT of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_FWFT_DATA_COUNT of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_VALID_LOW : integer;
-  attribute C_VALID_LOW of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_VALID_LOW of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_WR_ACK_LOW : integer;
-  attribute C_WR_ACK_LOW of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_WR_ACK_LOW of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_WR_DATA_COUNT_WIDTH : integer;
-  attribute C_WR_DATA_COUNT_WIDTH of fifo32fifo_generator_v11_0 : entity is 14;
+  attribute C_WR_DATA_COUNT_WIDTH of fifo64fifo_generator_v11_0 : entity is 14;
   attribute C_WR_DEPTH : integer;
-  attribute C_WR_DEPTH of fifo32fifo_generator_v11_0 : entity is 16384;
+  attribute C_WR_DEPTH of fifo64fifo_generator_v11_0 : entity is 16384;
   attribute C_WR_FREQ : integer;
-  attribute C_WR_FREQ of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_WR_FREQ of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_WR_PNTR_WIDTH : integer;
-  attribute C_WR_PNTR_WIDTH of fifo32fifo_generator_v11_0 : entity is 14;
+  attribute C_WR_PNTR_WIDTH of fifo64fifo_generator_v11_0 : entity is 14;
   attribute C_WR_RESPONSE_LATENCY : integer;
-  attribute C_WR_RESPONSE_LATENCY of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_WR_RESPONSE_LATENCY of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_MSGON_VAL : integer;
-  attribute C_MSGON_VAL of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_MSGON_VAL of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_ENABLE_RST_SYNC : integer;
-  attribute C_ENABLE_RST_SYNC of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_ENABLE_RST_SYNC of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_ERROR_INJECTION_TYPE : integer;
-  attribute C_ERROR_INJECTION_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_SYNCHRONIZER_STAGE : integer;
-  attribute C_SYNCHRONIZER_STAGE of fifo32fifo_generator_v11_0 : entity is 2;
+  attribute C_SYNCHRONIZER_STAGE of fifo64fifo_generator_v11_0 : entity is 2;
   attribute C_INTERFACE_TYPE : integer;
-  attribute C_INTERFACE_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_INTERFACE_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_AXI_TYPE : integer;
-  attribute C_AXI_TYPE of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXI_TYPE of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_AXI_WR_CHANNEL : integer;
-  attribute C_HAS_AXI_WR_CHANNEL of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_HAS_AXI_WR_CHANNEL of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_AXI_RD_CHANNEL : integer;
-  attribute C_HAS_AXI_RD_CHANNEL of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_HAS_AXI_RD_CHANNEL of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_SLAVE_CE : integer;
-  attribute C_HAS_SLAVE_CE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_SLAVE_CE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_MASTER_CE : integer;
-  attribute C_HAS_MASTER_CE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_MASTER_CE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_ADD_NGC_CONSTRAINT : integer;
-  attribute C_ADD_NGC_CONSTRAINT of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ADD_NGC_CONSTRAINT of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_COMMON_OVERFLOW : integer;
-  attribute C_USE_COMMON_OVERFLOW of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_COMMON_OVERFLOW of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_COMMON_UNDERFLOW : integer;
-  attribute C_USE_COMMON_UNDERFLOW of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_COMMON_UNDERFLOW of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_DEFAULT_SETTINGS : integer;
-  attribute C_USE_DEFAULT_SETTINGS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_DEFAULT_SETTINGS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXI_ID_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of fifo32fifo_generator_v11_0 : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of fifo64fifo_generator_v11_0 : entity is 32;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of fifo32fifo_generator_v11_0 : entity is 64;
+  attribute C_AXI_DATA_WIDTH of fifo64fifo_generator_v11_0 : entity is 64;
   attribute C_AXI_LEN_WIDTH : integer;
-  attribute C_AXI_LEN_WIDTH of fifo32fifo_generator_v11_0 : entity is 8;
+  attribute C_AXI_LEN_WIDTH of fifo64fifo_generator_v11_0 : entity is 8;
   attribute C_AXI_LOCK_WIDTH : integer;
-  attribute C_AXI_LOCK_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXI_LOCK_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_AXI_ID : integer;
-  attribute C_HAS_AXI_ID of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXI_ID of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXI_AWUSER : integer;
-  attribute C_HAS_AXI_AWUSER of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXI_AWUSER of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXI_WUSER : integer;
-  attribute C_HAS_AXI_WUSER of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXI_WUSER of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXI_BUSER : integer;
-  attribute C_HAS_AXI_BUSER of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXI_BUSER of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXI_ARUSER : integer;
-  attribute C_HAS_AXI_ARUSER of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXI_ARUSER of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXI_RUSER : integer;
-  attribute C_HAS_AXI_RUSER of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXI_RUSER of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_AXIS_TDATA : integer;
-  attribute C_HAS_AXIS_TDATA of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_HAS_AXIS_TDATA of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_AXIS_TID : integer;
-  attribute C_HAS_AXIS_TID of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXIS_TID of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXIS_TDEST : integer;
-  attribute C_HAS_AXIS_TDEST of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXIS_TDEST of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXIS_TUSER : integer;
-  attribute C_HAS_AXIS_TUSER of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_HAS_AXIS_TUSER of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_AXIS_TREADY : integer;
-  attribute C_HAS_AXIS_TREADY of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_HAS_AXIS_TREADY of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_HAS_AXIS_TLAST : integer;
-  attribute C_HAS_AXIS_TLAST of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXIS_TLAST of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXIS_TSTRB : integer;
-  attribute C_HAS_AXIS_TSTRB of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXIS_TSTRB of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_AXIS_TKEEP : integer;
-  attribute C_HAS_AXIS_TKEEP of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_AXIS_TKEEP of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_AXIS_TDATA_WIDTH : integer;
-  attribute C_AXIS_TDATA_WIDTH of fifo32fifo_generator_v11_0 : entity is 8;
+  attribute C_AXIS_TDATA_WIDTH of fifo64fifo_generator_v11_0 : entity is 8;
   attribute C_AXIS_TID_WIDTH : integer;
-  attribute C_AXIS_TID_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXIS_TID_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_AXIS_TDEST_WIDTH : integer;
-  attribute C_AXIS_TDEST_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXIS_TDEST_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_AXIS_TUSER_WIDTH : integer;
-  attribute C_AXIS_TUSER_WIDTH of fifo32fifo_generator_v11_0 : entity is 4;
+  attribute C_AXIS_TUSER_WIDTH of fifo64fifo_generator_v11_0 : entity is 4;
   attribute C_AXIS_TSTRB_WIDTH : integer;
-  attribute C_AXIS_TSTRB_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXIS_TSTRB_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_AXIS_TKEEP_WIDTH : integer;
-  attribute C_AXIS_TKEEP_WIDTH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_AXIS_TKEEP_WIDTH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_WACH_TYPE : integer;
-  attribute C_WACH_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_WACH_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_WDCH_TYPE : integer;
-  attribute C_WDCH_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_WDCH_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_WRCH_TYPE : integer;
-  attribute C_WRCH_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_WRCH_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_RACH_TYPE : integer;
-  attribute C_RACH_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_RACH_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_RDCH_TYPE : integer;
-  attribute C_RDCH_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_RDCH_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_AXIS_TYPE : integer;
-  attribute C_AXIS_TYPE of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_AXIS_TYPE of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_IMPLEMENTATION_TYPE_WACH : integer;
-  attribute C_IMPLEMENTATION_TYPE_WACH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_WACH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_WDCH : integer;
-  attribute C_IMPLEMENTATION_TYPE_WDCH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_WDCH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_WRCH : integer;
-  attribute C_IMPLEMENTATION_TYPE_WRCH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_WRCH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_RACH : integer;
-  attribute C_IMPLEMENTATION_TYPE_RACH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_RACH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_RDCH : integer;
-  attribute C_IMPLEMENTATION_TYPE_RDCH of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_RDCH of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_AXIS : integer;
-  attribute C_IMPLEMENTATION_TYPE_AXIS of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_AXIS of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_APPLICATION_TYPE_WACH : integer;
-  attribute C_APPLICATION_TYPE_WACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_APPLICATION_TYPE_WACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_APPLICATION_TYPE_WDCH : integer;
-  attribute C_APPLICATION_TYPE_WDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_APPLICATION_TYPE_WDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_APPLICATION_TYPE_WRCH : integer;
-  attribute C_APPLICATION_TYPE_WRCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_APPLICATION_TYPE_WRCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_APPLICATION_TYPE_RACH : integer;
-  attribute C_APPLICATION_TYPE_RACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_APPLICATION_TYPE_RACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_APPLICATION_TYPE_RDCH : integer;
-  attribute C_APPLICATION_TYPE_RDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_APPLICATION_TYPE_RDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_APPLICATION_TYPE_AXIS : integer;
-  attribute C_APPLICATION_TYPE_AXIS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_APPLICATION_TYPE_AXIS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_ECC_WACH : integer;
-  attribute C_USE_ECC_WACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_ECC_WACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_ECC_WDCH : integer;
-  attribute C_USE_ECC_WDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_ECC_WDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_ECC_WRCH : integer;
-  attribute C_USE_ECC_WRCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_ECC_WRCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_ECC_RACH : integer;
-  attribute C_USE_ECC_RACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_ECC_RACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_ECC_RDCH : integer;
-  attribute C_USE_ECC_RDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_ECC_RDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_USE_ECC_AXIS : integer;
-  attribute C_USE_ECC_AXIS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_USE_ECC_AXIS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_WACH : integer;
-  attribute C_ERROR_INJECTION_TYPE_WACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_WACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_WDCH : integer;
-  attribute C_ERROR_INJECTION_TYPE_WDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_WDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_WRCH : integer;
-  attribute C_ERROR_INJECTION_TYPE_WRCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_WRCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_RACH : integer;
-  attribute C_ERROR_INJECTION_TYPE_RACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_RACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_RDCH : integer;
-  attribute C_ERROR_INJECTION_TYPE_RDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_RDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_AXIS : integer;
-  attribute C_ERROR_INJECTION_TYPE_AXIS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_AXIS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_DIN_WIDTH_WACH : integer;
-  attribute C_DIN_WIDTH_WACH of fifo32fifo_generator_v11_0 : entity is 32;
+  attribute C_DIN_WIDTH_WACH of fifo64fifo_generator_v11_0 : entity is 32;
   attribute C_DIN_WIDTH_WDCH : integer;
-  attribute C_DIN_WIDTH_WDCH of fifo32fifo_generator_v11_0 : entity is 64;
+  attribute C_DIN_WIDTH_WDCH of fifo64fifo_generator_v11_0 : entity is 64;
   attribute C_DIN_WIDTH_WRCH : integer;
-  attribute C_DIN_WIDTH_WRCH of fifo32fifo_generator_v11_0 : entity is 2;
+  attribute C_DIN_WIDTH_WRCH of fifo64fifo_generator_v11_0 : entity is 2;
   attribute C_DIN_WIDTH_RACH : integer;
-  attribute C_DIN_WIDTH_RACH of fifo32fifo_generator_v11_0 : entity is 32;
+  attribute C_DIN_WIDTH_RACH of fifo64fifo_generator_v11_0 : entity is 32;
   attribute C_DIN_WIDTH_RDCH : integer;
-  attribute C_DIN_WIDTH_RDCH of fifo32fifo_generator_v11_0 : entity is 64;
+  attribute C_DIN_WIDTH_RDCH of fifo64fifo_generator_v11_0 : entity is 64;
   attribute C_DIN_WIDTH_AXIS : integer;
-  attribute C_DIN_WIDTH_AXIS of fifo32fifo_generator_v11_0 : entity is 1;
+  attribute C_DIN_WIDTH_AXIS of fifo64fifo_generator_v11_0 : entity is 1;
   attribute C_WR_DEPTH_WACH : integer;
-  attribute C_WR_DEPTH_WACH of fifo32fifo_generator_v11_0 : entity is 16;
+  attribute C_WR_DEPTH_WACH of fifo64fifo_generator_v11_0 : entity is 16;
   attribute C_WR_DEPTH_WDCH : integer;
-  attribute C_WR_DEPTH_WDCH of fifo32fifo_generator_v11_0 : entity is 1024;
+  attribute C_WR_DEPTH_WDCH of fifo64fifo_generator_v11_0 : entity is 1024;
   attribute C_WR_DEPTH_WRCH : integer;
-  attribute C_WR_DEPTH_WRCH of fifo32fifo_generator_v11_0 : entity is 16;
+  attribute C_WR_DEPTH_WRCH of fifo64fifo_generator_v11_0 : entity is 16;
   attribute C_WR_DEPTH_RACH : integer;
-  attribute C_WR_DEPTH_RACH of fifo32fifo_generator_v11_0 : entity is 16;
+  attribute C_WR_DEPTH_RACH of fifo64fifo_generator_v11_0 : entity is 16;
   attribute C_WR_DEPTH_RDCH : integer;
-  attribute C_WR_DEPTH_RDCH of fifo32fifo_generator_v11_0 : entity is 1024;
+  attribute C_WR_DEPTH_RDCH of fifo64fifo_generator_v11_0 : entity is 1024;
   attribute C_WR_DEPTH_AXIS : integer;
-  attribute C_WR_DEPTH_AXIS of fifo32fifo_generator_v11_0 : entity is 1024;
+  attribute C_WR_DEPTH_AXIS of fifo64fifo_generator_v11_0 : entity is 1024;
   attribute C_WR_PNTR_WIDTH_WACH : integer;
-  attribute C_WR_PNTR_WIDTH_WACH of fifo32fifo_generator_v11_0 : entity is 4;
+  attribute C_WR_PNTR_WIDTH_WACH of fifo64fifo_generator_v11_0 : entity is 4;
   attribute C_WR_PNTR_WIDTH_WDCH : integer;
-  attribute C_WR_PNTR_WIDTH_WDCH of fifo32fifo_generator_v11_0 : entity is 10;
+  attribute C_WR_PNTR_WIDTH_WDCH of fifo64fifo_generator_v11_0 : entity is 10;
   attribute C_WR_PNTR_WIDTH_WRCH : integer;
-  attribute C_WR_PNTR_WIDTH_WRCH of fifo32fifo_generator_v11_0 : entity is 4;
+  attribute C_WR_PNTR_WIDTH_WRCH of fifo64fifo_generator_v11_0 : entity is 4;
   attribute C_WR_PNTR_WIDTH_RACH : integer;
-  attribute C_WR_PNTR_WIDTH_RACH of fifo32fifo_generator_v11_0 : entity is 4;
+  attribute C_WR_PNTR_WIDTH_RACH of fifo64fifo_generator_v11_0 : entity is 4;
   attribute C_WR_PNTR_WIDTH_RDCH : integer;
-  attribute C_WR_PNTR_WIDTH_RDCH of fifo32fifo_generator_v11_0 : entity is 10;
+  attribute C_WR_PNTR_WIDTH_RDCH of fifo64fifo_generator_v11_0 : entity is 10;
   attribute C_WR_PNTR_WIDTH_AXIS : integer;
-  attribute C_WR_PNTR_WIDTH_AXIS of fifo32fifo_generator_v11_0 : entity is 10;
+  attribute C_WR_PNTR_WIDTH_AXIS of fifo64fifo_generator_v11_0 : entity is 10;
   attribute C_HAS_DATA_COUNTS_WACH : integer;
-  attribute C_HAS_DATA_COUNTS_WACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_WACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_DATA_COUNTS_WDCH : integer;
-  attribute C_HAS_DATA_COUNTS_WDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_WDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_DATA_COUNTS_WRCH : integer;
-  attribute C_HAS_DATA_COUNTS_WRCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_WRCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_DATA_COUNTS_RACH : integer;
-  attribute C_HAS_DATA_COUNTS_RACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_RACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_DATA_COUNTS_RDCH : integer;
-  attribute C_HAS_DATA_COUNTS_RDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_RDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_DATA_COUNTS_AXIS : integer;
-  attribute C_HAS_DATA_COUNTS_AXIS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_AXIS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_PROG_FLAGS_WACH : integer;
-  attribute C_HAS_PROG_FLAGS_WACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_WACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_PROG_FLAGS_WDCH : integer;
-  attribute C_HAS_PROG_FLAGS_WDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_WDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_PROG_FLAGS_WRCH : integer;
-  attribute C_HAS_PROG_FLAGS_WRCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_WRCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_PROG_FLAGS_RACH : integer;
-  attribute C_HAS_PROG_FLAGS_RACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_RACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_PROG_FLAGS_RDCH : integer;
-  attribute C_HAS_PROG_FLAGS_RDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_RDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_HAS_PROG_FLAGS_AXIS : integer;
-  attribute C_HAS_PROG_FLAGS_AXIS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_AXIS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_FULL_TYPE_WACH : integer;
-  attribute C_PROG_FULL_TYPE_WACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_FULL_TYPE_WACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_FULL_TYPE_WDCH : integer;
-  attribute C_PROG_FULL_TYPE_WDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_FULL_TYPE_WDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_FULL_TYPE_WRCH : integer;
-  attribute C_PROG_FULL_TYPE_WRCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_FULL_TYPE_WRCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_FULL_TYPE_RACH : integer;
-  attribute C_PROG_FULL_TYPE_RACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_FULL_TYPE_RACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_FULL_TYPE_RDCH : integer;
-  attribute C_PROG_FULL_TYPE_RDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_FULL_TYPE_RDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_FULL_TYPE_AXIS : integer;
-  attribute C_PROG_FULL_TYPE_AXIS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_FULL_TYPE_AXIS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WACH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WACH of fifo32fifo_generator_v11_0 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WACH of fifo64fifo_generator_v11_0 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WDCH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WDCH of fifo32fifo_generator_v11_0 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WDCH of fifo64fifo_generator_v11_0 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH of fifo32fifo_generator_v11_0 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH of fifo64fifo_generator_v11_0 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_RACH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_RACH of fifo32fifo_generator_v11_0 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_RACH of fifo64fifo_generator_v11_0 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_RDCH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_RDCH of fifo32fifo_generator_v11_0 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_RDCH of fifo64fifo_generator_v11_0 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS of fifo32fifo_generator_v11_0 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS of fifo64fifo_generator_v11_0 : entity is 1023;
   attribute C_PROG_EMPTY_TYPE_WACH : integer;
-  attribute C_PROG_EMPTY_TYPE_WACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_WACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_WDCH : integer;
-  attribute C_PROG_EMPTY_TYPE_WDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_WDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_WRCH : integer;
-  attribute C_PROG_EMPTY_TYPE_WRCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_WRCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_RACH : integer;
-  attribute C_PROG_EMPTY_TYPE_RACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_RACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_RDCH : integer;
-  attribute C_PROG_EMPTY_TYPE_RDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_RDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_AXIS : integer;
-  attribute C_PROG_EMPTY_TYPE_AXIS of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_AXIS of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH of fifo32fifo_generator_v11_0 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH of fifo64fifo_generator_v11_0 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH of fifo32fifo_generator_v11_0 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH of fifo64fifo_generator_v11_0 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH of fifo32fifo_generator_v11_0 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH of fifo64fifo_generator_v11_0 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH of fifo32fifo_generator_v11_0 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH of fifo64fifo_generator_v11_0 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH of fifo32fifo_generator_v11_0 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH of fifo64fifo_generator_v11_0 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS of fifo32fifo_generator_v11_0 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS of fifo64fifo_generator_v11_0 : entity is 1022;
   attribute C_REG_SLICE_MODE_WACH : integer;
-  attribute C_REG_SLICE_MODE_WACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_REG_SLICE_MODE_WACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_REG_SLICE_MODE_WDCH : integer;
-  attribute C_REG_SLICE_MODE_WDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_REG_SLICE_MODE_WDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_REG_SLICE_MODE_WRCH : integer;
-  attribute C_REG_SLICE_MODE_WRCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_REG_SLICE_MODE_WRCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_REG_SLICE_MODE_RACH : integer;
-  attribute C_REG_SLICE_MODE_RACH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_REG_SLICE_MODE_RACH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_REG_SLICE_MODE_RDCH : integer;
-  attribute C_REG_SLICE_MODE_RDCH of fifo32fifo_generator_v11_0 : entity is 0;
+  attribute C_REG_SLICE_MODE_RDCH of fifo64fifo_generator_v11_0 : entity is 0;
   attribute C_REG_SLICE_MODE_AXIS : integer;
-  attribute C_REG_SLICE_MODE_AXIS of fifo32fifo_generator_v11_0 : entity is 0;
-end fifo32fifo_generator_v11_0;
+  attribute C_REG_SLICE_MODE_AXIS of fifo64fifo_generator_v11_0 : entity is 0;
+end fifo64fifo_generator_v11_0;
 
-architecture STRUCTURE of fifo32fifo_generator_v11_0 is
+architecture STRUCTURE of fifo64fifo_generator_v11_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
 begin
@@ -19977,7 +19977,7 @@ VCC: unisim.vcomponents.VCC
     port map (
       P => \<const1>\
     );
-inst_fifo_gen: entity work.fifo32fifo_generator_v11_0_synth
+inst_fifo_gen: entity work.fifo64fifo_generator_v11_0_synth
     port map (
       din(63 downto 0) => din(63 downto 0),
       dout(63 downto 0) => dout(63 downto 0),
@@ -19992,7 +19992,7 @@ inst_fifo_gen: entity work.fifo32fifo_generator_v11_0_synth
 end STRUCTURE;
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
-entity fifo32 is
+entity fifo64 is
   port (
     rst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
@@ -20005,18 +20005,18 @@ entity fifo32 is
     empty : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of fifo32 : entity is true;
+  attribute NotValidForBitStream of fifo64 : entity is true;
   attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of fifo32 : entity is "yes";
+  attribute downgradeipidentifiedwarnings of fifo64 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of fifo32 : entity is "fifo_generator_v11_0,Vivado 2013.3";
+  attribute x_core_info of fifo64 : entity is "fifo_generator_v11_0,Vivado 2013.3";
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of fifo32 : entity is "fifo32,fifo_generator_v11_0,{}";
+  attribute CHECK_LICENSE_TYPE of fifo64 : entity is "fifo64,fifo_generator_v11_0,{}";
   attribute core_generation_info : string;
-  attribute core_generation_info of fifo32 : entity is "fifo32,fifo_generator_v11_0,{x_ipProduct=Vivado 2013.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=fifo_generator,x_ipVersion=11.0,x_ipCoreRevision=0,x_ipLanguage=VERILOG,C_COMMON_CLOCK=0,C_COUNT_TYPE=0,C_DATA_COUNT_WIDTH=14,C_DEFAULT_VALUE=BlankString,C_DIN_WIDTH=64,C_DOUT_RST_VAL=0,C_DOUT_WIDTH=64,C_ENABLE_RLOCS=0,C_FAMILY=zynq,C_FULL_FLAGS_RST_VAL=1,C_HAS_ALMOST_EMPTY=0,C_HAS_ALMOST_FULL=0,C_HAS_BACKUP=0,C_HAS_DATA_COUNT=0,C_HAS_INT_CLK=0,C_HAS_MEMINIT_FILE=0,C_HAS_OVERFLOW=0,C_HAS_RD_DATA_COUNT=0,C_HAS_RD_RST=0,C_HAS_RST=1,C_HAS_SRST=0,C_HAS_UNDERFLOW=0,C_HAS_VALID=0,C_HAS_WR_ACK=0,C_HAS_WR_DATA_COUNT=0,C_HAS_WR_RST=0,C_IMPLEMENTATION_TYPE=2,C_INIT_WR_PNTR_VAL=0,C_MEMORY_TYPE=1,C_MIF_FILE_NAME=BlankString,C_OPTIMIZATION_MODE=0,C_OVERFLOW_LOW=0,C_PRELOAD_LATENCY=0,C_PRELOAD_REGS=1,C_PRIM_FIFO_TYPE=8kx4,C_PROG_EMPTY_THRESH_ASSERT_VAL=4,C_PROG_EMPTY_THRESH_NEGATE_VAL=5,C_PROG_EMPTY_TYPE=0,C_PROG_FULL_THRESH_ASSERT_VAL=16383,C_PROG_FULL_THRESH_NEGATE_VAL=16382,C_PROG_FULL_TYPE=0,C_RD_DATA_COUNT_WIDTH=14,C_RD_DEPTH=16384,C_RD_FREQ=1,C_RD_PNTR_WIDTH=14,C_UNDERFLOW_LOW=0,C_USE_DOUT_RST=1,C_USE_ECC=0,C_USE_EMBEDDED_REG=0,C_USE_FIFO16_FLAGS=0,C_USE_FWFT_DATA_COUNT=0,C_VALID_LOW=0,C_WR_ACK_LOW=0,C_WR_DATA_COUNT_WIDTH=14,C_WR_DEPTH=16384,C_WR_FREQ=1,C_WR_PNTR_WIDTH=14,C_WR_RESPONSE_LATENCY=1,C_MSGON_VAL=1,C_ENABLE_RST_SYNC=1,C_ERROR_INJECTION_TYPE=0,C_SYNCHRONIZER_STAGE=2,C_INTERFACE_TYPE=0,C_AXI_TYPE=1,C_HAS_AXI_WR_CHANNEL=1,C_HAS_AXI_RD_CHANNEL=1,C_HAS_SLAVE_CE=0,C_HAS_MASTER_CE=0,C_ADD_NGC_CONSTRAINT=0,C_USE_COMMON_OVERFLOW=0,C_USE_COMMON_UNDERFLOW=0,C_USE_DEFAULT_SETTINGS=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_HAS_AXI_AWUSER=0,C_HAS_AXI_WUSER=0,C_HAS_AXI_BUSER=0,C_HAS_AXI_ARUSER=0,C_HAS_AXI_RUSER=0,C_AXI_ARUSER_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_HAS_AXI_ID=0,C_HAS_AXIS_TDATA=1,C_HAS_AXIS_TID=0,C_HAS_AXIS_TDEST=0,C_HAS_AXIS_TUSER=1,C_HAS_AXIS_TREADY=1,C_HAS_AXIS_TLAST=0,C_HAS_AXIS_TSTRB=0,C_HAS_AXIS_TKEEP=0,C_AXIS_TDATA_WIDTH=8,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=4,C_AXIS_TSTRB_WIDTH=1,C_AXIS_TKEEP_WIDTH=1,C_WACH_TYPE=0,C_WDCH_TYPE=0,C_WRCH_TYPE=0,C_RACH_TYPE=0,C_RDCH_TYPE=0,C_AXIS_TYPE=0,C_IMPLEMENTATION_TYPE_WACH=1,C_IMPLEMENTATION_TYPE_WDCH=1,C_IMPLEMENTATION_TYPE_WRCH=1,C_IMPLEMENTATION_TYPE_RACH=1,C_IMPLEMENTATION_TYPE_RDCH=1,C_IMPLEMENTATION_TYPE_AXIS=1,C_APPLICATION_TYPE_WACH=0,C_APPLICATION_TYPE_WDCH=0,C_APPLICATION_TYPE_WRCH=0,C_APPLICATION_TYPE_RACH=0,C_APPLICATION_TYPE_RDCH=0,C_APPLICATION_TYPE_AXIS=0,C_USE_ECC_WACH=0,C_USE_ECC_WDCH=0,C_USE_ECC_WRCH=0,C_USE_ECC_RACH=0,C_USE_ECC_RDCH=0,C_USE_ECC_AXIS=0,C_ERROR_INJECTION_TYPE_WACH=0,C_ERROR_INJECTION_TYPE_WDCH=0,C_ERROR_INJECTION_TYPE_WRCH=0,C_ERROR_INJECTION_TYPE_RACH=0,C_ERROR_INJECTION_TYPE_RDCH=0,C_ERROR_INJECTION_TYPE_AXIS=0,C_DIN_WIDTH_WACH=32,C_DIN_WIDTH_WDCH=64,C_DIN_WIDTH_WRCH=2,C_DIN_WIDTH_RACH=32,C_DIN_WIDTH_RDCH=64,C_DIN_WIDTH_AXIS=1,C_WR_DEPTH_WACH=16,C_WR_DEPTH_WDCH=1024,C_WR_DEPTH_WRCH=16,C_WR_DEPTH_RACH=16,C_WR_DEPTH_RDCH=1024,C_WR_DEPTH_AXIS=1024,C_WR_PNTR_WIDTH_WACH=4,C_WR_PNTR_WIDTH_WDCH=10,C_WR_PNTR_WIDTH_WRCH=4,C_WR_PNTR_WIDTH_RACH=4,C_WR_PNTR_WIDTH_RDCH=10,C_WR_PNTR_WIDTH_AXIS=10,C_HAS_DATA_COUNTS_WACH=0,C_HAS_DATA_COUNTS_WDCH=0,C_HAS_DATA_COUNTS_WRCH=0,C_HAS_DATA_COUNTS_RACH=0,C_HAS_DATA_COUNTS_RDCH=0,C_HAS_DATA_COUNTS_AXIS=0,C_HAS_PROG_FLAGS_WACH=0,C_HAS_PROG_FLAGS_WDCH=0,C_HAS_PROG_FLAGS_WRCH=0,C_HAS_PROG_FLAGS_RACH=0,C_HAS_PROG_FLAGS_RDCH=0,C_HAS_PROG_FLAGS_AXIS=0,C_PROG_FULL_TYPE_WACH=0,C_PROG_FULL_TYPE_WDCH=0,C_PROG_FULL_TYPE_WRCH=0,C_PROG_FULL_TYPE_RACH=0,C_PROG_FULL_TYPE_RDCH=0,C_PROG_FULL_TYPE_AXIS=0,C_PROG_FULL_THRESH_ASSERT_VAL_WACH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_WDCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_WRCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_RACH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_RDCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_AXIS=1023,C_PROG_EMPTY_TYPE_WACH=0,C_PROG_EMPTY_TYPE_WDCH=0,C_PROG_EMPTY_TYPE_WRCH=0,C_PROG_EMPTY_TYPE_RACH=0,C_PROG_EMPTY_TYPE_RDCH=0,C_PROG_EMPTY_TYPE_AXIS=0,C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS=1022,C_REG_SLICE_MODE_WACH=0,C_REG_SLICE_MODE_WDCH=0,C_REG_SLICE_MODE_WRCH=0,C_REG_SLICE_MODE_RACH=0,C_REG_SLICE_MODE_RDCH=0,C_REG_SLICE_MODE_AXIS=0,C_AXI_LEN_WIDTH=8,C_AXI_LOCK_WIDTH=1}";
-end fifo32;
+  attribute core_generation_info of fifo64 : entity is "fifo64,fifo_generator_v11_0,{x_ipProduct=Vivado 2013.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=fifo_generator,x_ipVersion=11.0,x_ipCoreRevision=0,x_ipLanguage=VERILOG,C_COMMON_CLOCK=0,C_COUNT_TYPE=0,C_DATA_COUNT_WIDTH=14,C_DEFAULT_VALUE=BlankString,C_DIN_WIDTH=64,C_DOUT_RST_VAL=0,C_DOUT_WIDTH=64,C_ENABLE_RLOCS=0,C_FAMILY=zynq,C_FULL_FLAGS_RST_VAL=1,C_HAS_ALMOST_EMPTY=0,C_HAS_ALMOST_FULL=0,C_HAS_BACKUP=0,C_HAS_DATA_COUNT=0,C_HAS_INT_CLK=0,C_HAS_MEMINIT_FILE=0,C_HAS_OVERFLOW=0,C_HAS_RD_DATA_COUNT=0,C_HAS_RD_RST=0,C_HAS_RST=1,C_HAS_SRST=0,C_HAS_UNDERFLOW=0,C_HAS_VALID=0,C_HAS_WR_ACK=0,C_HAS_WR_DATA_COUNT=0,C_HAS_WR_RST=0,C_IMPLEMENTATION_TYPE=2,C_INIT_WR_PNTR_VAL=0,C_MEMORY_TYPE=1,C_MIF_FILE_NAME=BlankString,C_OPTIMIZATION_MODE=0,C_OVERFLOW_LOW=0,C_PRELOAD_LATENCY=0,C_PRELOAD_REGS=1,C_PRIM_FIFO_TYPE=8kx4,C_PROG_EMPTY_THRESH_ASSERT_VAL=4,C_PROG_EMPTY_THRESH_NEGATE_VAL=5,C_PROG_EMPTY_TYPE=0,C_PROG_FULL_THRESH_ASSERT_VAL=16383,C_PROG_FULL_THRESH_NEGATE_VAL=16382,C_PROG_FULL_TYPE=0,C_RD_DATA_COUNT_WIDTH=14,C_RD_DEPTH=16384,C_RD_FREQ=1,C_RD_PNTR_WIDTH=14,C_UNDERFLOW_LOW=0,C_USE_DOUT_RST=1,C_USE_ECC=0,C_USE_EMBEDDED_REG=0,C_USE_FIFO16_FLAGS=0,C_USE_FWFT_DATA_COUNT=0,C_VALID_LOW=0,C_WR_ACK_LOW=0,C_WR_DATA_COUNT_WIDTH=14,C_WR_DEPTH=16384,C_WR_FREQ=1,C_WR_PNTR_WIDTH=14,C_WR_RESPONSE_LATENCY=1,C_MSGON_VAL=1,C_ENABLE_RST_SYNC=1,C_ERROR_INJECTION_TYPE=0,C_SYNCHRONIZER_STAGE=2,C_INTERFACE_TYPE=0,C_AXI_TYPE=1,C_HAS_AXI_WR_CHANNEL=1,C_HAS_AXI_RD_CHANNEL=1,C_HAS_SLAVE_CE=0,C_HAS_MASTER_CE=0,C_ADD_NGC_CONSTRAINT=0,C_USE_COMMON_OVERFLOW=0,C_USE_COMMON_UNDERFLOW=0,C_USE_DEFAULT_SETTINGS=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_HAS_AXI_AWUSER=0,C_HAS_AXI_WUSER=0,C_HAS_AXI_BUSER=0,C_HAS_AXI_ARUSER=0,C_HAS_AXI_RUSER=0,C_AXI_ARUSER_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_HAS_AXI_ID=0,C_HAS_AXIS_TDATA=1,C_HAS_AXIS_TID=0,C_HAS_AXIS_TDEST=0,C_HAS_AXIS_TUSER=1,C_HAS_AXIS_TREADY=1,C_HAS_AXIS_TLAST=0,C_HAS_AXIS_TSTRB=0,C_HAS_AXIS_TKEEP=0,C_AXIS_TDATA_WIDTH=8,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=4,C_AXIS_TSTRB_WIDTH=1,C_AXIS_TKEEP_WIDTH=1,C_WACH_TYPE=0,C_WDCH_TYPE=0,C_WRCH_TYPE=0,C_RACH_TYPE=0,C_RDCH_TYPE=0,C_AXIS_TYPE=0,C_IMPLEMENTATION_TYPE_WACH=1,C_IMPLEMENTATION_TYPE_WDCH=1,C_IMPLEMENTATION_TYPE_WRCH=1,C_IMPLEMENTATION_TYPE_RACH=1,C_IMPLEMENTATION_TYPE_RDCH=1,C_IMPLEMENTATION_TYPE_AXIS=1,C_APPLICATION_TYPE_WACH=0,C_APPLICATION_TYPE_WDCH=0,C_APPLICATION_TYPE_WRCH=0,C_APPLICATION_TYPE_RACH=0,C_APPLICATION_TYPE_RDCH=0,C_APPLICATION_TYPE_AXIS=0,C_USE_ECC_WACH=0,C_USE_ECC_WDCH=0,C_USE_ECC_WRCH=0,C_USE_ECC_RACH=0,C_USE_ECC_RDCH=0,C_USE_ECC_AXIS=0,C_ERROR_INJECTION_TYPE_WACH=0,C_ERROR_INJECTION_TYPE_WDCH=0,C_ERROR_INJECTION_TYPE_WRCH=0,C_ERROR_INJECTION_TYPE_RACH=0,C_ERROR_INJECTION_TYPE_RDCH=0,C_ERROR_INJECTION_TYPE_AXIS=0,C_DIN_WIDTH_WACH=32,C_DIN_WIDTH_WDCH=64,C_DIN_WIDTH_WRCH=2,C_DIN_WIDTH_RACH=32,C_DIN_WIDTH_RDCH=64,C_DIN_WIDTH_AXIS=1,C_WR_DEPTH_WACH=16,C_WR_DEPTH_WDCH=1024,C_WR_DEPTH_WRCH=16,C_WR_DEPTH_RACH=16,C_WR_DEPTH_RDCH=1024,C_WR_DEPTH_AXIS=1024,C_WR_PNTR_WIDTH_WACH=4,C_WR_PNTR_WIDTH_WDCH=10,C_WR_PNTR_WIDTH_WRCH=4,C_WR_PNTR_WIDTH_RACH=4,C_WR_PNTR_WIDTH_RDCH=10,C_WR_PNTR_WIDTH_AXIS=10,C_HAS_DATA_COUNTS_WACH=0,C_HAS_DATA_COUNTS_WDCH=0,C_HAS_DATA_COUNTS_WRCH=0,C_HAS_DATA_COUNTS_RACH=0,C_HAS_DATA_COUNTS_RDCH=0,C_HAS_DATA_COUNTS_AXIS=0,C_HAS_PROG_FLAGS_WACH=0,C_HAS_PROG_FLAGS_WDCH=0,C_HAS_PROG_FLAGS_WRCH=0,C_HAS_PROG_FLAGS_RACH=0,C_HAS_PROG_FLAGS_RDCH=0,C_HAS_PROG_FLAGS_AXIS=0,C_PROG_FULL_TYPE_WACH=0,C_PROG_FULL_TYPE_WDCH=0,C_PROG_FULL_TYPE_WRCH=0,C_PROG_FULL_TYPE_RACH=0,C_PROG_FULL_TYPE_RDCH=0,C_PROG_FULL_TYPE_AXIS=0,C_PROG_FULL_THRESH_ASSERT_VAL_WACH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_WDCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_WRCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_RACH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_RDCH=1023,C_PROG_FULL_THRESH_ASSERT_VAL_AXIS=1023,C_PROG_EMPTY_TYPE_WACH=0,C_PROG_EMPTY_TYPE_WDCH=0,C_PROG_EMPTY_TYPE_WRCH=0,C_PROG_EMPTY_TYPE_RACH=0,C_PROG_EMPTY_TYPE_RDCH=0,C_PROG_EMPTY_TYPE_AXIS=0,C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH=1022,C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS=1022,C_REG_SLICE_MODE_WACH=0,C_REG_SLICE_MODE_WDCH=0,C_REG_SLICE_MODE_WRCH=0,C_REG_SLICE_MODE_RACH=0,C_REG_SLICE_MODE_RDCH=0,C_REG_SLICE_MODE_AXIS=0,C_AXI_LEN_WIDTH=8,C_AXI_LOCK_WIDTH=1}";
+end fifo64;
 
-architecture STRUCTURE of fifo32 is
+architecture STRUCTURE of fifo64 is
   signal \<const0>\ : STD_LOGIC;
   signal NLW_U0_almost_empty_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_almost_full_UNCONNECTED : STD_LOGIC;
@@ -20528,7 +20528,7 @@ GND: unisim.vcomponents.GND
     port map (
       G => \<const0>\
     );
-U0: entity work.fifo32fifo_generator_v11_0
+U0: entity work.fifo64fifo_generator_v11_0
     port map (
       almost_empty => NLW_U0_almost_empty_UNCONNECTED,
       almost_full => NLW_U0_almost_full_UNCONNECTED,

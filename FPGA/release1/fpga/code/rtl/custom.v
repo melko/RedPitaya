@@ -35,7 +35,7 @@ reg read_clk;
 
 reg write_clk;
 
-fifo32 i_fifo32 (
+fifo64 i_fifo64 (
     .rst(fifo_config[0]),        // input rst
     .wr_clk(divisore[CLK_DIVIDER-1]),  // input wr_clk
     .rd_clk(read_clk),  // input rd_clk
