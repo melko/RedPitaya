@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<!--Product Version: Vivado v2013.3 (64-bit)-->
-<Project Version="6" Minor="13" Path="/home/matej/WORK/red_pitaya/redpitaya_svn/FPGA/release1/fpga/vivado/red_pitaya.xpr">
+<!--Product Version: Vivado v2013.3-->
+<Project Version="6" Minor="13" Path="/Network/Servers/elegen04.roma1.infn.it/Volumes/MacintoshHD2/Users/paolocretaro/Xilinx/RedPitaya/FPGA/release1/fpga/vivado/red_pitaya.xpr">
 	<FileSet Dir="sources_1" File="fileset.xml"/>
 	<FileSet Dir="constrs_1" File="fileset.xml"/>
 	<FileSet Dir="sim_1" File="fileset.xml"/>
+	<FileSet Dir="fifo32" File="fileset.xml"/>
 	<RunSet Dir="runs" File="runs.xml"/>
 	<DefaultLaunch Dir="$PRUNDIR"/>
 	<Config>
