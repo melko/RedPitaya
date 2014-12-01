@@ -91,7 +91,7 @@ reg             ack          ;
 //
 // generating signal from DAC table 
 
-localparam RSZ = 14 ;  // RAM size 2^RSZ
+localparam RSZ = 1 ;  // RAM size 2^RSZ
 
 reg   [RSZ+15: 0] set_a_size       ;
 reg   [RSZ+15: 0] set_a_step       ;

@@ -199,7 +199,7 @@ end
 //---------------------------------------------------------------------------------
 //  ADC buffer RAM
 
-localparam RSZ = 14 ;  // RAM size 2^RSZ
+localparam RSZ = 1 ;  // RAM size 2^RSZ
 
 
 reg   [  14-1: 0] adc_a_buf [0:(1<<RSZ)-1] ;
