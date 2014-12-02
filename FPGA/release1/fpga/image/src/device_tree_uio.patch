@@ -1,0 +1,13 @@
+--- vivado/red_pitaya.sdk/SDK/SDK_Export/device-tree_bsp_0/ps7_cortexa9_0/libsrc/device-tree_v0_00_x/xilinx.dts	2014-12-02 14:35:23.000000000 +0100
++++ xilinx.dts	2014-12-02 14:35:04.000000000 +0100
+@@ -388,4 +388,10 @@
+ 			reg = < 0xf8007100 0x20 >;
+ 		} ;
+ 	} ;
++	custom@40600000 {
++		compatible = "generic-uio";
++		reg = < 0x40600000 0x100000 >;
++		interrupts = < 0 57 0 >;
++		interrupt-parent = <&ps7_scugic_0>;
++	};
+ } ;
