@@ -28,6 +28,7 @@ DEV_TREE=$(SDK_EXPORT)/device-tree_bsp_0/ps7_cortexa9_0/libsrc/device-tree_v0_00
 all: bootbin devicetree
 
 bootbin:
+	mkdir -p $(OUT_DIR)
 	cp $(FPGA_BIT) $(OUT_DIR)/fpga.bit
 	cp $(FSBL_ELF) $(OUT_DIR)/fsbl.elf
 	@echo img:{[bootloader] $(OUT_DIR)/fsbl.elf $(OUT_DIR)/fpga.bit $(UBOOT_ELF) } > $(OUT_DIR)/boot.bif
