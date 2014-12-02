@@ -336,6 +336,7 @@ system_processing_system7_0_0 processing_system7_0
         .FCLK_RESET1_N(processing_system7_0_fclk_reset1_n),
         .FCLK_RESET2_N(processing_system7_0_fclk_reset2_n),
         .FCLK_RESET3_N(processing_system7_0_fclk_reset3_n),
+        .IRQ_F2P(GND_1),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_fclk_clk0),
         .M_AXI_GP0_ARADDR(processing_system7_0_m_axi_gp0_ARADDR),

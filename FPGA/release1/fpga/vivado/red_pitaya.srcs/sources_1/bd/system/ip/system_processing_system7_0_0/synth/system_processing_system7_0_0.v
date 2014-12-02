@@ -117,6 +117,7 @@ module system_processing_system7_0_0 (
   M_AXI_GP0_BRESP,
   M_AXI_GP0_RRESP,
   M_AXI_GP0_RDATA,
+  IRQ_F2P,
   FCLK_CLK0,
   FCLK_CLK1,
   FCLK_CLK2,
@@ -266,6 +267,8 @@ input [1 : 0] M_AXI_GP0_BRESP;
 input [1 : 0] M_AXI_GP0_RRESP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RDATA" *)
 input [31 : 0] M_AXI_GP0_RDATA;
+(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 IRQ_F2P INTERRUPT" *)
+input [0 : 0] IRQ_F2P;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *)
 output FCLK_CLK0;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK1 CLK" *)
@@ -941,7 +944,7 @@ inout PS_PORB;
     .IRQ_P2F_SPI1(),
     .IRQ_P2F_UART1(),
     .IRQ_P2F_CAN1(),
-    .IRQ_F2P(1'B0),
+    .IRQ_F2P(IRQ_F2P),
     .Core0_nFIQ(1'B0),
     .Core0_nIRQ(1'B0),
     .Core1_nFIQ(1'B0),
