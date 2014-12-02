@@ -69,12 +69,12 @@ always @(posedge sys_clk_i) begin
     end
     else begin
         if(sys_wen_i) begin
-            if(sys_addr_i[19:0]==20'h00) registro1 <= sys_wdata_i;
-            if(sys_addr_i[19:0]==20'h04) fifo_config <= sys_wdata_i[2:0];
-            //if(sys_addr_i[19:0]==20'h08) fifo_status <= sys_wdata_i[1:0];
-            if(sys_addr_i[19:0]==20'h0C) read_clk <= sys_wdata_i[0];
-            if(sys_addr_i[19:0]==20'h10) write_clk <= sys_wdata_i[0];
-            //if(sys_addr_i[19:0]==20'h14) data_out <= sys_wdata_i[1:0];
+            if(sys_addr_i[19:0]==20'h04) registro1 <= sys_wdata_i;
+            if(sys_addr_i[19:0]==20'h08) fifo_config <= sys_wdata_i[2:0];
+            //if(sys_addr_i[19:0]==20'h0C) fifo_status <= sys_wdata_i[1:0];
+            if(sys_addr_i[19:0]==20'h10) read_clk <= sys_wdata_i[0];
+            if(sys_addr_i[19:0]==20'h14) write_clk <= sys_wdata_i[0];
+            //if(sys_addr_i[19:0]==20'h18) data_out <= sys_wdata_i[1:0];
         end
     end
 end
@@ -84,13 +84,13 @@ always @(posedge sys_clk_i) begin
     sys_err_o <= 1'b0;
     
     casez(sys_addr_i[19:0])
-        20'h00: begin sys_ack_o <= sys_ack;  sys_rdata_o <= registro1;   end
-        20'h04: begin sys_ack_o <= sys_ack;  sys_rdata_o <= {29'h0, fifo_config};   end
-        20'h08: begin sys_ack_o <= sys_ack;  sys_rdata_o <= {30'h0, fifo_status};   end
-        20'h0C: begin sys_ack_o <= sys_ack;  sys_rdata_o <= {31'h0, read_clk};   end
-        20'h10: begin sys_ack_o <= sys_ack;  sys_rdata_o <= {31'h0, write_clk};   end
-        20'h14: begin sys_ack_o <= sys_ack;  sys_rdata_o <= data_out[31:0];   end
-        20'h18: begin sys_ack_o <= sys_ack;  sys_rdata_o <= data_out[63:32];   end
+        20'h04: begin sys_ack_o <= sys_ack;  sys_rdata_o <= registro1;   end
+        20'h08: begin sys_ack_o <= sys_ack;  sys_rdata_o <= {29'h0, fifo_config};   end
+        20'h0C: begin sys_ack_o <= sys_ack;  sys_rdata_o <= {30'h0, fifo_status};   end
+        20'h10: begin sys_ack_o <= sys_ack;  sys_rdata_o <= {31'h0, read_clk};   end
+        20'h14: begin sys_ack_o <= sys_ack;  sys_rdata_o <= {31'h0, write_clk};   end
+        20'h18: begin sys_ack_o <= sys_ack;  sys_rdata_o <= data_out[31:0];   end
+        20'h1C: begin sys_ack_o <= sys_ack;  sys_rdata_o <= data_out[63:32];   end
         
         default: begin sys_ack_o <= 1'b1;   sys_rdata_o <= 32'hffffffff;       end
     endcase;
