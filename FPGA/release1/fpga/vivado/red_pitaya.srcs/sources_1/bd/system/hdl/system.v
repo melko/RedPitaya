@@ -231,7 +231,7 @@ module s00_couplers_imp_156Q4UY
   assign s00_couplers_to_auto_pc_WVALID = S_AXI_wvalid;
   assign s_aclk_1 = S_ACLK;
   assign s_aresetn_1 = S_ARESETN[0];
-system_auto_pc_167 auto_pc
+system_auto_pc_175 auto_pc
        (.aclk(s_aclk_1),
         .aresetn(s_aresetn_1),
         .m_axi_araddr(auto_pc_to_s00_couplers_ARADDR),
@@ -444,7 +444,7 @@ module s00_couplers_imp_5VZGPS
   assign s_aresetn_1 = S_ARESETN[0];
 GND GND
        (.G(GND_1));
-system_auto_pc_166 auto_pc
+system_auto_pc_174 auto_pc
        (.aclk(s_aclk_1),
         .aresetn(s_aresetn_1),
         .m_axi_awaddr(auto_pc_to_s00_couplers_AWADDR),
@@ -486,7 +486,7 @@ system_auto_pc_166 auto_pc
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,da_axi4_cnt=2,da_board_cnt=1,da_ps7_cnt=1}" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,da_axi4_cnt=2,da_board_cnt=1,da_ps7_cnt=1}" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -570,6 +570,7 @@ module system
     SPI0_SS_O,
     SPI0_SS_T,
     fifo_S_AXIS_tdata,
+    fifo_S_AXIS_tkeep,
     fifo_S_AXIS_tlast,
     fifo_S_AXIS_tready,
     fifo_S_AXIS_tvalid,
@@ -658,6 +659,7 @@ module system
   output SPI0_SS_O;
   output SPI0_SS_T;
   input [63:0]fifo_S_AXIS_tdata;
+  input [7:0]fifo_S_AXIS_tkeep;
   input fifo_S_AXIS_tlast;
   output fifo_S_AXIS_tready;
   input fifo_S_AXIS_tvalid;
@@ -703,6 +705,7 @@ module system
   wire axi_mem_intercon_m00_axi_WVALID;
   wire [31:0]axis_data_fifo_0_axis_data_count;
   wire [63:0]axis_data_fifo_0_m_axis_TDATA;
+  wire [7:0]axis_data_fifo_0_m_axis_TKEEP;
   wire axis_data_fifo_0_m_axis_TLAST;
   wire axis_data_fifo_0_m_axis_TREADY;
   wire axis_data_fifo_0_m_axis_TVALID;
@@ -840,6 +843,7 @@ module system
   wire processing_system7_0_spi0_ss_o;
   wire processing_system7_0_spi0_ss_t;
   wire [63:0]s_axis_1_TDATA;
+  wire [7:0]s_axis_1_TKEEP;
   wire s_axis_1_TLAST;
   wire s_axis_1_TREADY;
   wire s_axis_1_TVALID;
@@ -850,7 +854,6 @@ module system
   wire spi0_sclk_i_1;
   wire spi0_ss_i_1;
   wire [0:0]xlconstant_0_const;
-  wire [7:0]xlconstant_1_const;
 
   assign FCLK_CLK0 = processing_system7_0_fclk_clk0;
   assign FCLK_CLK1 = processing_system7_0_fclk_clk1;
@@ -911,6 +914,7 @@ module system
   assign processing_system7_0_m_axi_gp0_RVALID = M_AXI_GP0_rvalid;
   assign processing_system7_0_m_axi_gp0_WREADY = M_AXI_GP0_wready;
   assign s_axis_1_TDATA = fifo_S_AXIS_tdata[63:0];
+  assign s_axis_1_TKEEP = fifo_S_AXIS_tkeep[7:0];
   assign s_axis_1_TLAST = fifo_S_AXIS_tlast;
   assign s_axis_1_TVALID = fifo_S_AXIS_tvalid;
   assign s_axis_aclk_1 = fifo_s_axis_aclk;
@@ -960,7 +964,7 @@ system_axi_dma_0_0 axi_dma_0
         .s_axi_lite_wready(processing_system7_0_axi_periph_m00_axi_WREADY),
         .s_axi_lite_wvalid(processing_system7_0_axi_periph_m00_axi_WVALID),
         .s_axis_s2mm_tdata(axis_data_fifo_0_m_axis_TDATA),
-        .s_axis_s2mm_tkeep(xlconstant_1_const),
+        .s_axis_s2mm_tkeep(axis_data_fifo_0_m_axis_TKEEP),
         .s_axis_s2mm_tlast(axis_data_fifo_0_m_axis_TLAST),
         .s_axis_s2mm_tready(axis_data_fifo_0_m_axis_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_0_m_axis_TVALID));
@@ -1010,12 +1014,14 @@ system_axis_data_fifo_0_0 axis_data_fifo_0
         .m_axis_aclk(processing_system7_0_fclk_clk3),
         .m_axis_aresetn(processing_system7_0_fclk_reset3_n),
         .m_axis_tdata(axis_data_fifo_0_m_axis_TDATA),
+        .m_axis_tkeep(axis_data_fifo_0_m_axis_TKEEP),
         .m_axis_tlast(axis_data_fifo_0_m_axis_TLAST),
         .m_axis_tready(axis_data_fifo_0_m_axis_TREADY),
         .m_axis_tvalid(axis_data_fifo_0_m_axis_TVALID),
         .s_axis_aclk(s_axis_aclk_1),
         .s_axis_aresetn(s_axis_aresetn_1),
         .s_axis_tdata(s_axis_1_TDATA),
+        .s_axis_tkeep(s_axis_1_TKEEP),
         .s_axis_tlast(s_axis_1_TLAST),
         .s_axis_tready(s_axis_1_TREADY),
         .s_axis_tvalid(s_axis_1_TVALID));
@@ -1250,8 +1256,6 @@ system_processing_system7_0_axi_periph_1 processing_system7_0_axi_periph
         .S00_AXI_wvalid(processing_system7_0_m_axi_gp1_WVALID));
 system_xlconstant_0_0 xlconstant_0
        (.const(xlconstant_0_const));
-system_xlconstant_1_1 xlconstant_1
-       (.const(xlconstant_1_const));
 endmodule
 
 module system_axi_mem_intercon_0

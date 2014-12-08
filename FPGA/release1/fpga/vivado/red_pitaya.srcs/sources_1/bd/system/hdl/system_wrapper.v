@@ -83,6 +83,7 @@ module system_wrapper
     SPI0_SS_O,
     SPI0_SS_T,
     fifo_S_AXIS_tdata,
+    fifo_S_AXIS_tkeep,
     fifo_S_AXIS_tlast,
     fifo_S_AXIS_tready,
     fifo_S_AXIS_tvalid,
@@ -171,6 +172,7 @@ module system_wrapper
   output SPI0_SS_O;
   output SPI0_SS_T;
   input [63:0]fifo_S_AXIS_tdata;
+  input [7:0]fifo_S_AXIS_tkeep;
   input fifo_S_AXIS_tlast;
   output fifo_S_AXIS_tready;
   input fifo_S_AXIS_tvalid;
@@ -260,6 +262,7 @@ module system_wrapper
   wire SPI0_SS_O;
   wire SPI0_SS_T;
   wire [63:0]fifo_S_AXIS_tdata;
+  wire [7:0]fifo_S_AXIS_tkeep;
   wire fifo_S_AXIS_tlast;
   wire fifo_S_AXIS_tready;
   wire fifo_S_AXIS_tvalid;
@@ -350,6 +353,7 @@ system system_i
         .SPI0_SS_O(SPI0_SS_O),
         .SPI0_SS_T(SPI0_SS_T),
         .fifo_S_AXIS_tdata(fifo_S_AXIS_tdata),
+        .fifo_S_AXIS_tkeep(fifo_S_AXIS_tkeep),
         .fifo_S_AXIS_tlast(fifo_S_AXIS_tlast),
         .fifo_S_AXIS_tready(fifo_S_AXIS_tready),
         .fifo_S_AXIS_tvalid(fifo_S_AXIS_tvalid),

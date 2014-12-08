@@ -127,6 +127,7 @@ module red_pitaya_ps
    input fifo_S_AXIS_tlast               ,  // last word of transfert
    output fifo_S_AXIS_tready             ,  // ready signal
    input fifo_S_AXIS_tvalid              ,  // valid signal
+   input [7:0] fifo_S_AXIS_tkeep         ,  // keep signal
    output [31:0]fifo_axis_rd_data_count  ,  // data counter
    input fifo_s_axis_aclk                ,  // fifo clock
    input fifo_s_axis_aresetn                // fifo reset
@@ -393,6 +394,7 @@ BUFG i_fclk3_buf  (.O(fclk_clk_o[3]), .I(fclk_clk[3]));
   .fifo_S_AXIS_tlast  (  fifo_S_AXIS_tlast           ),  // in
   .fifo_S_AXIS_tready (  fifo_S_AXIS_tready          ),  // out
   .fifo_S_AXIS_tvalid (  fifo_S_AXIS_tvalid          ),  // in
+  .fifo_S_AXIS_tkeep  (  fifo_S_AXIS_tkeep           ),  // in
   .fifo_axis_rd_data_count ( fifo_axis_rd_data_count ),  // out
   .fifo_s_axis_aclk   (  fifo_s_axis_aclk            ),  // in
   .fifo_s_axis_aresetn(  fifo_s_axis_aresetn         )   // in

@@ -3,18 +3,18 @@
 #  -string -flagsOSRD
 preplace port FCLK_CLK3 -pg 1 -y 610 -defaultsOSRD
 preplace port DDR -pg 1 -y 90 -defaultsOSRD
-preplace port fifo_s_axis_aclk -pg 1 -y 1230 -defaultsOSRD
+preplace port fifo_s_axis_aclk -pg 1 -y 1360 -defaultsOSRD
 preplace port SPI0_SS2_O -pg 1 -y 390 -defaultsOSRD
 preplace port SPI0_MOSI_T -pg 1 -y 250 -defaultsOSRD
 preplace port SPI0_SCLK_T -pg 1 -y 190 -defaultsOSRD
 preplace port FCLK_RESET0_N -pg 1 -y 630 -defaultsOSRD
 preplace port SPI0_SS_O -pg 1 -y 350 -defaultsOSRD
 preplace port SPI0_MISO_O -pg 1 -y 290 -defaultsOSRD
-preplace port fifo_S_AXIS -pg 1 -y 1160 -defaultsOSRD
+preplace port fifo_S_AXIS -pg 1 -y 1300 -defaultsOSRD
 preplace port M_AXI_GP0 -pg 1 -y 450 -defaultsOSRD
 preplace port SPI0_SS1_O -pg 1 -y 370 -defaultsOSRD
-preplace port SPI0_MOSI_I -pg 1 -y 820 -defaultsOSRD
-preplace port SPI0_SCLK_I -pg 1 -y 840 -defaultsOSRD
+preplace port SPI0_MOSI_I -pg 1 -y 1040 -defaultsOSRD
+preplace port SPI0_SCLK_I -pg 1 -y 1060 -defaultsOSRD
 preplace port FCLK_RESET1_N -pg 1 -y 650 -defaultsOSRD
 preplace port FCLK_RESET3_N -pg 1 -y 690 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 110 -defaultsOSRD
@@ -23,60 +23,58 @@ preplace port SPI0_SS_T -pg 1 -y 410 -defaultsOSRD
 preplace port SPI0_MISO_T -pg 1 -y 310 -defaultsOSRD
 preplace port FCLK_CLK0 -pg 1 -y 550 -defaultsOSRD
 preplace port FCLK_CLK1 -pg 1 -y 570 -defaultsOSRD
-preplace port fifo_s_axis_aresetn -pg 1 -y 1180 -defaultsOSRD
-preplace port SPI0_SS_I -pg 1 -y 860 -defaultsOSRD
-preplace port SPI0_MISO_I -pg 1 -y 800 -defaultsOSRD
+preplace port fifo_s_axis_aresetn -pg 1 -y 1320 -defaultsOSRD
+preplace port SPI0_SS_I -pg 1 -y 1080 -defaultsOSRD
+preplace port SPI0_MISO_I -pg 1 -y 1020 -defaultsOSRD
 preplace port SPI0_MOSI_O -pg 1 -y 230 -defaultsOSRD
 preplace port SPI0_SCLK_O -pg 1 -y 170 -defaultsOSRD
 preplace port FCLK_CLK2 -pg 1 -y 590 -defaultsOSRD
-preplace portBus fifo_axis_rd_data_count -pg 1 -y 1200 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 4 -y 1090 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -y 680 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 3 -y 980 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 5 -y 650 -defaultsOSRD
-preplace inst processing_system7_0_axi_periph -pg 1 -lvl 3 -y 650 -defaultsOSRD
-preplace inst proc_sys_reset -pg 1 -lvl 2 -y 700 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 6 -y 1270 -defaultsOSRD
+preplace portBus fifo_axis_rd_data_count -pg 1 -y 1330 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 4 -y 1140 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -y 850 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 5 -y 890 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 3 -y 890 -defaultsOSRD
+preplace inst proc_sys_reset -pg 1 -lvl 2 -y 870 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 6 -y 1340 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 6 -y 390 -defaultsOSRD
 preplace netloc processing_system7_0_ddr 1 6 1 N
-preplace netloc processing_system7_0_m_axi_gp1 1 2 5 820 510 NJ 530 NJ 530 NJ 770 2420
-preplace netloc proc_sys_reset_interconnect_aresetn 1 2 3 790 520 NJ 630 N
+preplace netloc processing_system7_0_m_axi_gp1 1 2 5 710 1040 NJ 1040 NJ 1040 NJ 780 2150
+preplace netloc proc_sys_reset_interconnect_aresetn 1 2 3 700 770 NJ 770 1380
 preplace netloc processing_system7_0_spi0_ss_o 1 6 1 N
 preplace netloc processing_system7_0_spi0_mosi_t 1 6 1 N
-preplace netloc processing_system7_0_fclk_reset3_n 1 3 4 1160 1260 NJ 1260 1940 1180 2440
-preplace netloc axi_dma_0_m_axi_s2mm 1 4 1 1590
-preplace netloc proc_sys_reset_peripheral_aresetn 1 2 3 810 530 NJ 710 1620
+preplace netloc processing_system7_0_fclk_reset3_n 1 3 4 1000 1330 NJ 1330 1710 1250 2160
+preplace netloc axi_dma_0_m_axi_s2mm 1 4 1 1370
+preplace netloc proc_sys_reset_peripheral_aresetn 1 2 3 700 1030 NJ 1030 1380
 preplace netloc processing_system7_0_spi0_sclk_t 1 6 1 N
-preplace netloc axi_mem_intercon_m00_axi 1 5 1 1920
-preplace netloc xlconstant_1_const 1 3 1 1080
-preplace netloc axis_data_fifo_0_axis_data_count 1 6 1 2450
+preplace netloc axi_mem_intercon_m00_axi 1 5 1 1690
+preplace netloc axis_data_fifo_0_axis_data_count 1 6 1 N
 preplace netloc processing_system7_0_spi0_miso_t 1 6 1 N
 preplace netloc processing_system7_0_fclk_reset2_n 1 6 1 N
 preplace netloc processing_system7_0_fclk_reset1_n 1 6 1 N
-preplace netloc s_axis_aclk_1 1 0 6 NJ 1230 NJ 1230 NJ 1230 NJ 1280 NJ 1280 1940
+preplace netloc s_axis_aclk_1 1 0 6 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 N
 preplace netloc processing_system7_0_spi0_ss1_o 1 6 1 N
-preplace netloc spi0_ss_i_1 1 0 7 NJ 500 NJ 500 NJ 500 NJ 520 NJ 520 NJ 40 2420
+preplace netloc spi0_ss_i_1 1 0 7 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 40 2150
 preplace netloc processing_system7_0_spi0_ss_t 1 6 1 N
-preplace netloc spi0_miso_i_1 1 0 7 NJ 490 NJ 490 NJ 490 NJ 510 NJ 510 NJ 30 2430
-preplace netloc spi0_mosi_i_1 1 0 7 NJ 480 NJ 480 NJ 480 NJ 500 NJ 500 NJ 20 2450
-preplace netloc spi0_sclk_i_1 1 0 7 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 10 2460
+preplace netloc spi0_miso_i_1 1 0 7 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 30 2160
+preplace netloc spi0_mosi_i_1 1 0 7 NJ 730 NJ 730 NJ 730 NJ 730 NJ 730 NJ 20 2180
+preplace netloc spi0_sclk_i_1 1 0 7 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 10 2190
 preplace netloc xlconstant_0_const 1 1 1 N
-preplace netloc axis_data_fifo_0_m_axis 1 3 4 1160 990 NJ 990 NJ 990 2420
+preplace netloc axis_data_fifo_0_m_axis 1 3 4 1000 1050 NJ 1050 NJ 1050 2150
 preplace netloc processing_system7_0_spi0_mosi_o 1 6 1 N
 preplace netloc processing_system7_0_fclk_reset0_n 1 6 1 N
 preplace netloc processing_system7_0_fixed_io 1 6 1 N
 preplace netloc processing_system7_0_spi0_sclk_o 1 6 1 N
-preplace netloc processing_system7_0_fclk_clk0 1 5 2 1940 750 2450
+preplace netloc processing_system7_0_fclk_clk0 1 5 2 1710 750 2190
 preplace netloc processing_system7_0_spi0_miso_o 1 6 1 N
 preplace netloc processing_system7_0_fclk_clk1 1 6 1 N
-preplace netloc s_axis_1 1 0 6 NJ 1160 NJ 1160 NJ 1160 NJ 1200 NJ 1200 1900
-preplace netloc processing_system7_0_axi_periph_m00_axi 1 3 1 1110
+preplace netloc s_axis_1 1 0 6 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 N
+preplace netloc processing_system7_0_axi_periph_m00_axi 1 3 1 990
 preplace netloc processing_system7_0_spi0_ss2_o 1 6 1 N
-preplace netloc processing_system7_0_fclk_clk2 1 1 6 360 610 NJ 780 NJ 920 NJ 780 NJ 780 2460
+preplace netloc processing_system7_0_fclk_clk2 1 1 6 360 760 NJ 760 NJ 760 NJ 760 NJ 760 2180
 preplace netloc processing_system7_0_m_axi_gp0 1 6 1 N
-preplace netloc s_axis_aresetn_1 1 0 6 NJ 1180 NJ 1180 NJ 1180 NJ 1250 NJ 1250 N
-preplace netloc processing_system7_0_fclk_clk3 1 2 5 820 770 1090 910 1610 1290 1930 760 2430
-levelinfo -pg 1 170 290 620 950 1390 1750 2200 2480
+preplace netloc s_axis_aresetn_1 1 0 6 NJ 1320 NJ 1320 NJ 1320 NJ 1320 NJ 1320 N
+preplace netloc processing_system7_0_fclk_clk3 1 2 5 720 1010 980 1020 1390 1370 1700 770 2170
+levelinfo -pg 1 170 290 530 850 1200 1520 1930 2210
 ",
 }
 {

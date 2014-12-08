@@ -190,6 +190,7 @@ wire [63:0] fifo_S_AXIS_tdata;
 wire fifo_S_AXIS_tlast;
 wire fifo_S_AXIS_tready;
 wire fifo_S_AXIS_tvalid;
+wire [7:0] fifo_S_AXIS_tkeep;
 wire [31:0]fifo_axis_rd_data_count;
 wire fifo_s_axis_aclk;
 wire fifo_s_axis_aresetn;
@@ -277,6 +278,7 @@ red_pitaya_ps i_ps
   .fifo_S_AXIS_tlast  (  fifo_S_AXIS_tlast           ),  // in
   .fifo_S_AXIS_tready (  fifo_S_AXIS_tready          ),  // out
   .fifo_S_AXIS_tvalid (  fifo_S_AXIS_tvalid          ),  // in
+  .fifo_S_AXIS_tkeep  (  fifo_S_AXIS_tkeep           ),  // in
   .fifo_axis_rd_data_count ( fifo_axis_rd_data_count ),  // out
   .fifo_s_axis_aclk   (  fifo_s_axis_aclk            ),  // in
   .fifo_s_axis_aresetn(  fifo_s_axis_aresetn         )   // in
@@ -739,6 +741,7 @@ custom i_custom
     .fifo_S_AXIS_tlast  (  fifo_S_AXIS_tlast           ),  // out
     .fifo_S_AXIS_tready (  fifo_S_AXIS_tready          ),  // in
     .fifo_S_AXIS_tvalid (  fifo_S_AXIS_tvalid          ),  // out
+    .fifo_S_AXIS_tkeep  (  fifo_S_AXIS_tkeep           ),  // out
     .fifo_axis_rd_data_count ( fifo_axis_rd_data_count ),  // in
     .fifo_s_axis_aclk   (  fifo_s_axis_aclk            ),  // out
     .fifo_s_axis_aresetn(  fifo_s_axis_aresetn         )   // out

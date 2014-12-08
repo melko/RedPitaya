@@ -16,12 +16,13 @@ module custom
     
     // fifo signals
     output [63:0] fifo_S_AXIS_tdata         ,  // data input
-    output fifo_S_AXIS_tlast               ,  // last word of transfert
-    input fifo_S_AXIS_tready             ,  // ready signal
-    output fifo_S_AXIS_tvalid              ,  // valid signal
-    input [31:0] fifo_axis_rd_data_count  ,  // data counter
-    output fifo_s_axis_aclk                ,  // fifo clock
-    output fifo_s_axis_aresetn                // fifo reset
+    output fifo_S_AXIS_tlast                ,  // last word of packet
+    input fifo_S_AXIS_tready                ,  // ready signal
+    output fifo_S_AXIS_tvalid               ,  // valid signal
+    output [7:0] fifo_S_AXIS_tkeep          ,  // keep signal
+    input [31:0] fifo_axis_rd_data_count    ,  // data counter
+    output fifo_s_axis_aclk                 ,  // fifo clock
+    output fifo_s_axis_aresetn                 // fifo reset
 );
 
 /*
@@ -88,6 +89,7 @@ assign fifo_s_axis_aclk = clk_o;
 assign fifo_S_AXIS_tdata = conteggio;
 assign fifo_S_AXIS_tlast = tlast;
 assign fifo_S_AXIS_tvalid = 1'b1;
+assign fifo_S_AXIS_tkeep = 8'hff;
 
 reg [2:0] fifo_config;
 wire [1:0] fifo_status;
