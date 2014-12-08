@@ -36,7 +36,7 @@ bootbin:
 
 devicetree:
 	cp $(DEV_TREE) $(OUT_DIR)/devicetree.dts
-	patch -N $(OUT_DIR)/devicetree.dts $(SRC_DIR)/device_tree_uio.patch
+	#patch -N $(OUT_DIR)/devicetree.dts $(SRC_DIR)/device_tree_uio.patch
 	patch -N $(OUT_DIR)/devicetree.dts $(SRC_DIR)/device_tree_$(FPGA_TOOL).patch
 	$(SRC_DIR)/dtc -I dts -O dtb -o $(OUT_DIR)/devicetree.dtb $(OUT_DIR)/devicetree.dts
 
