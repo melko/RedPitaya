@@ -120,7 +120,16 @@ module red_pitaya_ps
    input              spi_ss_i           ,  // slave selected
    input              spi_sclk_i         ,  // serial clock
    input              spi_mosi_i         ,  // master out slave in
-   output             spi_miso_o            // master in slave out
+   output             spi_miso_o         ,  // master in slave out
+   
+   // fifo signals
+   input [63:0]fifo_S_AXIS_tdata         ,  // data input
+   input fifo_S_AXIS_tlast               ,  // last word of transfert
+   output fifo_S_AXIS_tready             ,  // ready signal
+   input fifo_S_AXIS_tvalid              ,  // valid signal
+   output [31:0]fifo_axis_rd_data_count  ,  // data counter
+   input fifo_s_axis_aclk                ,  // fifo clock
+   input fifo_s_axis_aresetn                // fifo reset
 
 );
 
@@ -377,7 +386,16 @@ BUFG i_fclk3_buf  (.O(fclk_clk_o[3]), .I(fclk_clk[3]));
   .SPI0_SS_T          (                              ),  // out
   .SPI0_SCLK_T        (                              ),  // out
   .SPI0_MOSI_T        (                              ),  // out
-  .SPI0_MISO_T        (                              )   // out
+  .SPI0_MISO_T        (                              ),  // out
+  
+ // AXIS FIFO
+  .fifo_S_AXIS_tdata  (  fifo_S_AXIS_tdata           ),  // in
+  .fifo_S_AXIS_tlast  (  fifo_S_AXIS_tlast           ),  // in
+  .fifo_S_AXIS_tready (  fifo_S_AXIS_tready          ),  // out
+  .fifo_S_AXIS_tvalid (  fifo_S_AXIS_tvalid          ),  // in
+  .fifo_axis_rd_data_count ( fifo_axis_rd_data_count ),  // out
+  .fifo_s_axis_aclk   (  fifo_s_axis_aclk            ),  // in
+  .fifo_s_axis_aresetn(  fifo_s_axis_aresetn         )   // in
  );
 
  assign gp0_maxi_arstn = fclk_rstn[0] ;

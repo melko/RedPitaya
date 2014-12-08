@@ -185,6 +185,14 @@ wire  [ 32-1: 0] ps_sys_rdata       ;
 wire             ps_sys_err         ;
 wire             ps_sys_ack         ;
 
+// AXIS FIFO connection
+wire [63:0] fifo_S_AXIS_tdata;
+wire fifo_S_AXIS_tlast;
+wire fifo_S_AXIS_tready;
+wire fifo_S_AXIS_tvalid;
+wire [31:0]fifo_axis_rd_data_count;
+wire fifo_s_axis_aclk;
+wire fifo_s_axis_aresetn;
   
 red_pitaya_ps i_ps
 (
@@ -262,7 +270,16 @@ red_pitaya_ps i_ps
   .spi_ss_i        (  1'b1               ),  // slave selected
   .spi_sclk_i      (  1'b0               ),  // serial clock
   .spi_mosi_i      (  1'b0               ),  // master out slave in
-  .spi_miso_o      (                     )   // master in slave out
+  .spi_miso_o      (                     ),   // master in slave out
+  
+  // AXIS FIFO
+  .fifo_S_AXIS_tdata  (  fifo_S_AXIS_tdata           ),  // in
+  .fifo_S_AXIS_tlast  (  fifo_S_AXIS_tlast           ),  // in
+  .fifo_S_AXIS_tready (  fifo_S_AXIS_tready          ),  // out
+  .fifo_S_AXIS_tvalid (  fifo_S_AXIS_tvalid          ),  // in
+  .fifo_axis_rd_data_count ( fifo_axis_rd_data_count ),  // out
+  .fifo_s_axis_aclk   (  fifo_s_axis_aclk            ),  // in
+  .fifo_s_axis_aresetn(  fifo_s_axis_aresetn         )   // in
 
 );
 
@@ -717,7 +734,14 @@ custom i_custom
     .sys_ren_i       (  sys_ren[6]                 ),  // read enable
     .sys_rdata_o     (  sys_rdata[ 6*32+31: 6*32]  ),  // read data
     .sys_err_o       (  sys_err[6]                 ),  // error indicator
-    .sys_ack_o       (  sys_ack[6]                 )   // acknowledge signal
+    .sys_ack_o       (  sys_ack[6]                 ),  // acknowledge signal
+    .fifo_S_AXIS_tdata  (  fifo_S_AXIS_tdata           ),  // out
+    .fifo_S_AXIS_tlast  (  fifo_S_AXIS_tlast           ),  // out
+    .fifo_S_AXIS_tready (  fifo_S_AXIS_tready          ),  // in
+    .fifo_S_AXIS_tvalid (  fifo_S_AXIS_tvalid          ),  // out
+    .fifo_axis_rd_data_count ( fifo_axis_rd_data_count ),  // in
+    .fifo_s_axis_aclk   (  fifo_s_axis_aclk            ),  // out
+    .fifo_s_axis_aresetn(  fifo_s_axis_aresetn         )   // out
 );
 
 

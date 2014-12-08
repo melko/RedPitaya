@@ -81,7 +81,14 @@ module system_wrapper
     SPI0_SS2_O,
     SPI0_SS_I,
     SPI0_SS_O,
-    SPI0_SS_T);
+    SPI0_SS_T,
+    fifo_S_AXIS_tdata,
+    fifo_S_AXIS_tlast,
+    fifo_S_AXIS_tready,
+    fifo_S_AXIS_tvalid,
+    fifo_axis_rd_data_count,
+    fifo_s_axis_aclk,
+    fifo_s_axis_aresetn);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -163,6 +170,13 @@ module system_wrapper
   input SPI0_SS_I;
   output SPI0_SS_O;
   output SPI0_SS_T;
+  input [63:0]fifo_S_AXIS_tdata;
+  input fifo_S_AXIS_tlast;
+  output fifo_S_AXIS_tready;
+  input fifo_S_AXIS_tvalid;
+  output [31:0]fifo_axis_rd_data_count;
+  input fifo_s_axis_aclk;
+  input fifo_s_axis_aresetn;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -245,6 +259,13 @@ module system_wrapper
   wire SPI0_SS_I;
   wire SPI0_SS_O;
   wire SPI0_SS_T;
+  wire [63:0]fifo_S_AXIS_tdata;
+  wire fifo_S_AXIS_tlast;
+  wire fifo_S_AXIS_tready;
+  wire fifo_S_AXIS_tvalid;
+  wire [31:0]fifo_axis_rd_data_count;
+  wire fifo_s_axis_aclk;
+  wire fifo_s_axis_aresetn;
 
 system system_i
        (.DDR_addr(DDR_addr),
@@ -327,5 +348,12 @@ system system_i
         .SPI0_SS2_O(SPI0_SS2_O),
         .SPI0_SS_I(SPI0_SS_I),
         .SPI0_SS_O(SPI0_SS_O),
-        .SPI0_SS_T(SPI0_SS_T));
+        .SPI0_SS_T(SPI0_SS_T),
+        .fifo_S_AXIS_tdata(fifo_S_AXIS_tdata),
+        .fifo_S_AXIS_tlast(fifo_S_AXIS_tlast),
+        .fifo_S_AXIS_tready(fifo_S_AXIS_tready),
+        .fifo_S_AXIS_tvalid(fifo_S_AXIS_tvalid),
+        .fifo_axis_rd_data_count(fifo_axis_rd_data_count),
+        .fifo_s_axis_aclk(fifo_s_axis_aclk),
+        .fifo_s_axis_aresetn(fifo_s_axis_aresetn));
 endmodule
