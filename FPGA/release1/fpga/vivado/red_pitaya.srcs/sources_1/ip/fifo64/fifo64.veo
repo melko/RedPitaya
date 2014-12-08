@@ -55,15 +55,14 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 fifo64 your_instance_name (
-  .rst(rst),        // input rst
-  .wr_clk(wr_clk),  // input wr_clk
-  .rd_clk(rd_clk),  // input rd_clk
-  .din(din),        // input [63 : 0] din
-  .wr_en(wr_en),    // input wr_en
-  .rd_en(rd_en),    // input rd_en
-  .dout(dout),      // output [63 : 0] dout
-  .full(full),      // output full
-  .empty(empty)    // output empty
+  .clk(clk),      // input clk
+  .rst(rst),      // input rst
+  .din(din),      // input [63 : 0] din
+  .wr_en(wr_en),  // input wr_en
+  .rd_en(rd_en),  // input rd_en
+  .dout(dout),    // output [63 : 0] dout
+  .full(full),    // output full
+  .empty(empty)  // output empty
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

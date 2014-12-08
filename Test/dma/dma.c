@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
 			while((*dma_status & 1<<1) != 2){
 			//	printf("2: %x\n", *dma_status);
 			}
-			memcpy(dati, virt_addr_sram, *dma_size);
+			memcpy(dati, (void *) virt_addr_sram, *dma_size);
 			write(fd_out, dati, *dma_size);
 		}
 	}

@@ -54,9 +54,8 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module fifo64 (
+  clk,
   rst,
-  wr_clk,
-  rd_clk,
   din,
   wr_en,
   rd_en,
@@ -65,9 +64,8 @@ module fifo64 (
   empty
 );
 
+input clk;
 input rst;
-input wr_clk;
-input rd_clk;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *)
 input [63 : 0] din;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *)
@@ -82,9 +80,9 @@ output full;
 output empty;
 
   fifo_generator_v11_0 #(
-    .C_COMMON_CLOCK(0),
+    .C_COMMON_CLOCK(1),
     .C_COUNT_TYPE(0),
-    .C_DATA_COUNT_WIDTH(13),
+    .C_DATA_COUNT_WIDTH(14),
     .C_DEFAULT_VALUE("BlankString"),
     .C_DIN_WIDTH(64),
     .C_DOUT_RST_VAL("0"),
@@ -108,7 +106,7 @@ output empty;
     .C_HAS_WR_ACK(0),
     .C_HAS_WR_DATA_COUNT(0),
     .C_HAS_WR_RST(0),
-    .C_IMPLEMENTATION_TYPE(2),
+    .C_IMPLEMENTATION_TYPE(0),
     .C_INIT_WR_PNTR_VAL(0),
     .C_MEMORY_TYPE(1),
     .C_MIF_FILE_NAME("BlankString"),
@@ -123,7 +121,7 @@ output empty;
     .C_PROG_FULL_THRESH_ASSERT_VAL(8191),
     .C_PROG_FULL_THRESH_NEGATE_VAL(8190),
     .C_PROG_FULL_TYPE(0),
-    .C_RD_DATA_COUNT_WIDTH(13),
+    .C_RD_DATA_COUNT_WIDTH(14),
     .C_RD_DEPTH(8192),
     .C_RD_FREQ(1),
     .C_RD_PNTR_WIDTH(13),
@@ -132,10 +130,10 @@ output empty;
     .C_USE_ECC(0),
     .C_USE_EMBEDDED_REG(0),
     .C_USE_FIFO16_FLAGS(0),
-    .C_USE_FWFT_DATA_COUNT(0),
+    .C_USE_FWFT_DATA_COUNT(1),
     .C_VALID_LOW(0),
     .C_WR_ACK_LOW(0),
-    .C_WR_DATA_COUNT_WIDTH(13),
+    .C_WR_DATA_COUNT_WIDTH(14),
     .C_WR_DEPTH(8192),
     .C_WR_FREQ(1),
     .C_WR_PNTR_WIDTH(13),
@@ -277,12 +275,12 @@ output empty;
   ) inst (
     .backup(1'B0),
     .backup_marker(1'B0),
-    .clk(1'B0),
+    .clk(clk),
     .rst(rst),
     .srst(1'B0),
-    .wr_clk(wr_clk),
+    .wr_clk(1'B0),
     .wr_rst(1'B0),
-    .rd_clk(rd_clk),
+    .rd_clk(1'B0),
     .rd_rst(1'B0),
     .din(din),
     .wr_en(wr_en),

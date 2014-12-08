@@ -1,7 +1,7 @@
 // Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2013.3 (lin32) Build 329390 Wed Oct 16 18:28:36 MDT 2013
-// Date        : Mon Dec  8 13:01:03 2014
+// Date        : Mon Dec  8 23:03:23 2014
 // Host        : angband running 32-bit unknown
 // Command     : write_verilog -force -mode funcsim
 //               /home/melko/Xilinx/RedPitaya/FPGA/release1/fpga/vivado/red_pitaya.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_funcsim.v
@@ -95,7 +95,7 @@ VCC VCC
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(20.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(61.750000),
+    .CLKOUT0_DIVIDE_F(42.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
