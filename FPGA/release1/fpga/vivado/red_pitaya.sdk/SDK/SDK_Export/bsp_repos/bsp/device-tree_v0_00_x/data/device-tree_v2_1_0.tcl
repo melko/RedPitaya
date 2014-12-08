@@ -1525,14 +1525,19 @@ proc gener_slave {node slave intc {force_type ""}} {
 			set mhs_handle [xget_hw_parent_handle $slave]
 			# See what the axi dma is connected to.
 			set axidma_busif_handle [xget_hw_busif_handle $slave "M_AXIS_MM2S"]
-			set axidma_name [xget_hw_value $axidma_busif_handle]
-			set axidma_ip_handle [xget_hw_connected_busifs_handle $mhs_handle $axidma_name "TARGET"]
-			set axidma_ip_handle_name [xget_hw_name $axidma_ip_handle]
-			set connected_ip_handle [xget_hw_parent_handle $axidma_ip_handle]
-			set connected_ip_name [xget_hw_name $connected_ip_handle]
-			set connected_ip_type [xget_hw_value $connected_ip_handle]
-			set ip_tree [tree_append $ip_tree [list "axistream-connected" labelref $connected_ip_name]]
-			set ip_tree [tree_append $ip_tree [list "axistream-control-connected" labelref $connected_ip_name]]
+			if { [string length $axidma_busif_handle] != 0 } {
+				set axidma_name [xget_hw_value $axidma_busif_handle]
+
+				if { [string length $axidma_name] != 0 } {
+					set axidma_ip_handle [xget_hw_connected_busifs_handle $mhs_handle $axidma_name "TARGET"]
+					set axidma_ip_handle_name [xget_hw_name $axidma_ip_handle]
+					set connected_ip_handle [xget_hw_parent_handle $axidma_ip_handle]
+					set connected_ip_name [xget_hw_name $connected_ip_handle]
+					set connected_ip_type [xget_hw_value $connected_ip_handle]
+					set ip_tree [tree_append $ip_tree [list "axistream-connected" labelref $connected_ip_name]]
+					set ip_tree [tree_append $ip_tree [list "axistream-control-connected" labelref $connected_ip_name]]
+				}
+			}
 			lappend node $ip_tree
 		}
 		# FIXME - this need to be check because can break axi ethernet implementation
