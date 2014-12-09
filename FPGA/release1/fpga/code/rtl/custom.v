@@ -1,28 +1,28 @@
 module custom
 (
-    input clk,
-    output [8-1:0] leddini,
+    input               clk,
+    output [8-1:0]      leddini,
     // System bus
-    input sys_clk_i,
-    input sys_rstn_i,
-    input [32-1:0] sys_addr_i,
-    input [32-1:0] sys_wdata_i,
-    input [4-1:0] sys_sel_i,
-    input sys_wen_i,
-    input sys_ren_i,
+    input               sys_clk_i,
+    input               sys_rstn_i,
+    input  [32-1:0]     sys_addr_i,
+    input  [32-1:0]     sys_wdata_i,
+    input  [4-1:0]      sys_sel_i,
+    input               sys_wen_i,
+    input               sys_ren_i,
     output reg [32-1:0] sys_rdata_o,
-    output reg sys_err_o,
-    output reg sys_ack_o,
+    output reg          sys_err_o,
+    output reg          sys_ack_o,
     
     // fifo signals
     output [63:0] fifo_S_AXIS_tdata         ,  // data input
-    output fifo_S_AXIS_tlast                ,  // last word of packet
-    input fifo_S_AXIS_tready                ,  // ready signal
-    output fifo_S_AXIS_tvalid               ,  // valid signal
-    output [7:0] fifo_S_AXIS_tkeep          ,  // keep signal
-    input [31:0] fifo_axis_rd_data_count    ,  // data counter
-    output fifo_s_axis_aclk                 ,  // fifo clock
-    output fifo_s_axis_aresetn                 // fifo reset
+    output        fifo_S_AXIS_tlast         ,  // last word of packet
+    input         fifo_S_AXIS_tready        ,  // ready signal
+    output        fifo_S_AXIS_tvalid        ,  // valid signal
+    output [7:0]  fifo_S_AXIS_tkeep         ,  // keep signal
+    input  [31:0] fifo_axis_rd_data_count   ,  // data counter
+    output        fifo_s_axis_aclk          ,  // fifo clock
+    output        fifo_s_axis_aresetn          // fifo reset
 );
 
 // -----------------------------------------------------------------------
@@ -41,12 +41,11 @@ BUFGMUX #() BUFGMUX_inst (
 );
 
 reg [63:0] conteggio;
-always @(posedge clk_o or posedge fifo_config[0]) begin
-    if(fifo_config[0]) conteggio <= 32'h0;
-    else if(fifo_config[1]) conteggio <= conteggio + 1;
+always @(posedge clk_o or posedge reset) begin
+    if(reset) conteggio <= 32'h0;
+    else if(fifo64_wr_en) conteggio <= conteggio + 1;
 end
 // -----------------------------------------------------------------------
-
 
 
 // -----------------------------------------------------------------------------------------
@@ -55,11 +54,11 @@ end
 reg [31:0] packet_size;
 reg [31:0] tlast_counter;
 reg tlast;
-always @(posedge clk_o or posedge fifo_config[0]) begin
-    if(fifo_config[0]) tlast_counter <= 8'h0;
+always @(posedge clk_o or posedge reset) begin
+    if(reset) tlast_counter <= 8'h0;
     else begin
         if(tlast) tlast_counter <= 8'h0;
-        else if(fifo_config[1] & fifo_S_AXIS_tready & fifo_S_AXIS_tvalid) tlast_counter <= tlast_counter + 1;
+        else if(fifo64_wr_en & fifo_S_AXIS_tready & fifo_S_AXIS_tvalid) tlast_counter <= tlast_counter + 1;
     end
 end
 
@@ -70,26 +69,26 @@ always @(posedge clk_o) begin
         tlast <= 1'b0;
 end
 // -----------------------------------------------------------------------------------------
-reg  [2:0]  fifo_config;
-wire [1:0]  fifo_status;
 
 wire [63:0] fifo64_dout;
 wire        fifo64_rd_en;
+wire        fifo64_wr_en;
 wire        fifo64_empty;
+wire        fifo64_full;
 
 fifo64 i_fifo64 (
-    .rst(fifo_config[0]),        // input rst
+    .rst(reset),                 // input rst
     .clk(clk_o),                 // input clk
     .din(conteggio),             // input [63 : 0] din
-    .wr_en(1'b1),                // input wr_en
+    .wr_en(fifo64_wr_en),        // input wr_en
     .rd_en(fifo64_rd_en),        // input rd_en
     .dout(fifo64_dout),          // output [63 : 0] dout
-    .full(fifo_status[1]),       // output full
+    .full(fifo64_full),          // output full
     .empty(fifo64_empty)         // output empty
 );
 
 assign fifo64_rd_en        = fifo_S_AXIS_tready;
-assign fifo_s_axis_aresetn = ~fifo_config[0];
+assign fifo_s_axis_aresetn = ~reset;
 assign fifo_s_axis_aclk    = clk_o;
 assign fifo_S_AXIS_tdata   = fifo64_dout;
 assign fifo_S_AXIS_tlast   = tlast;
@@ -102,8 +101,16 @@ assign fifo_S_AXIS_tkeep   = 8'hff;
 
 // define some shared registers
 
-reg [31:0] registro1;
-assign leddini = registro1[7:0];
+reg  [31:0] registro1;
+reg  [2:0]  fifo_config;
+wire [1:0]  fifo_status;
+wire        reset;
+
+assign leddini        = registro1[7:0];
+assign fifo_status[1] = fifo64_full;
+assign fifo_status[0] = fifo64_empty;
+assign reset          = fifo_config[0];
+assign fifo64_wr_en   = fifo_config[1];
 
 // System bus connection
 
