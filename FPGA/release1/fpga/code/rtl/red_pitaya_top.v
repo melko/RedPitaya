@@ -329,7 +329,7 @@ red_pitaya_analog i_analog
   .dac_dat_o          (  dac_dat_o        ),  // combined data
   .dac_wrt_o          (  dac_wrt_o        ),  // write enable
   .dac_sel_o          (  dac_sel_o        ),  // channel select
-  .dac_clk_o          (  /*dac_clk_o*/    ),  // clock for daq DISABLED
+  .dac_clk_o          (  /*dac_clk_o RM*/    ),  // clock for daq DISABLED
   .dac_rst_o          (  dac_rst_o        ),  // reset
   
   // PWM DAC
@@ -354,7 +354,7 @@ red_pitaya_analog i_analog
 );
 
 always @(posedge adc_clk) begin
-   adc_rstn <= 1'b0; //frstn[0] ; keep this DISABLED for now
+   adc_rstn <= 1'b0; //frstn[0] ; RM
 end
 
 
@@ -447,10 +447,10 @@ wire  [  8-1: 0] exp_n_dir    ;
 red_pitaya_hk i_hk
 (
   .clk_i           (  adc_clk                    ),  // clock
-  .rstn_i          (  adc_rstn                   ),  // reset - active low
+  .rstn_i          (    adc_rstn                 ),  // reset - active low
 
   // LED
-  .led_o           (  /*led_o*/                  ),  // LED output (DISABLED)
+  .led_o           (  /*led_o RM*/                  ),  // LED output (DISABLED)
    // Expansion connector
   .exp_p_dat_i     (  exp_p_in                   ),  // input data
   .exp_p_dat_o     (  exp_p_out                  ),  // output data
@@ -724,8 +724,8 @@ red_pitaya_daisy i_daisy
 // Custom module
 custom i_custom
 (
-    .clk             (  fclk[2]                    ),
-    .leddini         (  led_o                      ),
+    .clk             (  fclk[0]                    ),
+    .led             (  led_o                      ),
     // System bus
     .sys_clk_i       (  sys_clk                    ),  // clock
     .sys_rstn_i      (  sys_rstn                   ),  // reset - active low
@@ -765,7 +765,7 @@ red_pitaya_test i_test
   .rand_o          (                             ),
 
    // System bus
-  .sys_clk_i       (  sys_clk                    ),  // clock
+  .sys_clk_i       (  sys_clk                   ),  // clock
   .sys_rstn_i      (  sys_rstn                   ),  // reset - active low
   .sys_addr_i      (  sys_addr                   ),  // address
   .sys_wdata_i     (  sys_wdata                  ),  // write data
