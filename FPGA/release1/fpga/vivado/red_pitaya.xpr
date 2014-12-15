@@ -5,7 +5,6 @@
 	<FileSet Dir="constrs_1" File="fileset.xml"/>
 	<FileSet Dir="sim_1" File="fileset.xml"/>
 	<FileSet Dir="fifo64" File="fileset.xml"/>
-	<FileSet Dir="clk_wiz_0" File="fileset.xml"/>
 	<RunSet Dir="runs" File="runs.xml"/>
 	<DefaultLaunch Dir="$PRUNDIR"/>
 	<Config>
