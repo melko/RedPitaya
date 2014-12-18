@@ -89,16 +89,13 @@ int main(int argc, char *argv[])
 		int i;
 		uint32_t size_p;
 		*dma_address = addr_sram;
-		*dma_size = PACKET_SIZE*8; // init transfer
 
 		while(1){
+			*dma_size = PACKET_SIZE*8; // init transfer
 			while((*dma_status & 1<<1) != 2){} // wait for DMA to finish transfer
 			size_p = *dma_size;
 			memcpy(dati, (void *) virt_addr_sram, size_p);
-			*dma_size = PACKET_SIZE*8; // init transfer
 			write(fd_out, dati, size_p);
-			//fwrite(dati, size_p, 8, fd_out);
-			//fflush(fd_out);
 		}
 	}
 	if (map_base != (void*)(-1)) {
