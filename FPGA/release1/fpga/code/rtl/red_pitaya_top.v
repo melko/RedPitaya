@@ -71,6 +71,12 @@
  * 
  */
 
+/**
+ * NOTES FROM PAOLO:
+ *
+ * I have disabled dac_clk_o, since I don't use it and I hope it helps cooling the board a bit
+ * (though maybe the DAC is not using that clock, but I cannot check given I have no schematic to look at)
+ */
 
 module red_pitaya_top
 (
