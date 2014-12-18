@@ -12,5 +12,6 @@ int main(int argc, char *argv[])
 			printf("%llu %llu     %llu\n", bin1, bin2, bin2-bin1);
 		bin1 = bin2;
 	}
+	printf("End reached, last number is %llu\n", bin1);
 	return 0;
 }
