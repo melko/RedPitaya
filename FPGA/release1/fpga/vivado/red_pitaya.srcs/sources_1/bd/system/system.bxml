@@ -2,68 +2,75 @@
 <Root MajorVersion="0" MinorVersion="27">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET"/>
-    <Generation Name="IMPLEMENTATION" State="RESET"/>
-    <Generation Name="SIMULATION" State="RESET"/>
+    <Generation Name="SYNTHESIS" State="GENERATED"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED"/>
+    <Generation Name="SIMULATION" State="STALE"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/system_processing_system7_0_0/system_processing_system7_0_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1418918501" IsTrackable="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1421340475" IsTrackable="true"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1418918502" IsTrackable="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1421340476" IsTrackable="true"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/system_axi_dma_0_0/system_axi_dma_0_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1418918505" IsTrackable="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1421340479" IsTrackable="true"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/system_axi_mem_intercon_0/system_axi_mem_intercon_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="false" Timestamp="1418402228" IsTrackable="true"/>
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1418923877" IsTrackable="true"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1418918506" IsTrackable="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1421340481" IsTrackable="true"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/system_processing_system7_0_axi_periph_1/system_processing_system7_0_axi_periph_1.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="false" Timestamp="1418402228" IsTrackable="true"/>
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1418923877" IsTrackable="true"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/system_xlconstant_0_0/system_xlconstant_0_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1418918506" IsTrackable="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1421340481" IsTrackable="true"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/system_auto_pc_204/system_auto_pc_204.xci" Type="IP">
+      <File Name="ip/system_auto_pc_208/system_auto_pc_208.xci" Type="IP">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/system_auto_pc_205/system_auto_pc_205.xci" Type="IP">
+      <File Name="ip/system_auto_pc_209/system_auto_pc_209.xci" Type="IP">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true"/>
+        <Library Name="work"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="hdl/system.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false"/>
         <Library Name="work"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>

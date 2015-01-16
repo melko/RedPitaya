@@ -154,7 +154,7 @@ module red_pitaya_top
 
    // Expansion connector
    inout  [ 8-1: 0] exp_p_io           ,
-   inout  [ 8-1: 0] exp_n_io           ,
+   input  [ 8-1: 0] exp_n_io           ,
 
 
    // SATA connector
@@ -314,6 +314,7 @@ assign adc_clk_o = 2'b10;
 wire             ser_clk     ;
 wire             adc_clk     ;
 reg              adc_rstn    ;
+wire  [ 14-1: 0] adc_raw     ;
 wire  [ 14-1: 0] adc_a       ;
 wire  [ 14-1: 0] adc_b       ;
 reg   [ 14-1: 0] dac_a       ;
@@ -343,6 +344,7 @@ red_pitaya_analog i_analog
   
   
   // user interface
+  .adc_dat_raw        (  adc_raw          ),  // ADC CH1 RAW
   .adc_dat_a_o        (  adc_a            ),  // ADC CH1
   .adc_dat_b_o        (  adc_b            ),  // ADC CH2
   .adc_clk_o          (  adc_clk          ),  // ADC received clock
@@ -360,7 +362,7 @@ red_pitaya_analog i_analog
 );
 
 always @(posedge adc_clk) begin
-   adc_rstn <= 1'b0; //frstn[0] ; RM
+   adc_rstn <= frstn[0] ;
 end
 
 
@@ -486,7 +488,7 @@ generate
 for( GV = 0 ; GV < 8 ; GV = GV + 1)
 begin : exp_iobuf
   IOBUF i_iobufp (.O(exp_p_in[GV]), .IO(exp_p_io[GV]), .I(exp_p_out[GV]), .T(!exp_p_dir[GV]) );
-  IOBUF i_iobufn (.O(exp_n_in[GV]), .IO(exp_n_io[GV]), .I(exp_n_out[GV]), .T(!exp_n_dir[GV]) );
+  //IOBUF i_iobufn (.O(exp_n_in[GV]), .IO(exp_n_io[GV]), .I(exp_n_out[GV]), .T(!exp_n_dir[GV]) );
 end
 endgenerate
 
@@ -728,9 +730,14 @@ red_pitaya_daisy i_daisy
 //------------------------------------------------------------------------
 //
 // Custom module
+wire discriminato;
+BUFG i_disc  (.O(discriminato), .I(exp_n_io[7]));
 custom i_custom
 (
-    .clk             (  fclk[0]                    ),
+    .clk             (  adc_clk                    ),
+    .adc_in          (  adc_raw                    ),
+    .rstn_i          (  adc_rstn                   ),  // reset - active low
+    .discriminato    (  discriminato               ),  // trigger from SiPM
     .led             (  led_o                      ),
     // System bus
     .sys_clk_i       (  sys_clk                    ),  // clock
@@ -743,6 +750,7 @@ custom i_custom
     .sys_rdata_o     (  sys_rdata[ 6*32+31: 6*32]  ),  // read data
     .sys_err_o       (  sys_err[6]                 ),  // error indicator
     .sys_ack_o       (  sys_ack[6]                 ),  // acknowledge signal
+    // FIFO signals
     .fifo_S_AXIS_tdata  (  fifo_S_AXIS_tdata           ),  // out
     .fifo_S_AXIS_tlast  (  fifo_S_AXIS_tlast           ),  // out
     .fifo_S_AXIS_tready (  fifo_S_AXIS_tready          ),  // in

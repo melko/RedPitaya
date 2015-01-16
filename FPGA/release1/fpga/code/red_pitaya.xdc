@@ -179,7 +179,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {exp_n_io[*]}]
 set_property SLEW FAST [get_ports {exp_p_io[*]}]
 set_property SLEW FAST [get_ports {exp_n_io[*]}]
 set_property DRIVE 8 [get_ports {exp_p_io[*]}]
-set_property DRIVE 8 [get_ports {exp_n_io[*]}]
+#set_property DRIVE 8 [get_ports {exp_n_io[*]}]
 
 set_property PACKAGE_PIN G17 [get_ports {exp_p_io[0]}]
 set_property PACKAGE_PIN G18 [get_ports {exp_n_io[0]}]
@@ -273,3 +273,5 @@ set_false_path -from [get_clocks dac_clk_out] -to [get_clocks dac_2ph_out]
 
 
 
+create_clock -period 10.000 -name discriminato [get_ports exp_n_io[7]]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets exp_n_io_IBUF[7]]
