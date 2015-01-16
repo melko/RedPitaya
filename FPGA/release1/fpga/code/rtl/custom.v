@@ -72,6 +72,7 @@ wire [63:0] data_in = {adc_in_delay, conteggio};
 // --------------------------
 
 delay i_delay(
+    .sel     (  led[3:0] ),
     .clk     (  clk      ),
     .rst     (  reset    ),
     .din     (  adc_in   ),
