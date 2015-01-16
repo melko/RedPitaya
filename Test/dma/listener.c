@@ -32,9 +32,17 @@ int main(int argc, char *argv[])
 
 	unsigned size;
 	uint64_t buffer[PACKET_SIZE/8];
+
+	uint64_t counter = 0;
+	write(fd_out, &counter, sizeof(counter)); // reserve first 8 byte for the event counter
+
 	while( size=read(fd, buffer, PACKET_SIZE) ){
 		write(fd_out, buffer, size);
+		counter += size;
 	}
+
+	lseek(fd_out, 0, SEEK_SET);
+	write(fd_out, &counter, sizeof(counter));
 
 	//close(fd);
 	close(fd_out);
