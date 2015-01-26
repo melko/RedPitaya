@@ -68,7 +68,16 @@ wire [1:0]  fifo_status;
 reg [49:0] conteggio; // 50 for the counter and 14 for the adc
 
 wire [13:0] adc_in_delay;
-wire [63:0] data_in = {adc_in_delay, conteggio};
+wire [63:0] data_in = {adc_in /*_delay*/, conteggio};
+reg  [63:0] low_threshold, high_threshold;
+reg  [13:0] adc_in_previous;
+// --------------------------
+always @(posedge clk or posedge reset) begin
+    if(reset) adc_in_previous <= 14'h0;
+    else adc_in_previous <= adc_in;
+end
+
+assign trigger = (adc_in < high_threshold) && (adc_in_previous > low_threshold);
 // --------------------------
 
 delay i_delay(
@@ -85,7 +94,7 @@ sync i_sync(
     .clk     (  clk      ),
     .rst     (  reset    ),
     .din     (discriminato),
-    .dout    (  trigger  )
+    .dout    (  /*trigger*/  )
 );
 
 always @(posedge clk or posedge reset) begin
@@ -196,6 +205,8 @@ always @(*) begin
       20'h20 : begin ack <= 1'b1;          rdata <= packet_size          ; end 
       20'h24 : begin ack <= 1'b1;          rdata <= tlast_counter          ; end 
       20'h28 : begin ack <= 1'b1;          rdata <= {18'h0,adc_in}          ; end 
+      20'h30 : begin ack <= 1'b1;          rdata <= low_threshold          ; end
+      20'h34 : begin ack <= 1'b1;          rdata <= high_threshold          ; end
      
      default : begin ack <= 1'b1;          rdata <=  32'h0                              ; end
    endcase
@@ -215,6 +226,8 @@ always @(posedge clk) begin
          //if (addr[19:0]==16'h08)    fifo_status  <= wdata;
          //if (addr[19:0]==16'h1C)    fifo_axis_rd_data_count  <= wdata;
          if (addr[19:0]==16'h20)    packet_size <= wdata;
+         if (addr[19:0]==16'h30)    low_threshold <= wdata;
+         if (addr[19:0]==16'h34)    high_threshold <= wdata;
       end
    end
 end
