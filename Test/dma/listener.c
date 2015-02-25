@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
 
 	lseek(fd_out, 0, SEEK_SET);
 	write(fd_out, &counter, sizeof(counter));
+	printf("Number of events: %llu\n", counter);
 
 	//close(fd);
 	close(fd_out);

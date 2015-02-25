@@ -46,24 +46,38 @@ int main(int argc, char *argv[])
 	map_sram = mmap(0, SRAM_MAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, addr_sram);
 	if(map_sram == (void *) -1) {fprintf(stderr, "Error mapping SRAM\n"); return -1;}
 
+	volatile void* virt_addr;
+	volatile uint32_t* register0;
+	volatile uint32_t* fifo_config;
+	volatile uint32_t* status_register;
+	volatile uint32_t* fifo_count;
+	volatile uint32_t* packet_size;
+
+	volatile void* virt_addr_dma;
+	volatile uint32_t* dma_control;
+	volatile uint32_t* dma_status;
+	volatile uint32_t* dma_address;
+	volatile uint32_t* dma_size;
+
+	volatile uint64_t* virt_addr_sram;
 
 	if((map_base != 0) && (map_dma != 0) && (map_sram != 0)){
-		volatile void* virt_addr = map_base;
-		volatile uint32_t* register0 = (uint32_t*)(virt_addr);
-		volatile uint32_t* fifo_config = (uint32_t*)(virt_addr + 0x4);
-		volatile uint32_t* fifo_status = (uint32_t*)(virt_addr + 0x8);
-		volatile uint32_t* fifo_count = (uint32_t*)(virt_addr + 0x1C);
-		volatile uint32_t* packet_size = (uint32_t*)(virt_addr + 0x20);
+		virt_addr = map_base;
+		register0 = (uint32_t*)(virt_addr);
+		fifo_config = (uint32_t*)(virt_addr + 0x4);
+		status_register = (uint32_t*)(virt_addr + 0x8);
+		fifo_count = (uint32_t*)(virt_addr + 0x1C);
+		packet_size = (uint32_t*)(virt_addr + 0x20);
 		printf("0x%08x\n", *register0);
 		fflush(stdout);
 
-		volatile void* virt_addr_dma = map_dma;
-		volatile uint32_t* dma_control = (uint32_t*)(virt_addr_dma + 0x30);
-		volatile uint32_t* dma_status = (uint32_t*)(virt_addr_dma + 0x34);
-		volatile uint32_t* dma_address = (uint32_t*)(virt_addr_dma + 0x48);
-		volatile uint32_t* dma_size = (uint32_t*)(virt_addr_dma + 0x58);
+		virt_addr_dma = map_dma;
+		dma_control = (uint32_t*)(virt_addr_dma + 0x30);
+		dma_status = (uint32_t*)(virt_addr_dma + 0x34);
+		dma_address = (uint32_t*)(virt_addr_dma + 0x48);
+		dma_size = (uint32_t*)(virt_addr_dma + 0x58);
 
-		volatile uint64_t* virt_addr_sram = map_sram;
+		virt_addr_sram = map_sram;
 
 		uint64_t dati[PACKET_SIZE];
 		int fd_out = open("fifo", O_WRONLY);
@@ -78,7 +92,7 @@ int main(int argc, char *argv[])
 		}
 
 		*fifo_config = 0x1; // reset counter and fifo
-		while(*fifo_status != 3 || *fifo_count > 2){} // wait for fifo to reset
+		while(*status_register != 3 || *fifo_count > 2); // wait for fifo to reset
 		*dma_control |= 1<<2; // reset dma
 		*dma_control &= ~(1<<2); // remove reset
 		*dma_control |= 1; // enable dma
@@ -90,14 +104,23 @@ int main(int argc, char *argv[])
 		uint32_t size_p;
 		*dma_address = addr_sram;
 
+		while((*status_register & 0x4) == 0); // wait for start_daq
+		printf("Acquisition started\n");
 		while(1){
 			*dma_size = PACKET_SIZE*8; // init transfer
-			while((*dma_status & 1<<1) != 2){} // wait for DMA to finish transfer
+			while((*dma_status & 1<<1) != 2){
+				if((*status_register & 0x4) == 0) goto end;
+			}
 			size_p = *dma_size;
 			memcpy(dati, (void *) virt_addr_sram, size_p);
 			write(fd_out, dati, size_p);
 		}
 	}
+
+	end:
+	printf("Acquisition finished\n");
+	if((*status_register & 0x8) != 0)
+		printf("Fifo has saturated during acquisition!\n");
 	if (map_base != (void*)(-1)) {
 		if(munmap(map_base, MAP_SIZE) == -1) {fprintf(stderr, "Error unmapping AXI_GP0\n"); return -1;}
 		map_base = (void*)(-1);
