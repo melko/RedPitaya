@@ -3,7 +3,8 @@ module custom
     input               clk,
     input      [13:0]   adc_in,
     input               rstn_i,
-    input               discriminato,
+    input               nstart_daq,
+    input               nstop_daq,
     output     [7:0]    led,
     // System bus
     input               sys_clk_i,
@@ -16,7 +17,7 @@ module custom
     output     [32-1:0] sys_rdata_o,
     output              sys_err_o,
     output              sys_ack_o,
-    
+
     // fifo signals
     output     [63:0]   fifo_S_AXIS_tdata,       // data input
     output              fifo_S_AXIS_tlast,       // last word of packet
@@ -31,7 +32,7 @@ module custom
 // -----------------------------------------------------------------------
 // CLOCK BUFFER AND CLOCK MUX
 // JUST FOR TESTING PURPOSE
-wire clk_o;
+/*wire clk_o;
 reg [31:0] clock_divider;
 
 always @(posedge clk) begin
@@ -42,7 +43,7 @@ always @(posedge clk) begin
 end
 
 assign clk_o = clock_divider[led[4:0]];
-
+*/
 
 // -----------------------------------------------------------------------
 
@@ -51,6 +52,7 @@ assign clk_o = clock_divider[led[4:0]];
 wire        reset;
 wire        enable;
 wire        trigger;
+wire        daq_enable;
 
 reg  [31:0] packet_size;
 reg  [31:0] tlast_counter;
@@ -63,48 +65,64 @@ wire        fifo64_full;
 
 reg  [31:0] registro1;
 reg  [2:0]  fifo_config;
-wire [1:0]  fifo_status;
+wire [31:0] status;
 
 reg [49:0] conteggio; // 50 for the counter and 14 for the adc
 
-wire [13:0] adc_in_delay;
-wire [63:0] data_in = {adc_in /*_delay*/, conteggio};
+//wire [13:0] adc_in_delay;
 reg  [63:0] low_threshold, high_threshold;
-reg  [13:0] adc_in_previous;
+reg  [13:0] adc_in_middle, adc_in_oldest;
+
+wire [63:0] data_in = {adc_in_middle /*_delay*/, conteggio};
 // --------------------------
 always @(posedge clk or posedge reset) begin
-    if(reset) adc_in_previous <= 14'h0;
-    else adc_in_previous <= adc_in;
+    if(reset) begin
+        adc_in_middle <= 14'h0;
+        adc_in_oldest <= 14'h0;
+    end
+    else begin
+        adc_in_middle <= adc_in;
+        adc_in_oldest <= adc_in_middle;
+    end
 end
 
-assign trigger = (adc_in < high_threshold) && (adc_in_previous > low_threshold);
+//assign trigger = (adc_in < high_threshold) && (adc_in_previous > low_threshold);
+assign trigger = (adc_in_middle < high_threshold) && (adc_in_middle < adc_in) && (adc_in_middle < adc_in_oldest);
 // --------------------------
 
-delay i_delay(
+/*delay i_delay(
     .sel     (  led[3:0] ),
     .clk     (  clk      ),
     .rst     (  reset    ),
     .din     (  adc_in   ),
     .dout    (adc_in_delay)
-);
+); */
 
 // --------------------------
 
-sync i_sync(
+/*sync i_sync(
     .clk     (  clk      ),
     .rst     (  reset    ),
     .din     (discriminato),
-    .dout    (  /*trigger*/  )
+    .dout    (  trigger  )
+); */
+
+msync_machine i_msync(
+    .clk        (    clk     ),
+    .reset      (   reset    ),
+    .nstart_daq ( nstart_daq ),
+    .nstop_daq  ( nstop_daq  ),
+    .daq_enable ( daq_enable )
 );
 
 always @(posedge clk or posedge reset) begin
     if(reset) conteggio <= 32'h0;
-    else conteggio <= conteggio + 8;
+    else if(daq_enable) conteggio <= conteggio + 8;
 end
 
 // -----------------------------------------------------------------------------------------
 // Block that generates a proper TLAST signal based on the PACKET_SIZE register
-// PACKET_SIZE value must be greater than 1  
+// PACKET_SIZE value must be greater than 1
 
 always @(posedge clk or posedge reset) begin
     if(reset) tlast_counter <= 32'h0;
@@ -121,14 +139,14 @@ assign tlast = (tlast_counter == (packet_size - 1)) ? 1'b1 : 1'b0;
 // -----------------------------------------------------------------------------------------
 
 fifo64 i_fifo64 (
-    .rst    (  reset         ),     // input rst
-    .clk    (  clk           ),     // input clk
-    .din    (  data_in       ),     // input [63 : 0] din
-    .wr_en  (  trigger       ),     // input wr_en
-    .rd_en  (  fifo64_rd_en  ),     // input rd_en
-    .dout   (  fifo64_dout   ),     // output [63 : 0] dout
-    .full   (  fifo64_full   ),     // output full
-    .empty  (  fifo64_empty  )      // output empty
+    .rst    (    reset         ),     // input rst
+    .clk    (    clk           ),     // input clk
+    .din    (    data_in       ),     // input [63 : 0] din
+    .wr_en  (trigger&daq_enable),     // input wr_en
+    .rd_en  (    fifo64_rd_en  ),     // input rd_en
+    .dout   (    fifo64_dout   ),     // output [63 : 0] dout
+    .full   (    fifo64_full   ),     // output full
+    .empty  (    fifo64_empty  )      // output empty
 );
 
 assign fifo64_rd_en        = fifo_S_AXIS_tready;
@@ -149,12 +167,15 @@ always @(posedge clk) begin
     end
 end
 
-assign led[7]         = lol;
-assign led[6:0]       = registro1[6:0];
-assign fifo_status[1] = fifo64_full;
-assign fifo_status[0] = fifo64_empty;
-assign reset          = fifo_config[0];
-assign enable         = fifo_config[1];
+assign led[7]    = lol;
+assign led[6]    = daq_enable;
+assign led[5:0]  = registro1[5:0];
+assign status[3] = lol;
+assign status[2] = daq_enable;
+assign status[1] = fifo64_full;
+assign status[0] = fifo64_empty;
+assign reset     = fifo_config[0];
+assign enable    = fifo_config[1];
 
 // ---------------------------------------------------------------------------------------
 // System bus connection
@@ -197,18 +218,18 @@ always @(*) begin
    err <= 1'b0 ;
 
    casez (addr[19:0])
-      20'h00 : begin ack <= 1'b1;          rdata <= registro1       ; end 
-      20'h04 : begin ack <= 1'b1;          rdata <= {29'h0, fifo_config}       ; end
-      20'h08 : begin ack <= 1'b1;          rdata <= {30'h0, fifo_status}       ; end
-      20'h1C : begin ack <= 1'b1;          rdata <= fifo_axis_rd_data_count       ; end
+      20'h00 : begin ack <= 1'b1;          rdata <= registro1               ; end
+      20'h04 : begin ack <= 1'b1;          rdata <= {29'h0, fifo_config}    ; end
+      20'h08 : begin ack <= 1'b1;          rdata <= status             ; end
+      20'h1C : begin ack <= 1'b1;          rdata <= fifo_axis_rd_data_count ; end
 
-      20'h20 : begin ack <= 1'b1;          rdata <= packet_size          ; end 
-      20'h24 : begin ack <= 1'b1;          rdata <= tlast_counter          ; end 
-      20'h28 : begin ack <= 1'b1;          rdata <= {18'h0,adc_in}          ; end 
-      20'h30 : begin ack <= 1'b1;          rdata <= low_threshold          ; end
+      20'h20 : begin ack <= 1'b1;          rdata <= packet_size             ; end
+      20'h24 : begin ack <= 1'b1;          rdata <= tlast_counter           ; end
+      20'h28 : begin ack <= 1'b1;          rdata <= {18'h0,adc_in}          ; end
+      20'h30 : begin ack <= 1'b1;          rdata <= low_threshold           ; end
       20'h34 : begin ack <= 1'b1;          rdata <= high_threshold          ; end
-     
-     default : begin ack <= 1'b1;          rdata <=  32'h0                              ; end
+ 
+     default : begin ack <= 1'b1;          rdata <=  32'h0                  ; end
    endcase
 end
 
@@ -223,7 +244,7 @@ always @(posedge clk) begin
       if (wen) begin
          if (addr[19:0]==16'h0)     registro1   <= wdata;
          if (addr[19:0]==16'h04)    fifo_config <= wdata[2:0];
-         //if (addr[19:0]==16'h08)    fifo_status  <= wdata;
+         //if (addr[19:0]==16'h08)    status  <= wdata;
          //if (addr[19:0]==16'h1C)    fifo_axis_rd_data_count  <= wdata;
          if (addr[19:0]==16'h20)    packet_size <= wdata;
          if (addr[19:0]==16'h30)    low_threshold <= wdata;

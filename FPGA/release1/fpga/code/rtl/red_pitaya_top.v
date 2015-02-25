@@ -730,14 +730,17 @@ red_pitaya_daisy i_daisy
 //------------------------------------------------------------------------
 //
 // Custom module
-wire discriminato;
-BUFG i_disc  (.O(discriminato), .I(exp_n_io[7]));
+//wire discriminato;
+//BUFG i_disc  (.O(discriminato), .I(exp_n_io[7]));
+//assign exp_n_io[6] = adc_clk;
+//assign exp_n_io[1] = fclk[0];
 custom i_custom
 (
     .clk             (  adc_clk                    ),
     .adc_in          (  adc_raw                    ),
     .rstn_i          (  adc_rstn                   ),  // reset - active low
-    .discriminato    (  discriminato               ),  // trigger from SiPM
+    .nstart_daq       (  exp_n_io[6]                ),  // start acquisition
+    .nstop_daq        (  exp_n_io[1]                ),  // stop acquisition
     .led             (  led_o                      ),
     // System bus
     .sys_clk_i       (  sys_clk                    ),  // clock
