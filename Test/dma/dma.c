@@ -17,7 +17,7 @@
 #include <stdint.h>
 
 #define MAP_SIZE 1024UL
-#define PACKET_SIZE 256
+#define PACKET_SIZE 512
 #define SRAM_MAP_SIZE PACKET_SIZE*8
 
 void* map_base = (void*)(-1);
@@ -28,7 +28,6 @@ int main(int argc, char *argv[])
 {
 	int fd = -1;
 	if((fd = open("/dev/mem", O_RDWR | O_SYNC)) == -1) {fprintf(stderr, "Error opening /dev/mem\n"); return -1;}
-	int access_type = 'w';
 
 	/* pay attention to the base address you put in the mmap function
 	 * man sais it must be multiple of sysconf(_SC_PAGE_SIZE) which in the zynq
@@ -100,7 +99,6 @@ int main(int argc, char *argv[])
 		*fifo_config = 0x6; // enable counter and unreset fifo
 		printf("dma status: %x\n", *dma_status);
 
-		int i;
 		uint32_t size_p;
 		*dma_address = addr_sram;
 
