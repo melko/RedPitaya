@@ -5,6 +5,7 @@
 #include <stdint.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <unistd.h>
 #include <fcntl.h>
 
 #define PACKET_SIZE 1048576
@@ -36,7 +37,7 @@ int main(int argc, char *argv[])
 	uint64_t counter = 0;
 	write(fd_out, &counter, sizeof(counter)); // reserve first 8 byte for the event counter
 
-	while( size=read(fd, buffer, PACKET_SIZE) ){
+	while( (size=read(fd, buffer, PACKET_SIZE)) ){
 		write(fd_out, buffer, size);
 		counter += size;
 	}
