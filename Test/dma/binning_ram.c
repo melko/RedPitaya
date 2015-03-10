@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	counter /= 8;
 	printf("event number: %llu\n", counter);
 
-	printf("lseek %lld \n", lseek(file_in, -8, SEEK_END)); // ignoring last event
+	printf("lseek %lld \n", lseek(file_in, -8, SEEK_END));
 	uint64_t acq_time;
 	read(file_in, &acq_time, sizeof(acq_time));
 	acq_time &= 0x3FFFFFFFFFFFFULL;
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 		printf("Can't allocate bin array\n");
 		return -1;
 	}
-	uint64_t *buffer = (uint64_t*) calloc(BUF_SIZE, 8);
+	uint64_t *buffer = (uint64_t*) calloc(BUF_SIZE, 1);
 	if(buffer == NULL){
 		printf("Can't allocate bin array\n");
 		return -1;
