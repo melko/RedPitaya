@@ -33,10 +33,17 @@ int main(int argc, char *argv[])
 	counter /= 8;
 	printf("event number: %llu\n", counter);
 
-	printf("lseek %lld \n", lseek(file_in, -8, SEEK_END));
-	uint64_t acq_time;
+	printf("lseek %lld \n", lseek(file_in, -16, SEEK_END));
+	uint64_t acq_time, acq_time2;
+	read(file_in, &acq_time2, sizeof(acq_time2));
+	acq_time2 &= 0x3FFFFFFFFFFFFULL;
 	read(file_in, &acq_time, sizeof(acq_time));
 	acq_time &= 0x3FFFFFFFFFFFFULL;
+	int discard_last = 0;
+	if(acq_time2 > acq_time){
+		acq_time = acq_time2;
+		discard_last = 1;
+	}
 	printf("Total acquisition time is %llu ns\n", acq_time);
 
 	uint64_t bin_size;
@@ -66,7 +73,7 @@ int main(int argc, char *argv[])
 		if(n <= 0) break;
 
 		int i;
-		//if(n < BUF_SIZE/8) --n; // dropping last event
+		if(n < BUF_SIZE/8 && discard_last) --n; // dropping last event
 		for(i=0; i<n; i++){
 			time = buffer[i] & 0x3FFFFFFFFFFFFULL;
 			counts[time/bin_size] += ((buffer[i]>>50) - INTERCEPT)/SLOPE/V_ph + 0.5;
