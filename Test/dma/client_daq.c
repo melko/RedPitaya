@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	int sockfd, portno, n;
 	struct sockaddr_in serv_addr;
 	struct hostent *server;
-	unsigned counter;
+	uint64_t counter = 0;
 
 	char buffer[PACKET_SIZE];
 	if (argc < 4) {
@@ -59,17 +59,14 @@ int main(int argc, char *argv[])
 	if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0)
 		error("ERROR connecting");
 
-	do{
-		n = read(sockfd,buffer,PACKET_SIZE);
-		if(n < PACKET_SIZE) n-=8;
+	write(fd_out, &counter, sizeof(counter)); // reserve first 8 bit for size
+	while((n = read(sockfd, buffer, PACKET_SIZE))){
 		write(fd_out,buffer,n);
-
-		if(n) counter = n;
-	} while(n);
+		counter += n;
+	}
 	lseek(fd_out, 0, SEEK_SET);
-	uint64_t *ne = (uint64_t*)(buffer+counter);
-	write(fd_out, ne, 8);
-	printf("Number of events: %llu\n", *ne);
+	write(fd_out, &counter, sizeof(counter));
+	printf("Event size: %llu\n", counter);
 	close(sockfd);
 	close(fd_out);
 	return 0;
