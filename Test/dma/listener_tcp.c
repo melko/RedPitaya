@@ -62,16 +62,14 @@ int main(int argc, char *argv[])
 	uint8_t buffer[PACKET_SIZE];
 
 	uint64_t counter = 0;
-	write(newsockfd, &counter, sizeof(counter)); // reserve first 8 byte for the event counter
 
 	while( (size=read(fd, buffer, PACKET_SIZE)) ){
 		write(newsockfd, buffer, size);
 		counter += size;
 	}
 
-	write(newsockfd, &counter, sizeof(counter));
 
-	printf("Number of events: %llu\n", counter);
+	printf("Event size: %llu\n", counter);
 	close(newsockfd);
 	close(sockfd);
 	close(fd);
