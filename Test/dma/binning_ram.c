@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	scanf("%lf", &V_ph);
 
 	uint64_t size = (acq_time/bin_size+1)*2;
-	printf("Size is %llu\n", size);
+	printf("Output file size is %llu\n", size);
 	uint16_t *counts = (uint16_t*) calloc(size, 1);
 	if(counts == NULL){
 		printf("Can't allocate bin array\n");
