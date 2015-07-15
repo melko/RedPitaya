@@ -10,8 +10,8 @@
 #include <fcntl.h>
 
 #define BUF_SIZE 1024*1024
-#define INTERCEPT 8206.4
-#define SLOPE -7308.3
+#define INTERCEPT 8323.5
+#define SLOPE -7224.6
 
 int main(int argc, char *argv[])
 {
