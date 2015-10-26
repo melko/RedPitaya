@@ -90,8 +90,8 @@ int main(int argc, char *argv[])
 			exit(1);
 		}
 
-		*config_register &= 0x1; // reset counter and fifo
-		while(*status_register != 3 || *fifo_count > 2); // wait for fifo to reset
+		*config_register |= 0x1; // reset counter and fifo
+		while((*status_register & 0x3) != 3 || *fifo_count > 2); // wait for fifo to reset
 		*dma_control |= 1<<2; // reset dma
 		*dma_control &= ~(1<<2); // remove reset
 		*dma_control |= 1; // enable dma
