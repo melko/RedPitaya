@@ -2,22 +2,25 @@ module msync_machine
 (
     input  clk,
     input  reset,
-    input  nstart_daq,
-    input  nstop_daq,
+    input  start_daq,
+    input  stop_daq,
+    input  disable_ms,
     output daq_enable
 );
 
 reg out;
 
-assign daq_enable = out;
+assign daq_enable = out | disable_ms;
 
 always @(posedge clk) begin
     if(reset)
         out <= 1'b0;
+/*    else
+	out <= 1'b1; */
     else begin
-        if(~nstart_daq)
+        if(start_daq)
             out <= 1'b1;
-        else if(~nstop_daq)
+        else if(stop_daq)
             out <= 1'b0;
         else
             out <= out;

@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+#define uint uint16_t
 #define BUF_SIZE 1024*1024
 #define INTERCEPT 8323.5
 #define SLOPE -7224.6
@@ -53,9 +54,9 @@ int main(int argc, char *argv[])
 	printf("how many V/p.e.? ");
 	scanf("%lf", &V_ph);
 
-	uint64_t size = (acq_time/bin_size+1)*2;
+	uint64_t size = (acq_time/bin_size+1) * sizeof(uint);
 	printf("Output file size is %llu\n", size);
-	uint16_t *counts = (uint16_t*) calloc(size, 1);
+	uint *counts = (uint*) calloc(size, 1);
 	if(counts == NULL){
 		printf("Can't allocate bin array\n");
 		return -1;
@@ -76,7 +77,7 @@ int main(int argc, char *argv[])
 		if(n < BUF_SIZE/8 && discard_last) --n; // dropping last event
 		for(i=0; i<n; i++){
 			time = buffer[i] & 0x3FFFFFFFFFFFFULL;
-			counts[time/bin_size] += ((buffer[i]>>50) - INTERCEPT)/SLOPE/V_ph + 0.5;
+			counts[time/bin_size] += 1; //((buffer[i]>>50) - INTERCEPT)/SLOPE/V_ph + 0.5;
 		}
 	}
 

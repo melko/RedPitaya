@@ -53,6 +53,9 @@ wire        reset;
 wire        enable;
 wire        trigger;
 wire        daq_enable;
+wire        start_daq_unspiked;
+wire        stop_daq_unspiked;
+wire        disable_ms;
 
 reg  [31:0] packet_size;
 reg  [31:0] tlast_counter;
@@ -64,7 +67,7 @@ wire        fifo64_empty;
 wire        fifo64_full;
 
 reg  [31:0] registro1;
-reg  [2:0]  fifo_config;
+reg  [31:0]  config_register;
 wire [31:0] status;
 
 reg [49:0] conteggio; // 50 for the counter and 14 for the adc
@@ -107,12 +110,27 @@ assign trigger = (adc_in_middle < high_threshold) && (adc_in_middle < adc_in) &&
     .dout    (  trigger  )
 ); */
 
+spike_filter i_start_filter(
+    .clk             (       clk        ),
+    .reset           (      reset       ),
+    .nsignal         (    nstart_daq    ),
+    .signal_unspiked (start_daq_unspiked)
+);
+
+spike_filter i_stop_filter(
+    .clk             (       clk       ),
+    .reset           (      reset      ),
+    .nsignal         (    nstop_daq    ),
+    .signal_unspiked (stop_daq_unspiked)
+);
+
 msync_machine i_msync(
-    .clk        (    clk     ),
-    .reset      (   reset    ),
-    .nstart_daq ( nstart_daq ),
-    .nstop_daq  ( nstop_daq  ),
-    .daq_enable ( daq_enable )
+    .clk        (         clk        ),
+    .reset      (        reset       ),
+    .start_daq  ( start_daq_unspiked ),
+    .stop_daq   ( stop_daq_unspiked  ),
+    .disable_ms (      disable_ms    ),
+    .daq_enable (     daq_enable     )
 );
 
 always @(posedge clk or posedge reset) begin
@@ -167,15 +185,15 @@ always @(posedge clk) begin
     end
 end
 
-assign led[7]    = lol;
-assign led[6]    = daq_enable;
-assign led[5:0]  = registro1[5:0];
-assign status[3] = lol;
-assign status[2] = daq_enable;
-assign status[1] = fifo64_full;
-assign status[0] = fifo64_empty;
-assign reset     = fifo_config[0];
-assign enable    = fifo_config[1];
+assign led[7]     = lol;
+assign led[6]     = daq_enable;
+assign led[5:0]   = registro1[5:0];
+assign status[3]  = lol;
+assign status[2]  = daq_enable;
+assign status[1]  = fifo64_full;
+assign status[0]  = fifo64_empty;
+assign reset      = config_register[0];
+assign disable_ms = config_register[1];
 
 // ---------------------------------------------------------------------------------------
 // System bus connection
@@ -219,8 +237,8 @@ always @(*) begin
 
    casez (addr[19:0])
       20'h00 : begin ack <= 1'b1;          rdata <= registro1               ; end
-      20'h04 : begin ack <= 1'b1;          rdata <= {29'h0, fifo_config}    ; end
-      20'h08 : begin ack <= 1'b1;          rdata <= status             ; end
+      20'h04 : begin ack <= 1'b1;          rdata <= config_register         ; end
+      20'h08 : begin ack <= 1'b1;          rdata <= status                  ; end
       20'h1C : begin ack <= 1'b1;          rdata <= fifo_axis_rd_data_count ; end
 
       20'h20 : begin ack <= 1'b1;          rdata <= packet_size             ; end
@@ -228,7 +246,7 @@ always @(*) begin
       20'h28 : begin ack <= 1'b1;          rdata <= {18'h0,adc_in}          ; end
       20'h30 : begin ack <= 1'b1;          rdata <= low_threshold           ; end
       20'h34 : begin ack <= 1'b1;          rdata <= high_threshold          ; end
- 
+
      default : begin ack <= 1'b1;          rdata <=  32'h0                  ; end
    endcase
 end
@@ -237,13 +255,13 @@ end
 always @(posedge clk) begin
    if (rstn_i == 1'b0) begin
       registro1 <= 32'h0;
-      fifo_config <= 3'b000;
+      config_register <= 32'h0;
       packet_size = 32'h100; // default packet size 256
    end
    else begin
       if (wen) begin
          if (addr[19:0]==16'h0)     registro1   <= wdata;
-         if (addr[19:0]==16'h04)    fifo_config <= wdata[2:0];
+         if (addr[19:0]==16'h04)    config_register <= wdata;
          //if (addr[19:0]==16'h08)    status  <= wdata;
          //if (addr[19:0]==16'h1C)    fifo_axis_rd_data_count  <= wdata;
          if (addr[19:0]==16'h20)    packet_size <= wdata;

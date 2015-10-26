@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 
 	volatile void* virt_addr;
 	volatile uint32_t* register0;
-	volatile uint32_t* fifo_config;
+	volatile uint32_t* config_register;
 	volatile uint32_t* status_register;
 	volatile uint32_t* fifo_count;
 	volatile uint32_t* packet_size;
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 	if((map_base != 0) && (map_dma != 0) && (map_sram != 0)){
 		virt_addr = map_base;
 		register0 = (uint32_t*)(virt_addr);
-		fifo_config = (uint32_t*)(virt_addr + 0x4);
+		config_register = (uint32_t*)(virt_addr + 0x4);
 		status_register = (uint32_t*)(virt_addr + 0x8);
 		fifo_count = (uint32_t*)(virt_addr + 0x1C);
 		packet_size = (uint32_t*)(virt_addr + 0x20);
@@ -85,18 +85,18 @@ int main(int argc, char *argv[])
 		if(fd_out < 0 ){
 		//if(fd_out == NULL ){
 			if(errno == ENODEV)
-				fprintf(stderr, "maybe lol.dat write only file?\n");
+				fprintf(stderr, "maybe fifo is a write only file?\n");
 			perror("failed to open target");
 			exit(1);
 		}
 
-		*fifo_config = 0x1; // reset counter and fifo
+		*config_register &= 0x1; // reset counter and fifo
 		while(*status_register != 3 || *fifo_count > 2); // wait for fifo to reset
 		*dma_control |= 1<<2; // reset dma
 		*dma_control &= ~(1<<2); // remove reset
 		*dma_control |= 1; // enable dma
 		*packet_size = PACKET_SIZE;
-		*fifo_config = 0x6; // enable counter and unreset fifo
+		*config_register &= ~0x1; // enable counter and unreset fifo
 		printf("dma status: %x\n", *dma_status);
 
 		uint32_t size_p;
